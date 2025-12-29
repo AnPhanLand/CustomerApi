@@ -189,3 +189,12 @@ C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\obj\Debug\net10.0\r
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\obj\Debug\net10.0\Customer.pdb
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\obj\Debug\net10.0\Customer.genruntimeconfig.cache
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\obj\Debug\net10.0\ref\Customer.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.IdentityModel.Abstractions.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.IdentityModel.JsonWebTokens.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.IdentityModel.Logging.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\obj\Debug\net10.0\Customer.sourcelink.json

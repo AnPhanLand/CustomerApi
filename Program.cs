@@ -1,5 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using CustomerApp;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 var builder = WebApplication.CreateBuilder(args);
 // builder.Services.AddDbContext<CustomerDb>(opt => opt.UseInMemoryDatabase("Customer"));
@@ -17,9 +22,61 @@ builder.Services.AddOpenApiDocument(config =>
     config.DocumentName = "CustomerAPI";
     config.Title = "CustomerAPI v1";
     config.Version = "v1";
+    ////////////////////////////////////
+    config.AddSecurity("JWT", Enumerable.Empty<string>(), new NSwag.OpenApiSecurityScheme
+    {
+        Type = NSwag.OpenApiSecuritySchemeType.ApiKey,
+        Name = "Authorization",
+        In = NSwag.OpenApiSecurityApiKeyLocation.Header,
+        Description = "Type into the textbox: Bearer {your JWT token}."
+    });
 });
 
+var secretKey = builder.Configuration["Jwt:Key"];
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = "your-api",
+            ValidAudience = "your-client",
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!))
+        };
+    });
+
+builder.Services.AddAuthorization();
+
 var app = builder.Build();
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+//Login Test
+app.MapPost("/login", () => 
+{
+    var claims = new[]
+    {
+        new Claim(JwtRegisteredClaimNames.Sub, "admin"),
+        new Claim(ClaimTypes.Role, "Admin")
+    };
+
+    var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!));
+    var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
+
+    var token = new JwtSecurityToken(
+        issuer: "your-api",
+        audience: "your-client",
+        claims: claims,
+        expires: DateTime.Now.AddMinutes(30),
+        signingCredentials: creds
+    );
+
+    return Results.Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token) });
+});
 
 if (app.Environment.IsDevelopment())
 {
@@ -33,7 +90,7 @@ if (app.Environment.IsDevelopment())
     });
 }
 
-RouteGroupBuilder customer = app.MapGroup("/Customer");
+RouteGroupBuilder customer = app.MapGroup("/Customer").RequireAuthorization();
 
 customer.MapGet("/", GetAllCustomers);
 // todoItems.MapGet("/complete", GetCompleteTodos);
