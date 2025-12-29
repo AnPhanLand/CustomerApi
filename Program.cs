@@ -20,7 +20,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApiDocument(config =>
 {
     config.DocumentName = "CustomerAPI";
-    config.Title = "CustomerAPI v1";
+    config.Title = "CustomerAPI";
     config.Version = "v1";
     ////////////////////////////////////
     config.AddSecurity("JWT", Enumerable.Empty<string>(), new NSwag.OpenApiSecurityScheme
