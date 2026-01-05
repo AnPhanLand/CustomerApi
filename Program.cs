@@ -17,6 +17,8 @@ using System.Text;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Serilog;
+using Serilog.Events;
+
 
 // using var log = ... (Local Logger) Once the method (like Main) finishes, the logger is destroyed (disposed).
 // Log.Logger = ... (Global Static Logger) It lives as long as your application is running.
@@ -27,10 +29,13 @@ Log.Logger = new LoggerConfiguration()
     // MinimalLevel.Debug(): you want to fix bugs
     // MinimalLevel.Information(): you want to clean up the log when you finished fixing bugs
     .MinimumLevel.Debug()
-    .WriteTo.Console()
+    // Need using Serilog.Events for LogEventLevel
+    // Add MinimumLevel to Console only
+    .WriteTo.Console(restrictedToMinimumLevel: LogEventLevel.Information)
     // RollingInterval.Day tells Serilog: "At midnight, close the current file and start a brand new one for the new day."
     .WriteTo.File("logs/myapp.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
+    // Additional infomation for Enrichers, Filters, and Sub-loggers: https://github.com/serilog/serilog/wiki/Configuration-Basics
 
 try {
     // Other level: Log.Verbose(""), Log.Debug(""), Log.Information(""), Log.Warning(""), Log.Error(""), Log.Fatal("")
