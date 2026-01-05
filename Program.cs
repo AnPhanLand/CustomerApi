@@ -21,12 +21,19 @@ using Serilog;
 // using var log = ... (Local Logger) Once the method (like Main) finishes, the logger is destroyed (disposed).
 // Log.Logger = ... (Global Static Logger) It lives as long as your application is running.
 Log.Logger = new LoggerConfiguration()
+    // MinimumLevel prevents any logs belows the given log level to appear.
+    // The level from lowest to highest: Verbose, Debug, Information, Warning, Error, Fatal
+    // Usage: Level Switching (Runtime Control)
+    // MinimalLevel.Debug(): you want to fix bugs
+    // MinimalLevel.Information(): you want to clean up the log when you finished fixing bugs
+    .MinimumLevel.Debug()
     .WriteTo.Console()
     // RollingInterval.Day tells Serilog: "At midnight, close the current file and start a brand new one for the new day."
     .WriteTo.File("logs/myapp.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
 try {
+    // Other level: Log.Verbose(""), Log.Debug(""), Log.Information(""), Log.Warning(""), Log.Error(""), Log.Fatal("")
     Log.Information("Starting the API...");
 
 
