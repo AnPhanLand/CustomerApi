@@ -29,6 +29,10 @@ Log.Logger = new LoggerConfiguration()
     // MinimalLevel.Debug(): you want to fix bugs
     // MinimalLevel.Information(): you want to clean up the log when you finished fixing bugs
     .MinimumLevel.Debug()
+
+    // Sink is where log can be stored. Console and File are the basic, there are many more and you can make a custome one too.
+    // https://github.com/serilog/serilog/wiki/Provided-Sinks
+
     // Need using Serilog.Events for LogEventLevel
     // Add MinimumLevel to Console only
     .WriteTo.Console(restrictedToMinimumLevel: LogEventLevel.Information)
