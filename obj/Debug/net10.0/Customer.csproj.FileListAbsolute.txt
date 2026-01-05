@@ -198,3 +198,12 @@ c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\M
 c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.IdentityModel.Tokens.dll
 c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\System.IdentityModel.Tokens.Jwt.dll
 c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\obj\Debug\net10.0\Customer.sourcelink.json
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Serilog.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Serilog.AspNetCore.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Serilog.Extensions.Hosting.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Serilog.Extensions.Logging.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Serilog.Formatting.Compact.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Serilog.Settings.Configuration.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Serilog.Sinks.Console.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Serilog.Sinks.Debug.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Serilog.Sinks.File.dll

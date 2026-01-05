@@ -1,0 +1,45 @@
+2026-01-05 15:23:44.329 +07:00 [INF] Starting the API...
+2026-01-05 15:23:44.487 +07:00 [INF] This is var secretKey: A_Very_Long_Random_String_That_Is_At_Least_32_Chars_Long!
+2026-01-05 15:23:44.626 +07:00 [DBG] Hosting starting
+2026-01-05 15:23:44.643 +07:00 [INF] User profile is available. Using 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-05 15:23:44.649 +07:00 [DBG] Reading data from file 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys\key-e0e4c711-e38d-4994-9c4d-b0c1ef741012.xml'.
+2026-01-05 15:23:44.659 +07:00 [DBG] Found key {e0e4c711-e38d-4994-9c4d-b0c1ef741012}.
+2026-01-05 15:23:44.675 +07:00 [DBG] Considering key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} with expiration date 2026-03-29 06:37:16Z as default key.
+2026-01-05 15:23:44.680 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-01-05 15:23:44.683 +07:00 [DBG] Decrypting secret element using Windows DPAPI.
+2026-01-05 15:23:44.685 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-01-05 15:23:44.692 +07:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2026-01-05 15:23:44.694 +07:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2026-01-05 15:23:44.695 +07:00 [DBG] Using key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} as the default key.
+2026-01-05 15:23:44.695 +07:00 [DBG] Key ring with default key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} was loaded during application startup.
+2026-01-05 15:23:44.700 +07:00 [DBG] Middleware loaded
+2026-01-05 15:23:44.702 +07:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16459 B).
+2026-01-05 15:23:44.707 +07:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2026-01-05 15:23:44.773 +07:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2026-01-05 15:23:44.775 +07:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2026-01-05 15:23:44.775 +07:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2026-01-05 15:23:44.790 +07:00 [INF] Now listening on: http://localhost:5086
+2026-01-05 15:23:44.790 +07:00 [DBG] Loaded hosting startup assembly Customer
+2026-01-05 15:23:44.791 +07:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2026-01-05 15:23:44.791 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-05 15:23:44.791 +07:00 [INF] Hosting environment: Development
+2026-01-05 15:23:44.791 +07:00 [INF] Content root path: C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi
+2026-01-05 15:23:44.791 +07:00 [DBG] Hosting started
+2026-01-05 15:23:45.264 +07:00 [DBG] Connection id "0HNIC6EV4GK8T" accepted.
+2026-01-05 15:23:45.265 +07:00 [DBG] Connection id "0HNIC6EV4GK8T" started.
+2026-01-05 15:23:45.294 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/ - null null
+2026-01-05 15:23:45.325 +07:00 [DBG] No candidates found for the request path '/'
+2026-01-05 15:23:45.325 +07:00 [DBG] Request did not match any endpoints
+2026-01-05 15:23:45.365 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-05 15:23:45.369 +07:00 [DBG] The request path  does not match the path filter
+2026-01-05 15:23:45.373 +07:00 [DBG] Connection id "0HNIC6EV4GK8T" completed keep alive response.
+2026-01-05 15:23:45.376 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/ - 404 null null 83.2491ms
+2026-01-05 15:23:45.404 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5086/, Response status code: 404
+2026-01-05 15:23:45.461 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/favicon.ico - null null
+2026-01-05 15:23:45.462 +07:00 [DBG] No candidates found for the request path '/favicon.ico'
+2026-01-05 15:23:45.462 +07:00 [DBG] Request did not match any endpoints
+2026-01-05 15:23:45.468 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-05 15:23:45.468 +07:00 [DBG] The request path  does not match the path filter
+2026-01-05 15:23:45.468 +07:00 [DBG] Connection id "0HNIC6EV4GK8T" completed keep alive response.
+2026-01-05 15:23:45.469 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/favicon.ico - 404 0 null 7.9311ms
+2026-01-05 15:23:45.470 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5086/favicon.ico, Response status code: 404
