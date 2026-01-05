@@ -111,6 +111,8 @@ app.MapPost("/login", async (LoginRequest login, CustomerDb db) =>
     // 1. Logic for a 'backdoor' account to allow testing without database entries.
     bool isTestAccount = (login.Email == "admin@test.com" && login.Password == "password123");
     
+    // Declares a variable to hold a Customer object, initializing it as 'null' (empty).
+    // The '?' means this variable is "nullable"—it is allowed to be empty if no user is found.
     Customer? user = null;
 
     if (isTestAccount)
