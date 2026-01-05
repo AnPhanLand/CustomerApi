@@ -56,11 +56,35 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 //Login Test
-app.MapPost("/login", () => 
+app.MapPost("/login", async (LoginRequest login, CustomerDb db) => 
 {
+    // 1. Check for the hardcoded "Backdoor" Test Account first
+    bool isTestAccount = (login.Email == "admin@test.com" && login.Password == "password123");
+    
+    Customer? user = null;
+
+    if (isTestAccount)
+    {
+        // Create a fake user object for the test account so the rest of the code works
+        user = new Customer { Id = Guid.Empty, Email = "admin@test.com" };
+    }
+    else
+    {
+        // 2. Otherwise, look for a real user in the database
+        user = await db.Customers.FirstOrDefaultAsync(u => u.Email == login.Email);
+        
+        // Verify real user existence and password
+        if (user is null || user.Password != login.Password) 
+        {
+            return Results.Unauthorized();
+        }
+    }
+
+    // 3. Create claims using the user (either the real one or the test one)
     var claims = new[]
     {
-        new Claim(JwtRegisteredClaimNames.Sub, "admin"),
+        new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
+        new Claim(JwtRegisteredClaimNames.Email, user.Email),
         new Claim(ClaimTypes.Role, "Admin")
     };
 
@@ -75,7 +99,11 @@ app.MapPost("/login", () =>
         signingCredentials: creds
     );
 
-    return Results.Ok(new { token = new JwtSecurityTokenHandler().WriteToken(token) });
+    // 4. Return the token string from the response body
+    return Results.Ok(new { 
+        token = new JwtSecurityTokenHandler().WriteToken(token),
+        email = user.Email 
+    });
 });
 
 if (app.Environment.IsDevelopment())
@@ -124,7 +152,8 @@ static async Task<IResult> CreateCustomer(CustomerCreateDTO customerDTO, Custome
     {
         FirstName = customerDTO.FirstName,
         LastName = customerDTO.LastName,
-        Email = customerDTO.Email
+        Email = customerDTO.Email,
+        Password = customerDTO.Password
     };
 
     db.Customers.Add(customer);
