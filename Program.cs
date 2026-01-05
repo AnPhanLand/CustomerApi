@@ -176,34 +176,41 @@ if (app.Environment.IsDevelopment())
     });
 }
 
+
+// This final section of your code defines the Protected CRUD Operations (Create, Read, Update, Delete). It connects your HTTP routes to the actual database logic and ensures that only users with a valid "ID Card" (JWT) can get past the gate.
+
+// 1. Creates a group of routes starting with "/Customer" and locks them all behind JWT authorization.
 RouteGroupBuilder customer = app.MapGroup("/Customer").RequireAuthorization();
 
-customer.MapGet("/", GetAllCustomers);
-// todoItems.MapGet("/complete", GetCompleteTodos);
-customer.MapGet("/{id}", GetCustomer);
-customer.MapPost("/", CreateCustomer);
-customer.MapPut("/{id}", UpdateCustomer);
-customer.MapDelete("/{id}", DeleteCustomer);
+// Maps specific HTTP verbs (GET, POST, etc.) to the logic functions defined below.
+customer.MapGet("/", GetAllCustomers);          // List all
+customer.MapGet("/{id}", GetCustomer);        // Get one by ID
+customer.MapPost("/", CreateCustomer);         // Create new
+customer.MapPut("/{id}", UpdateCustomer);      // Update existing
+customer.MapDelete("/{id}", DeleteCustomer);   // Remove
 
+// The command that officially starts the web server to listen for requests.
 app.Run();
 
+// --- LOGIC FUNCTIONS (HANDLERS) ---
+
+// Fetches all customers from the database and converts them into "ReadDTOs" to hide sensitive data.
 static async Task<IResult> GetAllCustomers(CustomerDb db)
 {
-    return TypedResults.Ok(await db.Customers.Select(x => new CustomerReadDTO(x)).ToArrayAsync());
+    var customers = await db.Customers.Select(x => new CustomerReadDTO(x)).ToArrayAsync();
+    return TypedResults.Ok(customers);
 }
 
-// static async Task<IResult> GetCompleteTodos(TodoDb db) {
-//     return TypedResults.Ok(await db.Todos.Where(t => t.IsComplete).Select(x => new TodoItemDTO(x)).ToListAsync());
-// }
-
+// Searches for one customer by their Unique ID (Guid).
 static async Task<IResult> GetCustomer(Guid id, CustomerDb db)
 {
     return await db.Customers.FindAsync(id)
         is Customer customer
-            ? TypedResults.Ok(new CustomerReadDTO(customer))
-            : TypedResults.NotFound();
+            ? TypedResults.Ok(new CustomerReadDTO(customer)) // Found: Return 200 OK
+            : TypedResults.NotFound();                       // Not Found: Return 404
 }
 
+// Receives a "CreateDTO" from the user and saves a new Customer record to PostgreSQL.
 static async Task<IResult> CreateCustomer(CustomerCreateDTO customerDTO, CustomerDb db)
 {
     var customer = new Customer
@@ -211,17 +218,17 @@ static async Task<IResult> CreateCustomer(CustomerCreateDTO customerDTO, Custome
         FirstName = customerDTO.FirstName,
         LastName = customerDTO.LastName,
         Email = customerDTO.Email,
-        Password = customerDTO.Password
+        Password = customerDTO.Password // Maps DTO password to the database entity.
     };
 
-    db.Customers.Add(customer);
-    await db.SaveChangesAsync();
+    db.Customers.Add(customer);       // Stages the change.
+    await db.SaveChangesAsync();      // Pushes the change to the Docker database.
 
-    customerDTO = new CustomerCreateDTO(customer);
-
-    return TypedResults.Created($"/Customer/{customer.Id}", customerDTO);
+    // Returns a 201 Created status and the URL where the new resource can be found.
+    return TypedResults.Created($"/Customer/{customer.Id}", new CustomerCreateDTO(customer));
 }
 
+// Finds an existing customer and updates their details.
 static async Task<IResult> UpdateCustomer(Guid id, CustomerUpdateDTO customerDTO, CustomerDb db)
 {
     var customer = await db.Customers.FindAsync(id);
@@ -232,11 +239,12 @@ static async Task<IResult> UpdateCustomer(Guid id, CustomerUpdateDTO customerDTO
     customer.LastName = customerDTO.LastName;
     customer.Email = customerDTO.Email;
 
-    await db.SaveChangesAsync();
+    await db.SaveChangesAsync(); // Saves the updates.
 
-    return TypedResults.NoContent();
+    return TypedResults.NoContent(); // Returns 204 (Success, but no data to send back).
 }
 
+// Deletes a customer record from the database.
 static async Task<IResult> DeleteCustomer(Guid id, CustomerDb db)
 {
     if (await db.Customers.FindAsync(id) is Customer customer)
