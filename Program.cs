@@ -102,66 +102,75 @@ app.UseAuthentication();
 // 7. Middleware: Decides if the identified user is allowed to access the specific route.
 app.UseAuthorization();
 
-//Login Test
+
+// This section contains your Identity Logic (the /login endpoint) and your Development Tools (Swagger/OpenAPI). This is where your API transitions from being a passive database to an active security authority
+
+// Defines a POST endpoint at "/login" that accepts login credentials and the database context.
 app.MapPost("/login", async (LoginRequest login, CustomerDb db) => 
 {
-    // 1. Check for the hardcoded "Backdoor" Test Account first
+    // 1. Logic for a 'backdoor' account to allow testing without database entries.
     bool isTestAccount = (login.Email == "admin@test.com" && login.Password == "password123");
     
     Customer? user = null;
 
     if (isTestAccount)
     {
-        // Create a fake user object for the test account so the rest of the code works
+        // Creates a temporary in-memory user object for the test account.
         user = new Customer { Id = Guid.Empty, Email = "admin@test.com" };
     }
     else
     {
-        // 2. Otherwise, look for a real user in the database
+        // 2. Database lookup: Finds a real customer matching the provided email.
         user = await db.Customers.FirstOrDefaultAsync(u => u.Email == login.Email);
         
-        // Verify real user existence and password
+        // Security check: If user doesn't exist or password doesn't match, block access.
         if (user is null || user.Password != login.Password) 
         {
-            return Results.Unauthorized();
+            return Results.Unauthorized(); // Returns HTTP 401.
         }
     }
 
-    // 3. Create claims using the user (either the real one or the test one)
+    // 3. Claims: Key-value pairs describing the user that will be encoded into the JWT.
     var claims = new[]
     {
-        new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-        new Claim(JwtRegisteredClaimNames.Email, user.Email),
-        new Claim(ClaimTypes.Role, "Admin")
+        new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()), // Unique ID of the user.
+        new Claim(JwtRegisteredClaimNames.Email, user.Email),       // User's email address.
+        new Claim(ClaimTypes.Role, "Admin")                         // User's permission level.
     };
 
+    // Prepares the mathematical key and algorithm used to sign the token.
     var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!));
     var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
+    // Creates the JWT object with metadata, expiration, and the user's claims.
     var token = new JwtSecurityToken(
         issuer: "your-api",
         audience: "your-client",
         claims: claims,
-        expires: DateTime.Now.AddMinutes(30),
+        expires: DateTime.Now.AddMinutes(30), // Token becomes invalid after 30 mins.
         signingCredentials: creds
     );
 
-    // 4. Return the token string from the response body
+    // 4. Returns a JSON object containing the finalized string token to the client.
     return Results.Ok(new { 
         token = new JwtSecurityTokenHandler().WriteToken(token),
         email = user.Email 
     });
 });
 
+// Checks if the application is running in 'Development' mode (not production).
 if (app.Environment.IsDevelopment())
 {
+    // Generates the OpenAPI specification (swagger.json).
     app.UseOpenApi();
+    
+    // Enables the visual Swagger UI website to test endpoints easily.
     app.UseSwaggerUi(config =>
     {
         config.DocumentTitle = "CustomerAPI";
-        config.Path = "/swagger";
+        config.Path = "/swagger"; // The URL where you view the UI.
         config.DocumentPath = "/swagger/{documentName}/swagger.json";
-        config.DocExpansion = "list";
+        config.DocExpansion = "list"; // Keeps the endpoint list collapsed by default.
     });
 }
 
