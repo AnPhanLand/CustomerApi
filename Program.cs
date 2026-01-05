@@ -18,6 +18,8 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Serilog;
 
+// using var log = ... (Local Logger) Once the method (like Main) finishes, the logger is destroyed (disposed).
+// Log.Logger = ... (Global Static Logger) It lives as long as your application is running.
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     // RollingInterval.Day tells Serilog: "At midnight, close the current file and start a brand new one for the new day."
