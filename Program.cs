@@ -100,6 +100,8 @@ try {
     // 1. Retrieves the secret string from appsettings.json to use for digital signatures.
     var secretKey = builder.Configuration["Jwt:Key"];
 
+    Log.Information("This is var secretKey: {@SecretKey}", secretKey);
+
     // 2. Registers the Authentication service and sets JWT as the default scheme.
     builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         .AddJwtBearer(options =>
