@@ -251,6 +251,7 @@ static async Task<IResult> GetAllCustomers(CustomerDb db)
 // Searches for one customer by their Unique ID (Guid).
 static async Task<IResult> GetCustomer(Guid id, CustomerDb db)
 {
+    // FindAsync(id) is optimized for looking up the Primary Key (the ID). It's the fastest way to find one specific person.
     return await db.Customers.FindAsync(id)
         is Customer customer
             ? TypedResults.Ok(new CustomerReadDTO(customer)) // Found: Return 200 OK
