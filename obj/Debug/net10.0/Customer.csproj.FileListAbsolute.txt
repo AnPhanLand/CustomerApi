@@ -229,3 +229,15 @@ c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\s
 c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\tr-TR\Hangfire.Core.resources.dll
 c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\zh-TW\Hangfire.Core.resources.dll
 c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\zh\Hangfire.Core.resources.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.Extensions.AmbientMetadata.Application.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.Extensions.Compliance.Abstractions.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.AutoActivation.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.Extensions.Diagnostics.ExceptionSummarization.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.Extensions.Http.Diagnostics.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.Extensions.Http.Resilience.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.Extensions.Resilience.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.Extensions.Telemetry.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.Extensions.Telemetry.Abstractions.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Polly.Core.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Polly.Extensions.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Polly.RateLimiting.dll
