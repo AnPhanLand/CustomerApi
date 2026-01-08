@@ -1221,3 +1221,60 @@ FROM "Customers" AS c
 2026-01-08 11:00:03.207 +07:00 [DBG] Connection id "0HNIED89BNA27", Request id "0HNIED89BNA27:00000035": done reading request body.
 2026-01-08 11:00:03.211 +07:00 [DBG] Connection id "0HNIED89BNA27" completed keep alive response.
 2026-01-08 11:00:03.211 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5086/hangfire/stats - 200 null application/json 4.1238ms
+2026-01-08 11:00:06.237 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5086/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 258
+2026-01-08 11:00:06.237 +07:00 [DBG] No candidates found for the request path '/hangfire/stats'
+2026-01-08 11:00:06.237 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 11:00:06.237 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 11:00:06.237 +07:00 [DBG] Connection id "0HNIED89BNA27", Request id "0HNIED89BNA27:00000036": started reading request body.
+2026-01-08 11:00:06.238 +07:00 [DBG] Connection id "0HNIED89BNA27", Request id "0HNIED89BNA27:00000036": done reading request body.
+2026-01-08 11:00:06.242 +07:00 [DBG] Connection id "0HNIED89BNA27" completed keep alive response.
+2026-01-08 11:00:06.242 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5086/hangfire/stats - 200 null application/json 4.3169ms
+2026-01-08 11:00:08.271 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5086/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 258
+2026-01-08 11:00:08.271 +07:00 [DBG] No candidates found for the request path '/hangfire/stats'
+2026-01-08 11:00:08.271 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 11:00:08.271 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 11:00:08.271 +07:00 [DBG] Connection id "0HNIED89BNA27", Request id "0HNIED89BNA27:00000037": started reading request body.
+2026-01-08 11:00:08.271 +07:00 [DBG] Connection id "0HNIED89BNA27", Request id "0HNIED89BNA27:00000037": done reading request body.
+2026-01-08 11:00:08.275 +07:00 [DBG] Connection id "0HNIED89BNA27" completed keep alive response.
+2026-01-08 11:00:08.275 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5086/hangfire/stats - 200 null application/json 4.2802ms
+2026-01-08 11:00:10.370 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5086/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 258
+2026-01-08 11:00:10.370 +07:00 [DBG] No candidates found for the request path '/hangfire/stats'
+2026-01-08 11:00:10.370 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 11:00:10.370 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 11:00:10.370 +07:00 [DBG] Connection id "0HNIED89BNA27", Request id "0HNIED89BNA27:00000038": started reading request body.
+2026-01-08 11:00:10.370 +07:00 [DBG] Connection id "0HNIED89BNA27", Request id "0HNIED89BNA27:00000038": done reading request body.
+2026-01-08 11:00:10.373 +07:00 [DBG] Connection id "0HNIED89BNA27" completed keep alive response.
+2026-01-08 11:00:10.373 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5086/hangfire/stats - 200 null application/json 3.1785ms
+2026-01-08 11:00:12.013 +07:00 [DBG] Server desktop-l31jdro:20068:b38c7af3 heartbeat successfully sent
+2026-01-08 11:00:12.410 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5086/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 258
+2026-01-08 11:00:12.410 +07:00 [DBG] No candidates found for the request path '/hangfire/stats'
+2026-01-08 11:00:12.410 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 11:00:12.410 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 11:00:12.410 +07:00 [DBG] Connection id "0HNIED89BNA27", Request id "0HNIED89BNA27:00000039": started reading request body.
+2026-01-08 11:00:12.410 +07:00 [DBG] Connection id "0HNIED89BNA27", Request id "0HNIED89BNA27:00000039": done reading request body.
+2026-01-08 11:00:12.416 +07:00 [DBG] Connection id "0HNIED89BNA27" completed keep alive response.
+2026-01-08 11:00:12.416 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5086/hangfire/stats - 200 null application/json 5.6501ms
+2026-01-08 11:00:12.460 +07:00 [DBG] Connection id "0HNIED89BNA29" received FIN.
+2026-01-08 11:00:12.460 +07:00 [DBG] Connection id "0HNIED89BNA2A" received FIN.
+2026-01-08 11:00:12.460 +07:00 [DBG] Connection id "0HNIED89BNA26" received FIN.
+2026-01-08 11:00:12.461 +07:00 [DBG] Connection id "0HNIED89BNA29" disconnecting.
+2026-01-08 11:00:12.461 +07:00 [DBG] Connection id "0HNIED89BNA2A" disconnecting.
+2026-01-08 11:00:12.461 +07:00 [DBG] Connection id "0HNIED89BNA26" disconnecting.
+2026-01-08 11:00:12.462 +07:00 [DBG] Connection id "0HNIED89BNA29" stopped.
+2026-01-08 11:00:12.462 +07:00 [DBG] Connection id "0HNIED89BNA26" stopped.
+2026-01-08 11:00:12.462 +07:00 [DBG] Connection id "0HNIED89BNA2A" stopped.
+2026-01-08 11:00:12.463 +07:00 [DBG] Connection id "0HNIED89BNA29" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-01-08 11:00:12.463 +07:00 [DBG] Connection id "0HNIED89BNA2A" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-01-08 11:00:12.463 +07:00 [DBG] Connection id "0HNIED89BNA26" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-01-08 11:00:13.465 +07:00 [DBG] Connection id "0HNIED89BNA28" received FIN.
+2026-01-08 11:00:13.465 +07:00 [DBG] Connection id "0HNIED89BNA28" disconnecting.
+2026-01-08 11:00:13.465 +07:00 [DBG] Connection id "0HNIED89BNA28" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-01-08 11:00:13.485 +07:00 [DBG] Connection id "0HNIED89BNA28" stopped.
+2026-01-08 11:00:14.455 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5086/hangfire/stats - application/x-www-form-urlencoded; charset=UTF-8 258
+2026-01-08 11:00:14.455 +07:00 [DBG] No candidates found for the request path '/hangfire/stats'
+2026-01-08 11:00:14.455 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 11:00:14.455 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 11:00:14.455 +07:00 [DBG] Connection id "0HNIED89BNA27", Request id "0HNIED89BNA27:0000003A": started reading request body.
+2026-01-08 11:00:14.455 +07:00 [DBG] Connection id "0HNIED89BNA27", Request id "0HNIED89BNA27:0000003A": done reading request body.
+2026-01-08 11:00:14.458 +07:00 [DBG] Connection id "0HNIED89BNA27" completed keep alive response.
+2026-01-08 11:00:14.458 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5086/hangfire/stats - 200 null application/json 3.4419ms
