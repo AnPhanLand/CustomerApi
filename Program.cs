@@ -21,6 +21,8 @@ using Serilog.Events;
 using MediatR;
 using Hangfire; 
 using Hangfire.PostgreSql;
+using Polly; 
+using Polly.Retry;
 
 // using var log = ... (Local Logger) Once the method (like Main) finishes, the logger is destroyed (disposed).
 // Log.Logger = ... (Global Static Logger) It lives as long as your application is running.
@@ -166,6 +168,20 @@ try {
     // Defines a POST endpoint at "/login" that accepts login credentials and the database context.
     app.MapPost("/login", async (LoginRequest login, CustomerDb db) => 
     {
+        // 1. DEFINE THE POLICY
+        // We create a "Pipeline" that retries 3 times if a database exception occurs.
+        var pipeline = new ResiliencePipelineBuilder<Customer?>()
+            .AddRetry(new RetryStrategyOptions<Customer?>
+            {
+                ShouldHandle = new PredicateBuilder<Customer?>()
+                    .Handle<DbUpdateException>()
+                    .Handle<OperationCanceledException>(), // Handle timeouts
+                MaxRetryAttempts = 3,
+                Delay = TimeSpan.FromSeconds(1),
+                BackoffType = DelayBackoffType.Constant // Wait exactly 1s between tries
+            })
+            .Build();
+
         // 1. Logic for a 'backdoor' account to allow testing without database entries.
         bool isTestAccount = (login.Email == "admin@test.com" && login.Password == "password123");
         
@@ -181,7 +197,12 @@ try {
         else
         {
             // 2. Database lookup: Finds a real customer matching the provided email.
-            user = await db.Customers.FirstOrDefaultAsync(u => u.Email == login.Email);
+            // 2. EXECUTE THE LOOKUP INSIDE THE PIPELINE
+            // The code inside 'ExecuteAsync' is what Polly will watch over.
+            user = await pipeline.ExecuteAsync(async ct => 
+            {
+                return await db.Customers.FirstOrDefaultAsync(u => u.Email == login.Email, ct);
+            });
             
             // Security check: If user doesn't exist or password doesn't match, block access.
             if (user is null || user.Password != login.Password) 
