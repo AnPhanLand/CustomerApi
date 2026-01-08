@@ -19,6 +19,8 @@ using System.Security.Claims;
 using Serilog;
 using Serilog.Events;
 using MediatR;
+using Hangfire; 
+using Hangfire.PostgreSql;
 
 // using var log = ... (Local Logger) Once the method (like Main) finishes, the logger is destroyed (disposed).
 // Log.Logger = ... (Global Static Logger) It lives as long as your application is running.
@@ -70,6 +72,17 @@ try {
     // Registers your Database Context (CustomerDb) to use the Npgsql provider for PostgreSQL.
     builder.Services.AddDbContext<CustomerDb>(options =>
         options.UseNpgsql(connectionString));
+
+    // --- HANGFIRE CONFIGURATION ---
+    // 1. Tell Hangfire to use your Postgres database to store job data
+    builder.Services.AddHangfire(config => config
+        .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
+        .UseSimpleAssemblyNameTypeSerializer()
+        .UseRecommendedSerializerSettings()
+        .UsePostgreSqlStorage(options => options.UseNpgsqlConnection(connectionString)));
+
+    // 2. Add the Hangfire Server (the background worker that actually runs the jobs)
+    builder.Services.AddHangfireServer();
 
     // Provides helpful error pages during development if a database-related error occurs.
     builder.Services.AddDatabaseDeveloperPageExceptionFilter();
@@ -142,6 +155,10 @@ try {
 
     // 7. Middleware: Decides if the identified user is allowed to access the specific route.
     app.UseAuthorization();
+
+    // --- HANGFIRE DASHBOARD ---
+    // This creates the "/hangfire" URL where you can monitor your background jobs.
+    app.UseHangfireDashboard("/hangfire");
 
 
     // This section contains your Identity Logic (the /login endpoint) and your Development Tools (Swagger/OpenAPI). This is where your API transitions from being a passive database to an active security authority

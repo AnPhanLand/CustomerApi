@@ -2,6 +2,46 @@
   "version": 3,
   "targets": {
     "net10.0": {
+      "Dapper/2.0.123": {
+        "type": "package",
+        "compile": {
+          "lib/net5.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net5.0/Dapper.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Hangfire/1.8.22": {
+        "type": "package",
+        "dependencies": {
+          "Hangfire.AspNetCore": "[1.8.22]",
+          "Hangfire.Core": "[1.8.22]",
+          "Hangfire.SqlServer": "[1.8.22]"
+        }
+      },
+      "Hangfire.AspNetCore/1.8.22": {
+        "type": "package",
+        "dependencies": {
+          "Hangfire.NetCore": "[1.8.22]"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Hangfire.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Hangfire.AspNetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Hangfire.Core/1.8.22": {
         "type": "package",
         "dependencies": {
@@ -59,6 +99,56 @@
           },
           "lib/netstandard2.0/zh/Hangfire.Core.resources.dll": {
             "locale": "zh"
+          }
+        }
+      },
+      "Hangfire.NetCore/1.8.22": {
+        "type": "package",
+        "dependencies": {
+          "Hangfire.Core": "[1.8.22]"
+        },
+        "compile": {
+          "lib/netstandard2.1/Hangfire.NetCore.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.1/Hangfire.NetCore.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Hangfire.PostgreSql/1.20.13": {
+        "type": "package",
+        "dependencies": {
+          "Dapper": "2.0.123",
+          "Hangfire.Core": "1.8.0",
+          "Npgsql": "6.0.11"
+        },
+        "compile": {
+          "lib/netstandard2.0/Hangfire.PostgreSql.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Hangfire.PostgreSql.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Hangfire.SqlServer/1.8.22": {
+        "type": "package",
+        "dependencies": {
+          "Hangfire.Core": "[1.8.22]"
+        },
+        "compile": {
+          "lib/netstandard2.0/Hangfire.SqlServer.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/netstandard2.0/Hangfire.SqlServer.dll": {
+            "related": ".xml"
           }
         }
       },
@@ -1750,6 +1840,71 @@
     }
   },
   "libraries": {
+    "Dapper/2.0.123": {
+      "sha512": "RDFF4rBLLmbpi6pwkY7q/M6UXHRJEOerplDGE5jwEkP/JGJnBauAClYavNKJPW1yOTWRPIyfj4is3EaJxQXILQ==",
+      "type": "package",
+      "path": "dapper/2.0.123",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Dapper.png",
+        "dapper.2.0.123.nupkg.sha512",
+        "dapper.nuspec",
+        "lib/net461/Dapper.dll",
+        "lib/net461/Dapper.xml",
+        "lib/net5.0/Dapper.dll",
+        "lib/net5.0/Dapper.xml",
+        "lib/netstandard2.0/Dapper.dll",
+        "lib/netstandard2.0/Dapper.xml"
+      ]
+    },
+    "Hangfire/1.8.22": {
+      "sha512": "hA+HPipSEeGvsWsVFZG+2PI5+LNLRVOn2WYY+9jgIl1wgCsxECYKzU0DCCk/TA2UzeEuU5AzKaWyhs8clJP+yw==",
+      "type": "package",
+      "path": "hangfire/1.8.22",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "COPYING",
+        "COPYING.LESSER",
+        "LICENSE.md",
+        "LICENSE_ROYALTYFREE",
+        "LICENSE_STANDARD",
+        "NOTICES",
+        "README.md",
+        "hangfire.1.8.22.nupkg.sha512",
+        "hangfire.nuspec",
+        "icon.png"
+      ]
+    },
+    "Hangfire.AspNetCore/1.8.22": {
+      "sha512": "Ud5ZNnH9q5+3MryiuPTW7baRERN9QYLyX+8muLwH9BqumoE9eWZRxna9RrunYaMVkNGbTUUuwOfSYIvCC222TQ==",
+      "type": "package",
+      "path": "hangfire.aspnetcore/1.8.22",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "COPYING",
+        "COPYING.LESSER",
+        "LICENSE.md",
+        "LICENSE_ROYALTYFREE",
+        "LICENSE_STANDARD",
+        "NOTICES",
+        "hangfire.aspnetcore.1.8.22.nupkg.sha512",
+        "hangfire.aspnetcore.nuspec",
+        "icon.png",
+        "lib/net451/Hangfire.AspNetCore.dll",
+        "lib/net451/Hangfire.AspNetCore.xml",
+        "lib/net461/Hangfire.AspNetCore.dll",
+        "lib/net461/Hangfire.AspNetCore.xml",
+        "lib/netcoreapp3.0/Hangfire.AspNetCore.dll",
+        "lib/netcoreapp3.0/Hangfire.AspNetCore.xml",
+        "lib/netstandard1.3/Hangfire.AspNetCore.dll",
+        "lib/netstandard1.3/Hangfire.AspNetCore.xml",
+        "lib/netstandard2.0/Hangfire.AspNetCore.dll",
+        "lib/netstandard2.0/Hangfire.AspNetCore.xml"
+      ]
+    },
     "Hangfire.Core/1.8.22": {
       "sha512": "fjgEtlfkLNnUcX9IB+fp3gTPtt5G7VJ0PCcoKLEWnXJXn5qTm/mvrm/t3/T+Xj35ZePtbWBm+j2PXE0beFwzbA==",
       "type": "package",
@@ -1831,6 +1986,74 @@
         "lib/netstandard2.0/tr-TR/Hangfire.Core.resources.dll",
         "lib/netstandard2.0/zh-TW/Hangfire.Core.resources.dll",
         "lib/netstandard2.0/zh/Hangfire.Core.resources.dll"
+      ]
+    },
+    "Hangfire.NetCore/1.8.22": {
+      "sha512": "I7LiUHpC3ks7k+vLFOdwwCwDHxT83H+Mv6bT+7vkI1SLOc4Vwv2zOWdeeN1K86vddu7R36ho+eKP0gvfYlSZjg==",
+      "type": "package",
+      "path": "hangfire.netcore/1.8.22",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "COPYING",
+        "COPYING.LESSER",
+        "LICENSE.md",
+        "LICENSE_ROYALTYFREE",
+        "LICENSE_STANDARD",
+        "NOTICES",
+        "hangfire.netcore.1.8.22.nupkg.sha512",
+        "hangfire.netcore.nuspec",
+        "icon.png",
+        "lib/net451/Hangfire.NetCore.dll",
+        "lib/net451/Hangfire.NetCore.xml",
+        "lib/net461/Hangfire.NetCore.dll",
+        "lib/net461/Hangfire.NetCore.xml",
+        "lib/netstandard1.3/Hangfire.NetCore.dll",
+        "lib/netstandard1.3/Hangfire.NetCore.xml",
+        "lib/netstandard2.0/Hangfire.NetCore.dll",
+        "lib/netstandard2.0/Hangfire.NetCore.xml",
+        "lib/netstandard2.1/Hangfire.NetCore.dll",
+        "lib/netstandard2.1/Hangfire.NetCore.xml"
+      ]
+    },
+    "Hangfire.PostgreSql/1.20.13": {
+      "sha512": "+JxVOTQINm/gTNstGYgiJQzjP81lGM86COvaSomSyYbbjDExAcqwc5xflsykMVfBKxMP6C/bH0wWgrlhPS0SMQ==",
+      "type": "package",
+      "path": "hangfire.postgresql/1.20.13",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "hangfire.postgresql.1.20.13.nupkg.sha512",
+        "hangfire.postgresql.nuspec",
+        "lib/netstandard2.0/Hangfire.PostgreSql.dll",
+        "lib/netstandard2.0/Hangfire.PostgreSql.xml"
+      ]
+    },
+    "Hangfire.SqlServer/1.8.22": {
+      "sha512": "EXuS2taxDrYwznuabkqkYZNOJEEs4Y6A5w7JwuufGES3uJHsdA+3ELqVM9GrUxatGcko4DWIRnMTI2U2YBP1WA==",
+      "type": "package",
+      "path": "hangfire.sqlserver/1.8.22",
+      "hasTools": true,
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "COPYING",
+        "COPYING.LESSER",
+        "LICENSE.md",
+        "LICENSE_ROYALTYFREE",
+        "LICENSE_STANDARD",
+        "NOTICES",
+        "hangfire.sqlserver.1.8.22.nupkg.sha512",
+        "hangfire.sqlserver.nuspec",
+        "icon.png",
+        "lib/net451/Hangfire.SqlServer.dll",
+        "lib/net451/Hangfire.SqlServer.xml",
+        "lib/netstandard1.3/Hangfire.SqlServer.dll",
+        "lib/netstandard1.3/Hangfire.SqlServer.xml",
+        "lib/netstandard2.0/Hangfire.SqlServer.dll",
+        "lib/netstandard2.0/Hangfire.SqlServer.xml",
+        "tools/install.sql"
       ]
     },
     "Humanizer.Core/2.14.1": {
@@ -4341,7 +4564,9 @@
   },
   "projectFileDependencyGroups": {
     "net10.0": [
+      "Hangfire >= 1.8.22",
       "Hangfire.Core >= 1.8.22",
+      "Hangfire.PostgreSql >= 1.20.13",
       "MediatR >= 14.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 10.0.1",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 10.0.1",
@@ -4398,9 +4623,17 @@
       "net10.0": {
         "targetAlias": "net10.0",
         "dependencies": {
+          "Hangfire": {
+            "target": "Package",
+            "version": "[1.8.22, )"
+          },
           "Hangfire.Core": {
             "target": "Package",
             "version": "[1.8.22, )"
+          },
+          "Hangfire.PostgreSql": {
+            "target": "Package",
+            "version": "[1.20.13, )"
           },
           "MediatR": {
             "target": "Package",

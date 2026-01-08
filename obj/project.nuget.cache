@@ -1,10 +1,16 @@
 {
   "version": 2,
-  "dgSpecHash": "l4FMJDEwlrk=",
+  "dgSpecHash": "c3m3q6qVGMA=",
   "success": true,
   "projectFilePath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\Customer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\phant\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\hangfire\\1.8.22\\hangfire.1.8.22.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\hangfire.aspnetcore\\1.8.22\\hangfire.aspnetcore.1.8.22.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\hangfire.core\\1.8.22\\hangfire.core.1.8.22.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\hangfire.netcore\\1.8.22\\hangfire.netcore.1.8.22.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\hangfire.postgresql\\1.20.13\\hangfire.postgresql.1.20.13.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\hangfire.sqlserver\\1.8.22\\hangfire.sqlserver.1.8.22.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\mediatr\\14.0.0\\mediatr.14.0.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
