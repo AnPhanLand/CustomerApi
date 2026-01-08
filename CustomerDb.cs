@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 namespace CustomerApp;
-class CustomerDb : DbContext
+public class CustomerDb : DbContext
 {
     public CustomerDb(DbContextOptions<CustomerDb> options)
         : base(options) { }
