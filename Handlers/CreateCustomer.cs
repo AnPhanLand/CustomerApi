@@ -1,3 +1,4 @@
+using Hangfire;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
@@ -42,6 +43,11 @@ public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, IRes
         // 3. Execution: Save changes to the database (PostgreSQL in Docker)
         // We pass 'ct' so the database stops if the user disconnects.
         await _db.SaveChangesAsync(ct);
+
+        // --- HANGFIRE JOB ---
+        // This doesn't run the code NOW. It saves the "Plan" into Postgres
+        // and returns immediately.
+        BackgroundJob.Enqueue(() => Console.WriteLine($"Sending Welcome Email to: {customer.Email}"));
 
         // 4. Response: Return a 201 Created status and the location of the new resource
         return TypedResults.Created($"/customers/{customer.Id}", new CustomerCreateDTO(customer));
