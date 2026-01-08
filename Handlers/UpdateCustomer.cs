@@ -51,6 +51,7 @@ public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, IRes
         await _db.SaveChangesAsync(ct);
 
         await _cache.RemoveAsync($"customer_{request.Id}", ct);
+        await _cache.RemoveAsync("all_customers", ct);
 
         // 5. Return 204 No Content (Standard for successful updates).
         return TypedResults.NoContent();

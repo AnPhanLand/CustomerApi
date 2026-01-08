@@ -1,6 +1,8 @@
 using Hangfire;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
+using System.Text.Json;
 
 namespace CustomerApp;
 
@@ -19,11 +21,13 @@ public record CreateCustomerCommand(CustomerCreateDTO CustomerDTO) : IRequest<IR
 public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, IResult>
 {
     private readonly CustomerDb _db;
+    private readonly IDistributedCache _cache;
 
     // Injecting the database context. Ensure it is 'public' to avoid CS0051.
-    public CreateCustomerHandler(CustomerDb db)
+    public CreateCustomerHandler(CustomerDb db, IDistributedCache cache)
     {
         _db = db;
+        _cache = cache;
     }
 
     public async Task<IResult> Handle(CreateCustomerCommand request, CancellationToken ct)
@@ -43,6 +47,8 @@ public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, IRes
         // 3. Execution: Save changes to the database (PostgreSQL in Docker)
         // We pass 'ct' so the database stops if the user disconnects.
         await _db.SaveChangesAsync(ct);
+
+        await _cache.RemoveAsync("all_customers", ct);
 
         // --- HANGFIRE JOB ---
         // This doesn't run the code NOW. It saves the "Plan" into Postgres

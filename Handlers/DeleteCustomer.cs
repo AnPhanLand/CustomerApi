@@ -34,6 +34,7 @@ public class DeleteCustomerHandler : IRequestHandler<DeleteCustomerCommand, IRes
             _db.Customers.Remove(customer);
             await _db.SaveChangesAsync(ct);
             await _cache.RemoveAsync($"customer_{request.Id}", ct);
+            await _cache.RemoveAsync("all_customers", ct);
             return TypedResults.NoContent();
         }
 
