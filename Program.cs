@@ -59,6 +59,10 @@ try {
     // Full Visibility: You will see internal .NET events, like "Request Started," "Authentication Failed," or "SQL Query Executed."
     builder.Host.UseSerilog();
 
+    builder.Services.AddMediatR(cfg => {
+        cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
+    });
+
     // The connection string containing the address, credentials, and database name for your PostgreSQL instance.
     var connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=mysecretpassword";
 
