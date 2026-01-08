@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "YHmaHTCbBjk=",
+  "dgSpecHash": "YH5t0h5iY9E=",
   "success": true,
   "projectFilePath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\Customer.csproj",
   "expectedPackageFiles": [
@@ -33,6 +33,7 @@
     "C:\\Users\\phant\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\10.0.1\\microsoft.entityframeworkcore.inmemory.10.0.1.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\10.0.1\\microsoft.entityframeworkcore.relational.10.0.1.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\microsoft.extensions.ambientmetadata.application\\10.1.0\\microsoft.extensions.ambientmetadata.application.10.1.0.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\microsoft.extensions.caching.stackexchangeredis\\10.0.1\\microsoft.extensions.caching.stackexchangeredis.10.0.1.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\microsoft.extensions.compliance.abstractions\\10.1.0\\microsoft.extensions.compliance.abstractions.10.1.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\microsoft.extensions.dependencyinjection.autoactivation\\10.1.0\\microsoft.extensions.dependencyinjection.autoactivation.10.1.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\microsoft.extensions.dependencymodel\\10.0.1\\microsoft.extensions.dependencymodel.10.0.1.nupkg.sha512",
@@ -64,6 +65,7 @@
     "C:\\Users\\phant\\.nuget\\packages\\nswag.core.yaml\\14.6.3\\nswag.core.yaml.14.6.3.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\nswag.generation\\14.6.3\\nswag.generation.14.6.3.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\nswag.generation.aspnetcore\\14.6.3\\nswag.generation.aspnetcore.14.6.3.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\polly.core\\8.6.5\\polly.core.8.6.5.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\polly.extensions\\8.4.2\\polly.extensions.8.4.2.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\polly.ratelimiting\\8.4.2\\polly.ratelimiting.8.4.2.nupkg.sha512",
@@ -76,6 +78,7 @@
     "C:\\Users\\phant\\.nuget\\packages\\serilog.sinks.console\\6.1.1\\serilog.sinks.console.6.1.1.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\serilog.sinks.debug\\3.0.0\\serilog.sinks.debug.3.0.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\serilog.sinks.file\\7.0.0\\serilog.sinks.file.7.0.0.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\stackexchange.redis\\2.7.27\\stackexchange.redis.2.7.27.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\system.codedom\\9.0.0\\system.codedom.9.0.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\system.composition\\9.0.0\\system.composition.9.0.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\system.composition.attributedmodel\\9.0.0\\system.composition.attributedmodel.9.0.0.nupkg.sha512",

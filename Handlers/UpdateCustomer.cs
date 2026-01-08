@@ -1,5 +1,7 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
+using System.Text.Json;
 
 namespace CustomerApp;
 
@@ -17,11 +19,14 @@ public record UpdateCustomerCommand(Guid Id, CustomerUpdateDTO CustomerDTO) : IR
 public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, IResult>
 {
     private readonly CustomerDb _db;
+    
+    private readonly IDistributedCache _cache;
 
     // Injecting the database context. Remember to keep CustomerDb 'public'.
-    public UpdateCustomerHandler(CustomerDb db)
+    public UpdateCustomerHandler(CustomerDb db, IDistributedCache cache)
     {
         _db = db;
+        _cache = cache;
     }
 
     public async Task<IResult> Handle(UpdateCustomerCommand request, CancellationToken ct)
@@ -44,6 +49,8 @@ public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, IRes
         // 4. Save the changes. 
         // Since EF Core is "tracking" this customer, it knows exactly what changed.
         await _db.SaveChangesAsync(ct);
+
+        await _cache.RemoveAsync($"customer_{request.Id}", ct);
 
         // 5. Return 204 No Content (Standard for successful updates).
         return TypedResults.NoContent();

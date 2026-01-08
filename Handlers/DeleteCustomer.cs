@@ -1,5 +1,6 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
 
 namespace CustomerApp;
 
@@ -17,11 +18,13 @@ public record DeleteCustomerCommand(Guid Id) : IRequest<IResult>;
 public class DeleteCustomerHandler : IRequestHandler<DeleteCustomerCommand, IResult>
 {
     private readonly CustomerDb _db;
+    private readonly IDistributedCache _cache;
 
     // Injecting the database context. Remember to keep CustomerDb 'public'.
-    public DeleteCustomerHandler(CustomerDb db)
+    public DeleteCustomerHandler(CustomerDb db, IDistributedCache cache)
     {
         _db = db;
+        _cache = cache;
     }
 
     public async Task<IResult> Handle(DeleteCustomerCommand request, CancellationToken ct)
@@ -30,6 +33,7 @@ public class DeleteCustomerHandler : IRequestHandler<DeleteCustomerCommand, IRes
         {
             _db.Customers.Remove(customer);
             await _db.SaveChangesAsync(ct);
+            await _cache.RemoveAsync($"customer_{request.Id}", ct);
             return TypedResults.NoContent();
         }
 

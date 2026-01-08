@@ -86,6 +86,15 @@ try {
     // 2. Add the Hangfire Server (the background worker that actually runs the jobs)
     builder.Services.AddHangfireServer();
 
+    // The default Redis port is 6379
+    var redisConnection = "localhost:6379"; 
+
+    builder.Services.AddStackExchangeRedisCache(options =>
+    {
+        options.Configuration = redisConnection;
+        options.InstanceName = "CustomerAPI_"; // Keeps your keys organized
+    });
+
     // Provides helpful error pages during development if a database-related error occurs.
     builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
