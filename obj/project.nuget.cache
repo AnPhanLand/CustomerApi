@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "mGwAN94GLSg=",
+  "dgSpecHash": "l4FMJDEwlrk=",
   "success": true,
   "projectFilePath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\Customer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\phant\\.nuget\\packages\\hangfire.core\\1.8.22\\hangfire.core.1.8.22.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\mediatr\\14.0.0\\mediatr.14.0.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

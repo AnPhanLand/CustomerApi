@@ -1,0 +1,483 @@
+2026-01-08 09:55:37.815 +07:00 [INF] Starting the API...
+2026-01-08 09:55:38.101 +07:00 [INF] This is var secretKey: A_Very_Long_Random_String_That_Is_At_Least_32_Chars_Long!
+2026-01-08 09:55:38.333 +07:00 [DBG] Hosting starting
+2026-01-08 09:55:38.356 +07:00 [INF] User profile is available. Using 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-08 09:55:38.372 +07:00 [DBG] Reading data from file 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys\key-e0e4c711-e38d-4994-9c4d-b0c1ef741012.xml'.
+2026-01-08 09:55:38.388 +07:00 [DBG] Found key {e0e4c711-e38d-4994-9c4d-b0c1ef741012}.
+2026-01-08 09:55:38.403 +07:00 [DBG] Considering key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} with expiration date 2026-03-29 06:37:16Z as default key.
+2026-01-08 09:55:38.408 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-01-08 09:55:38.410 +07:00 [DBG] Decrypting secret element using Windows DPAPI.
+2026-01-08 09:55:38.411 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-01-08 09:55:38.419 +07:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2026-01-08 09:55:38.421 +07:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2026-01-08 09:55:38.423 +07:00 [DBG] Using key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} as the default key.
+2026-01-08 09:55:38.423 +07:00 [DBG] Key ring with default key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} was loaded during application startup.
+2026-01-08 09:55:38.429 +07:00 [DBG] Middleware loaded
+2026-01-08 09:55:38.433 +07:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16459 B).
+2026-01-08 09:55:38.438 +07:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2026-01-08 09:55:38.562 +07:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2026-01-08 09:55:38.563 +07:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2026-01-08 09:55:38.564 +07:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2026-01-08 09:55:38.587 +07:00 [INF] Now listening on: http://localhost:5086
+2026-01-08 09:55:38.587 +07:00 [DBG] Loaded hosting startup assembly Customer
+2026-01-08 09:55:38.588 +07:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2026-01-08 09:55:38.588 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-08 09:55:38.589 +07:00 [INF] Hosting environment: Development
+2026-01-08 09:55:38.589 +07:00 [INF] Content root path: C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi
+2026-01-08 09:55:38.589 +07:00 [DBG] Hosting started
+2026-01-08 09:55:39.320 +07:00 [DBG] Connection id "0HNIEC5JSHS3F" accepted.
+2026-01-08 09:55:39.321 +07:00 [DBG] Connection id "0HNIEC5JSHS3F" started.
+2026-01-08 09:55:39.353 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/ - null null
+2026-01-08 09:55:39.403 +07:00 [DBG] No candidates found for the request path '/'
+2026-01-08 09:55:39.404 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 09:55:39.490 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:55:39.495 +07:00 [DBG] The request path  does not match the path filter
+2026-01-08 09:55:39.503 +07:00 [DBG] Connection id "0HNIEC5JSHS3F" completed keep alive response.
+2026-01-08 09:55:39.504 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/ - 404 null null 152.5061ms
+2026-01-08 09:55:39.530 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5086/, Response status code: 404
+2026-01-08 09:55:39.638 +07:00 [DBG] Connection id "0HNIEC5JSHS3F" received FIN.
+2026-01-08 09:55:39.641 +07:00 [DBG] Connection id "0HNIEC5JSHS3F" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-01-08 09:55:39.641 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/favicon.ico - null null
+2026-01-08 09:55:39.641 +07:00 [DBG] Connection id "0HNIEC5JSHS3F" disconnecting.
+2026-01-08 09:55:39.644 +07:00 [DBG] No candidates found for the request path '/favicon.ico'
+2026-01-08 09:55:39.644 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 09:55:39.647 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:55:39.647 +07:00 [DBG] The request path  does not match the path filter
+2026-01-08 09:55:39.648 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/favicon.ico - 499 null null 6.7786ms
+2026-01-08 09:55:39.649 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5086/favicon.ico, Response status code: 499
+2026-01-08 09:55:39.657 +07:00 [DBG] Connection id "0HNIEC5JSHS3F" stopped.
+2026-01-08 09:56:25.168 +07:00 [INF] Starting the API...
+2026-01-08 09:56:25.282 +07:00 [INF] This is var secretKey: A_Very_Long_Random_String_That_Is_At_Least_32_Chars_Long!
+2026-01-08 09:56:25.361 +07:00 [DBG] Hosting starting
+2026-01-08 09:56:25.374 +07:00 [INF] User profile is available. Using 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-08 09:56:25.379 +07:00 [DBG] Reading data from file 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys\key-e0e4c711-e38d-4994-9c4d-b0c1ef741012.xml'.
+2026-01-08 09:56:25.386 +07:00 [DBG] Found key {e0e4c711-e38d-4994-9c4d-b0c1ef741012}.
+2026-01-08 09:56:25.392 +07:00 [DBG] Considering key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} with expiration date 2026-03-29 06:37:16Z as default key.
+2026-01-08 09:56:25.395 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-01-08 09:56:25.396 +07:00 [DBG] Decrypting secret element using Windows DPAPI.
+2026-01-08 09:56:25.397 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-01-08 09:56:25.400 +07:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2026-01-08 09:56:25.401 +07:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2026-01-08 09:56:25.401 +07:00 [DBG] Using key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} as the default key.
+2026-01-08 09:56:25.402 +07:00 [DBG] Key ring with default key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} was loaded during application startup.
+2026-01-08 09:56:25.405 +07:00 [DBG] Middleware loaded
+2026-01-08 09:56:25.407 +07:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16459 B).
+2026-01-08 09:56:25.410 +07:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2026-01-08 09:56:25.458 +07:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2026-01-08 09:56:25.459 +07:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2026-01-08 09:56:25.460 +07:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2026-01-08 09:56:25.472 +07:00 [INF] Now listening on: http://localhost:5086
+2026-01-08 09:56:25.472 +07:00 [DBG] Loaded hosting startup assembly Customer
+2026-01-08 09:56:25.472 +07:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2026-01-08 09:56:25.472 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-08 09:56:25.472 +07:00 [INF] Hosting environment: Development
+2026-01-08 09:56:25.472 +07:00 [INF] Content root path: C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi
+2026-01-08 09:56:25.473 +07:00 [DBG] Hosting started
+2026-01-08 09:56:25.769 +07:00 [DBG] Connection id "0HNIEC61NGUIB" accepted.
+2026-01-08 09:56:25.770 +07:00 [DBG] Connection id "0HNIEC61NGUIB" started.
+2026-01-08 09:56:25.793 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/ - null null
+2026-01-08 09:56:25.817 +07:00 [DBG] No candidates found for the request path '/'
+2026-01-08 09:56:25.817 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 09:56:25.836 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:56:25.839 +07:00 [DBG] The request path  does not match the path filter
+2026-01-08 09:56:25.841 +07:00 [DBG] Connection id "0HNIEC61NGUIB" completed keep alive response.
+2026-01-08 09:56:25.842 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/ - 404 null null 51.573ms
+2026-01-08 09:56:25.852 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5086/, Response status code: 404
+2026-01-08 09:56:25.900 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/favicon.ico - null null
+2026-01-08 09:56:25.901 +07:00 [DBG] No candidates found for the request path '/favicon.ico'
+2026-01-08 09:56:25.901 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 09:56:25.903 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:56:25.903 +07:00 [DBG] The request path  does not match the path filter
+2026-01-08 09:56:25.903 +07:00 [DBG] Connection id "0HNIEC61NGUIB" completed keep alive response.
+2026-01-08 09:56:25.904 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/favicon.ico - 404 0 null 3.5809ms
+2026-01-08 09:56:25.904 +07:00 [DBG] Connection id "0HNIEC61NGUIB" reset.
+2026-01-08 09:56:25.904 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5086/favicon.ico, Response status code: 404
+2026-01-08 09:56:25.905 +07:00 [DBG] Connection id "0HNIEC61NGUIB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-01-08 09:56:25.905 +07:00 [DBG] Connection id "0HNIEC61NGUIB" disconnecting.
+2026-01-08 09:56:25.907 +07:00 [DBG] Connection id "0HNIEC61NGUIB" stopped.
+2026-01-08 09:56:31.739 +07:00 [DBG] Connection id "0HNIEC61NGUIC" accepted.
+2026-01-08 09:56:31.740 +07:00 [DBG] Connection id "0HNIEC61NGUIC" started.
+2026-01-08 09:56:31.740 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/swagger - null null
+2026-01-08 09:56:31.741 +07:00 [DBG] No candidates found for the request path '/swagger'
+2026-01-08 09:56:31.741 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 09:56:31.743 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:56:31.747 +07:00 [DBG] Connection id "0HNIEC61NGUIC" completed keep alive response.
+2026-01-08 09:56:31.747 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/swagger - 302 null null 6.8196ms
+2026-01-08 09:56:31.791 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/swagger/index.html - null null
+2026-01-08 09:56:31.791 +07:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2026-01-08 09:56:31.791 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 09:56:31.791 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:56:31.857 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2026-01-08 09:56:31.862 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2026-01-08 09:56:31.862 +07:00 [DBG] Connection id "0HNIEC61NGUIC" completed keep alive response.
+2026-01-08 09:56:31.862 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/swagger/index.html - 200 null text/html; charset=utf-8 71.1626ms
+2026-01-08 09:56:31.912 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/swagger/swagger-ui.css - null null
+2026-01-08 09:56:31.912 +07:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2026-01-08 09:56:31.912 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 09:56:31.912 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:56:31.913 +07:00 [DBG] Connection id "0HNIEC61NGUID" accepted.
+2026-01-08 09:56:31.913 +07:00 [DBG] Connection id "0HNIEC61NGUID" started.
+2026-01-08 09:56:31.914 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/swagger/index.css - null null
+2026-01-08 09:56:31.914 +07:00 [DBG] No candidates found for the request path '/swagger/index.css'
+2026-01-08 09:56:31.914 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 09:56:31.914 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:56:31.915 +07:00 [DBG] Connection id "0HNIEC61NGUIE" accepted.
+2026-01-08 09:56:31.915 +07:00 [DBG] Connection id "0HNIEC61NGUIE" started.
+2026-01-08 09:56:31.915 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/swagger/swagger-ui-bundle.js - null null
+2026-01-08 09:56:31.915 +07:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2026-01-08 09:56:31.915 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 09:56:31.915 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:56:31.916 +07:00 [DBG] Connection id "0HNIEC61NGUIF" accepted.
+2026-01-08 09:56:31.916 +07:00 [DBG] Connection id "0HNIEC61NGUIF" started.
+2026-01-08 09:56:31.916 +07:00 [DBG] Connection id "0HNIEC61NGUIG" accepted.
+2026-01-08 09:56:31.916 +07:00 [DBG] Connection id "0HNIEC61NGUIG" started.
+2026-01-08 09:56:31.917 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-08 09:56:31.917 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/swagger/swagger-ui-standalone-preset.js - null null
+2026-01-08 09:56:31.917 +07:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2026-01-08 09:56:31.917 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 09:56:31.917 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:56:31.919 +07:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2026-01-08 09:56:31.919 +07:00 [DBG] Connection id "0HNIEC61NGUID" completed keep alive response.
+2026-01-08 09:56:31.919 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/swagger/index.css - 200 218 text/css 5.4226ms
+2026-01-08 09:56:31.919 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2026-01-08 09:56:31.919 +07:00 [DBG] Connection id "0HNIEC61NGUIG" completed keep alive response.
+2026-01-08 09:56:31.919 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/_framework/aspnetcore-browser-refresh.js - 200 16459 application/javascript; charset=utf-8 2.6675ms
+2026-01-08 09:56:31.930 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-01-08 09:56:31.930 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-01-08 09:56:31.933 +07:00 [DBG] Connection id "0HNIEC61NGUIC" completed keep alive response.
+2026-01-08 09:56:31.933 +07:00 [DBG] Connection id "0HNIEC61NGUIF" completed keep alive response.
+2026-01-08 09:56:31.933 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/swagger/swagger-ui-standalone-preset.js - 200 229224 text/javascript 16.5964ms
+2026-01-08 09:56:31.933 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/swagger/swagger-ui.css - 200 154988 text/css 21.0907ms
+2026-01-08 09:56:31.946 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-01-08 09:56:31.946 +07:00 [DBG] Connection id "0HNIEC61NGUIE" completed keep alive response.
+2026-01-08 09:56:31.946 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/swagger/swagger-ui-bundle.js - 200 1468327 text/javascript 31.1207ms
+2026-01-08 09:56:32.191 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/swagger/CustomerAPI/swagger.json - null null
+2026-01-08 09:56:32.191 +07:00 [DBG] No candidates found for the request path '/swagger/CustomerAPI/swagger.json'
+2026-01-08 09:56:32.191 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 09:56:32.191 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:56:32.194 +07:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-08 09:56:32.196 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v10.0.0.0.
+2026-01-08 09:56:32.304 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/swagger/favicon-16x16.png - null null
+2026-01-08 09:56:32.304 +07:00 [DBG] No candidates found for the request path '/swagger/favicon-16x16.png'
+2026-01-08 09:56:32.305 +07:00 [DBG] Request did not match any endpoints
+2026-01-08 09:56:32.305 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:56:32.305 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2026-01-08 09:56:32.305 +07:00 [DBG] Connection id "0HNIEC61NGUIF" completed keep alive response.
+2026-01-08 09:56:32.305 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/swagger/favicon-16x16.png - 200 665 image/png 1.0102ms
+2026-01-08 09:56:32.523 +07:00 [DBG] Connection id "0HNIEC61NGUIE" completed keep alive response.
+2026-01-08 09:56:32.523 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/swagger/CustomerAPI/swagger.json - 200 null application/json; charset=utf-8 332.6563ms
+2026-01-08 09:57:54.107 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5086/login - application/json 47
+2026-01-08 09:57:54.110 +07:00 [DBG] 1 candidate(s) found for the request path '/login'
+2026-01-08 09:57:54.110 +07:00 [DBG] Request matched endpoint 'HTTP: POST /login'
+2026-01-08 09:57:54.110 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:57:54.111 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-01-08 09:57:54.111 +07:00 [INF] Executing endpoint 'HTTP: POST /login'
+2026-01-08 09:57:54.125 +07:00 [DBG] Connection id "0HNIEC61NGUIE", Request id "0HNIEC61NGUIE:00000003": started reading request body.
+2026-01-08 09:57:54.125 +07:00 [DBG] Connection id "0HNIEC61NGUIE", Request id "0HNIEC61NGUIE:00000003": done reading request body.
+2026-01-08 09:57:54.248 +07:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2026-01-08 09:57:54.636 +07:00 [DBG] Entity Framework Core 10.0.1 initialized 'CustomerDb' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:10.0.0+7624373747b28d693b45cea8174471d4b312e2a5' with options: None
+2026-01-08 09:57:54.689 +07:00 [DBG] Compiling query expression: 
+'DbSet<Customer>()
+    .FirstOrDefault(u => u.Email == @login_Email)'
+2026-01-08 09:57:54.896 +07:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Customer>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<Customer>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IPropertyBase, int> { [Property: Customer.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Customer.Email (string) Required, 1], [Property: Customer.FirstName (string) Required, 2], [Property: Customer.LastName (string) Required, 3], [Property: Customer.Password (string) Required, 4] }
+            SELECT TOP(1) c.Id, c.Email, c.FirstName, c.LastName, c.Password
+            FROM Customers AS c
+            WHERE c.Email == @login_Email) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IPropertyBase, int> { [Property: Customer.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Customer.Email (string) Required, 1], [Property: Customer.FirstName (string) Required, 2], [Property: Customer.LastName (string) Required, 3], [Property: Customer.Password (string) Required, 4] }
+            SELECT TOP(1) c.Id, c.Email, c.FirstName, c.LastName, c.Password
+            FROM Customers AS c
+            WHERE c.Email == @login_Email, 
+            False, 
+            Parameter
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: null, 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            Customer entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                Customer instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(Customer);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: Customer.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("CustomerApp.Customer").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetGuid(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (Customer)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: Customer | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("CustomerApp.Customer")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: Customer | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("CustomerApp.Customer")]: 
+                            {
+                                return 
+                                {
+                                    Customer instance;
+                                    instance = new Customer();
+                                    instance.<Id>k__BackingField = dataReader.GetGuid(0);
+                                    instance.<Email>k__BackingField = dataReader.GetString(1);
+                                    instance.<FirstName>k__BackingField = dataReader.GetString(2);
+                                    instance.<LastName>k__BackingField = dataReader.GetString(3);
+                                    instance.<Password>k__BackingField = dataReader.GetString(4);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: Customer | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("CustomerApp.Customer")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(Customer)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            return entity;
+        }, 
+        contextType: CustomerApp.CustomerDb, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)'
+2026-01-08 09:57:54.930 +07:00 [DBG] Creating DbConnection.
+2026-01-08 09:57:54.990 +07:00 [DBG] Created DbConnection. (59ms).
+2026-01-08 09:57:54.993 +07:00 [DBG] Opening connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:57:55.243 +07:00 [DBG] Opened connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:57:55.245 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-01-08 09:57:55.250 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2026-01-08 09:57:55.254 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (8ms).
+2026-01-08 09:57:55.259 +07:00 [DBG] Executing DbCommand [Parameters=[@login_Email='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Email", c."FirstName", c."LastName", c."Password"
+FROM "Customers" AS c
+WHERE c."Email" = @login_Email
+LIMIT 1
+2026-01-08 09:57:55.311 +07:00 [INF] Executed DbCommand (51ms) [Parameters=[@login_Email='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Email", c."FirstName", c."LastName", c."Password"
+FROM "Customers" AS c
+WHERE c."Email" = @login_Email
+LIMIT 1
+2026-01-08 09:57:55.316 +07:00 [DBG] Closing data reader to 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:57:55.322 +07:00 [DBG] A data reader for 'postgres' on server 'tcp://localhost:5432' is being disposed after spending 8ms reading results.
+2026-01-08 09:57:55.324 +07:00 [DBG] Closing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:57:55.328 +07:00 [DBG] Closed connection to database 'postgres' on server 'tcp://localhost:5432' (3ms).
+2026-01-08 09:57:55.331 +07:00 [INF] Setting HTTP status code 401.
+2026-01-08 09:57:55.331 +07:00 [INF] Executed endpoint 'HTTP: POST /login'
+2026-01-08 09:57:55.331 +07:00 [DBG] Connection id "0HNIEC61NGUIE" completed keep alive response.
+2026-01-08 09:57:55.333 +07:00 [DBG] 'CustomerDb' disposed.
+2026-01-08 09:57:55.336 +07:00 [DBG] Disposing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:57:55.337 +07:00 [DBG] Disposed connection to database 'postgres' on server 'tcp://localhost:5432' (1ms).
+2026-01-08 09:57:55.337 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5086/login - 401 0 null 1229.927ms
+2026-01-08 09:58:18.014 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5086/login - application/json 53
+2026-01-08 09:58:18.014 +07:00 [DBG] 1 candidate(s) found for the request path '/login'
+2026-01-08 09:58:18.015 +07:00 [DBG] Request matched endpoint 'HTTP: POST /login'
+2026-01-08 09:58:18.015 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-08 09:58:18.015 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-01-08 09:58:18.015 +07:00 [INF] Executing endpoint 'HTTP: POST /login'
+2026-01-08 09:58:18.015 +07:00 [DBG] Connection id "0HNIEC61NGUIE", Request id "0HNIEC61NGUIE:00000004": started reading request body.
+2026-01-08 09:58:18.015 +07:00 [DBG] Connection id "0HNIEC61NGUIE", Request id "0HNIEC61NGUIE:00000004": done reading request body.
+2026-01-08 09:58:18.067 +07:00 [DBG] Entity Framework Core 10.0.1 initialized 'CustomerDb' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:10.0.0+7624373747b28d693b45cea8174471d4b312e2a5' with options: None
+2026-01-08 09:58:18.071 +07:00 [DBG] Creating DbConnection.
+2026-01-08 09:58:18.071 +07:00 [DBG] Created DbConnection. (0ms).
+2026-01-08 09:58:18.071 +07:00 [DBG] Opening connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:58:18.071 +07:00 [DBG] Opened connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:58:18.071 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-01-08 09:58:18.071 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2026-01-08 09:58:18.071 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2026-01-08 09:58:18.071 +07:00 [DBG] Executing DbCommand [Parameters=[@login_Email='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Email", c."FirstName", c."LastName", c."Password"
+FROM "Customers" AS c
+WHERE c."Email" = @login_Email
+LIMIT 1
+2026-01-08 09:58:18.073 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@login_Email='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Email", c."FirstName", c."LastName", c."Password"
+FROM "Customers" AS c
+WHERE c."Email" = @login_Email
+LIMIT 1
+2026-01-08 09:58:18.103 +07:00 [DBG] Context 'CustomerDb' started tracking 'Customer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-01-08 09:58:18.114 +07:00 [DBG] Closing data reader to 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:58:18.114 +07:00 [DBG] A data reader for 'postgres' on server 'tcp://localhost:5432' is being disposed after spending 41ms reading results.
+2026-01-08 09:58:18.114 +07:00 [DBG] Closing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:58:18.114 +07:00 [DBG] Closed connection to database 'postgres' on server 'tcp://localhost:5432' (0ms).
+2026-01-08 09:58:18.137 +07:00 [INF] Setting HTTP status code 200.
+2026-01-08 09:58:18.141 +07:00 [INF] Writing value of type '<>f__AnonymousType1`2' as Json.
+2026-01-08 09:58:18.143 +07:00 [INF] Executed endpoint 'HTTP: POST /login'
+2026-01-08 09:58:18.143 +07:00 [DBG] Connection id "0HNIEC61NGUIE" completed keep alive response.
+2026-01-08 09:58:18.143 +07:00 [DBG] 'CustomerDb' disposed.
+2026-01-08 09:58:18.143 +07:00 [DBG] Disposing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:58:18.143 +07:00 [DBG] Disposed connection to database 'postgres' on server 'tcp://localhost:5432' (0ms).
+2026-01-08 09:58:18.143 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5086/login - 200 null application/json; charset=utf-8 129.0823ms
+2026-01-08 09:58:27.534 +07:00 [DBG] Connection id "0HNIEC61NGUIF" received FIN.
+2026-01-08 09:58:27.535 +07:00 [DBG] Connection id "0HNIEC61NGUIG" received FIN.
+2026-01-08 09:58:27.535 +07:00 [DBG] Connection id "0HNIEC61NGUID" received FIN.
+2026-01-08 09:58:27.535 +07:00 [DBG] Connection id "0HNIEC61NGUIC" received FIN.
+2026-01-08 09:58:27.535 +07:00 [DBG] Connection id "0HNIEC61NGUIF" disconnecting.
+2026-01-08 09:58:27.535 +07:00 [DBG] Connection id "0HNIEC61NGUIF" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-01-08 09:58:27.535 +07:00 [DBG] Connection id "0HNIEC61NGUIG" disconnecting.
+2026-01-08 09:58:27.535 +07:00 [DBG] Connection id "0HNIEC61NGUIG" stopped.
+2026-01-08 09:58:27.536 +07:00 [DBG] Connection id "0HNIEC61NGUID" disconnecting.
+2026-01-08 09:58:27.536 +07:00 [DBG] Connection id "0HNIEC61NGUID" stopped.
+2026-01-08 09:58:27.537 +07:00 [DBG] Connection id "0HNIEC61NGUIC" disconnecting.
+2026-01-08 09:58:27.537 +07:00 [DBG] Connection id "0HNIEC61NGUIC" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-01-08 09:58:27.537 +07:00 [DBG] Connection id "0HNIEC61NGUIG" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-01-08 09:58:27.538 +07:00 [DBG] Connection id "0HNIEC61NGUID" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-01-08 09:58:27.555 +07:00 [DBG] Connection id "0HNIEC61NGUIC" stopped.
+2026-01-08 09:58:27.555 +07:00 [DBG] Connection id "0HNIEC61NGUIF" stopped.
+2026-01-08 09:58:34.285 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5086/Customer - null null
+2026-01-08 09:58:34.285 +07:00 [DBG] 1 candidate(s) found for the request path '/Customer'
+2026-01-08 09:58:34.285 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Customer/'
+2026-01-08 09:58:34.318 +07:00 [DBG] Successfully validated the token.
+2026-01-08 09:58:34.319 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2026-01-08 09:58:34.321 +07:00 [DBG] Authorization was successful.
+2026-01-08 09:58:34.321 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-01-08 09:58:34.322 +07:00 [INF] Executing endpoint 'HTTP: GET /Customer/'
+2026-01-08 09:58:34.324 +07:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-08 09:58:34.337 +07:00 [DBG] Entity Framework Core 10.0.1 initialized 'CustomerDb' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:10.0.0+7624373747b28d693b45cea8174471d4b312e2a5' with options: None
+2026-01-08 09:58:34.341 +07:00 [DBG] Compiling query expression: 
+'DbSet<Customer>()
+    .Select(x => new CustomerReadDTO(x))'
+2026-01-08 09:58:34.348 +07:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<CustomerReadDTO>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Client Projections:
+            0 -> Dictionary<IPropertyBase, int> { [Property: Customer.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Customer.Email (string) Required, 1], [Property: Customer.FirstName (string) Required, 2], [Property: Customer.LastName (string) Required, 3], [Property: Customer.Password (string) Required, 4] }
+        SELECT c.Id, c.Email, c.FirstName, c.LastName, c.Password
+        FROM Customers AS c) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Client Projections:
+            0 -> Dictionary<IPropertyBase, int> { [Property: Customer.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Customer.Email (string) Required, 1], [Property: Customer.FirstName (string) Required, 2], [Property: Customer.LastName (string) Required, 3], [Property: Customer.Password (string) Required, 4] }
+        SELECT c.Id, c.Email, c.FirstName, c.LastName, c.Password
+        FROM Customers AS c, 
+        False, 
+        Parameter
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        Customer entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            Customer instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(Customer);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: Customer.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("CustomerApp.Customer").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetGuid(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (Customer)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: Customer | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("CustomerApp.Customer")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: Customer | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("CustomerApp.Customer")]: 
+                        {
+                            return 
+                            {
+                                Customer instance;
+                                instance = new Customer();
+                                instance.<Id>k__BackingField = dataReader.GetGuid(0);
+                                instance.<Email>k__BackingField = dataReader.GetString(1);
+                                instance.<FirstName>k__BackingField = dataReader.GetString(2);
+                                instance.<LastName>k__BackingField = dataReader.GetString(3);
+                                instance.<Password>k__BackingField = dataReader.GetString(4);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: Customer | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("CustomerApp.Customer")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(Customer)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return new CustomerReadDTO(entity);
+    }, 
+    contextType: CustomerApp.CustomerDb, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)'
+2026-01-08 09:58:34.350 +07:00 [DBG] Creating DbConnection.
+2026-01-08 09:58:34.350 +07:00 [DBG] Created DbConnection. (0ms).
+2026-01-08 09:58:34.350 +07:00 [DBG] Opening connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:58:34.350 +07:00 [DBG] Opened connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:58:34.350 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-01-08 09:58:34.350 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2026-01-08 09:58:34.350 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2026-01-08 09:58:34.350 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Email", c."FirstName", c."LastName", c."Password"
+FROM "Customers" AS c
+2026-01-08 09:58:34.351 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."Email", c."FirstName", c."LastName", c."Password"
+FROM "Customers" AS c
+2026-01-08 09:58:34.351 +07:00 [DBG] Context 'CustomerDb' started tracking 'Customer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-01-08 09:58:34.352 +07:00 [DBG] Closing data reader to 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:58:34.352 +07:00 [DBG] A data reader for 'postgres' on server 'tcp://localhost:5432' is being disposed after spending 1ms reading results.
+2026-01-08 09:58:34.353 +07:00 [DBG] Closing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:58:34.353 +07:00 [DBG] Closed connection to database 'postgres' on server 'tcp://localhost:5432' (0ms).
+2026-01-08 09:58:34.353 +07:00 [INF] Setting HTTP status code 200.
+2026-01-08 09:58:34.360 +07:00 [INF] Writing value of type 'CustomerReadDTO[]' as Json.
+2026-01-08 09:58:34.362 +07:00 [INF] Executed endpoint 'HTTP: GET /Customer/'
+2026-01-08 09:58:34.362 +07:00 [DBG] Connection id "0HNIEC61NGUIE" completed keep alive response.
+2026-01-08 09:58:34.362 +07:00 [DBG] 'CustomerDb' disposed.
+2026-01-08 09:58:34.362 +07:00 [DBG] Disposing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-08 09:58:34.362 +07:00 [DBG] Disposed connection to database 'postgres' on server 'tcp://localhost:5432' (0ms).
+2026-01-08 09:58:34.362 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5086/Customer - 200 null application/json; charset=utf-8 77.8227ms
+2026-01-08 10:00:30.965 +07:00 [DBG] Connection id "0HNIEC61NGUIE" received FIN.
+2026-01-08 10:00:30.965 +07:00 [DBG] Connection id "0HNIEC61NGUIE" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-01-08 10:00:30.965 +07:00 [DBG] Connection id "0HNIEC61NGUIE" disconnecting.
+2026-01-08 10:00:30.965 +07:00 [DBG] Connection id "0HNIEC61NGUIE" stopped.
