@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "YH5t0h5iY9E=",
+  "dgSpecHash": "wRr9EcWhmoA=",
   "success": true,
   "projectFilePath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\Customer.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\phant\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\hangfire\\1.8.22\\hangfire.1.8.22.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\hangfire.aspnetcore\\1.8.22\\hangfire.aspnetcore.1.8.22.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\hangfire.core\\1.8.22\\hangfire.core.1.8.22.nupkg.sha512",

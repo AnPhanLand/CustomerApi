@@ -3,6 +3,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
+using FluentValidation;
 
 namespace CustomerApp;
 
@@ -22,16 +23,25 @@ public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, IRes
 {
     private readonly CustomerDb _db;
     private readonly IDistributedCache _cache;
+    private readonly IValidator<CreateCustomerCommand> _validator;
 
     // Injecting the database context. Ensure it is 'public' to avoid CS0051.
-    public CreateCustomerHandler(CustomerDb db, IDistributedCache cache)
+    public CreateCustomerHandler(CustomerDb db, IDistributedCache cache, IValidator<CreateCustomerCommand> validator)
     {
         _db = db;
         _cache = cache;
+        _validator = validator;
     }
 
     public async Task<IResult> Handle(CreateCustomerCommand request, CancellationToken ct)
     {
+        var validationResult = await _validator.ValidateAsync(request);
+
+        if (!validationResult.IsValid)
+        {
+            return TypedResults.ValidationProblem(validationResult.ToDictionary());
+        }
+
         // 1. Mapping: Convert the DTO inside the 'request' into a new 'Customer' Entity
         var customer = new Customer
         {

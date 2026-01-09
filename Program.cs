@@ -23,6 +23,7 @@ using Hangfire;
 using Hangfire.PostgreSql;
 using Polly; 
 using Polly.Retry;
+using FluentValidation;
 
 // using var log = ... (Local Logger) Once the method (like Main) finishes, the logger is destroyed (disposed).
 // Log.Logger = ... (Global Static Logger) It lives as long as your application is running.
@@ -94,6 +95,9 @@ try {
         options.Configuration = redisConnection;
         options.InstanceName = "CustomerAPI_"; // Keeps your keys organized
     });
+
+    // Fluent Validation
+    builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 
     // Provides helpful error pages during development if a database-related error occurs.
     builder.Services.AddDatabaseDeveloperPageExceptionFilter();
