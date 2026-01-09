@@ -1666,6 +1666,33 @@
           }
         }
       },
+      "RedisRateLimiting/1.2.1": {
+        "type": "package",
+        "dependencies": {
+          "StackExchange.Redis": "2.8.0"
+        },
+        "compile": {
+          "lib/net10.0/RedisRateLimiting.dll": {}
+        },
+        "runtime": {
+          "lib/net10.0/RedisRateLimiting.dll": {}
+        }
+      },
+      "RedisRateLimiting.AspNetCore/1.2.1": {
+        "type": "package",
+        "dependencies": {
+          "RedisRateLimiting": "1.2.1"
+        },
+        "compile": {
+          "lib/net10.0/RedisRateLimiting.AspNetCore.dll": {}
+        },
+        "runtime": {
+          "lib/net10.0/RedisRateLimiting.AspNetCore.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
       "Serilog/4.3.0": {
         "type": "package",
         "compile": {
@@ -1821,7 +1848,7 @@
           }
         }
       },
-      "StackExchange.Redis/2.7.27": {
+      "StackExchange.Redis/2.8.0": {
         "type": "package",
         "dependencies": {
           "Pipelines.Sockets.Unofficial": "2.2.8"
@@ -4585,6 +4612,38 @@
         "polly.ratelimiting.nuspec"
       ]
     },
+    "RedisRateLimiting/1.2.1": {
+      "sha512": "rYisSFv+0bi8iLLUwzPF4afVvCD4nUFI6YiWOy4UTxOzkyfZPA1a0C9o9TyRKQRZ06f+tfgoaUA2q3A0YNnGng==",
+      "type": "package",
+      "path": "redisratelimiting/1.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net10.0/RedisRateLimiting.dll",
+        "lib/net7.0/RedisRateLimiting.dll",
+        "lib/net8.0/RedisRateLimiting.dll",
+        "lib/net9.0/RedisRateLimiting.dll",
+        "redisratelimiting.1.2.1.nupkg.sha512",
+        "redisratelimiting.nuspec"
+      ]
+    },
+    "RedisRateLimiting.AspNetCore/1.2.1": {
+      "sha512": "2kjolrrDgVll/fYGWcnxlh7BEmTr/oOp9M2I+orEIWvXciLVlwTVGarAFTcX8mZ7YFtDP3zaofMi08CMh4GVxw==",
+      "type": "package",
+      "path": "redisratelimiting.aspnetcore/1.2.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "lib/net10.0/RedisRateLimiting.AspNetCore.dll",
+        "lib/net7.0/RedisRateLimiting.AspNetCore.dll",
+        "lib/net8.0/RedisRateLimiting.AspNetCore.dll",
+        "lib/net9.0/RedisRateLimiting.AspNetCore.dll",
+        "redisratelimiting.aspnetcore.1.2.1.nupkg.sha512",
+        "redisratelimiting.aspnetcore.nuspec"
+      ]
+    },
     "Serilog/4.3.0": {
       "sha512": "+cDryFR0GRhsGOnZSKwaDzRRl4MupvJ42FhCE4zhQRVanX0Jpg6WuCBk59OVhVDPmab1bB+nRykAnykYELA9qQ==",
       "type": "package",
@@ -4803,10 +4862,10 @@
         "serilog.sinks.file.nuspec"
       ]
     },
-    "StackExchange.Redis/2.7.27": {
-      "sha512": "Uqc2OQHglqj9/FfGQ6RkKFkZfHySfZlfmbCl+hc+u2I/IqunfelQ7QJi7ZhvAJxUtu80pildVX6NPLdDaUffOw==",
+    "StackExchange.Redis/2.8.0": {
+      "sha512": "MjAJ0ejH8zLhtuN5+Z+/I07NmPGdVuGEvE2+4xONQoFwgl+7vbQ/A6jlUgH9UkZb4s9Mu9QDyBq1TkRqQcOgTQ==",
       "type": "package",
-      "path": "stackexchange.redis/2.7.27",
+      "path": "stackexchange.redis/2.8.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4820,7 +4879,7 @@
         "lib/netcoreapp3.1/StackExchange.Redis.xml",
         "lib/netstandard2.0/StackExchange.Redis.dll",
         "lib/netstandard2.0/StackExchange.Redis.xml",
-        "stackexchange.redis.2.7.27.nupkg.sha512",
+        "stackexchange.redis.2.8.0.nupkg.sha512",
         "stackexchange.redis.nuspec"
       ]
     },
@@ -5308,6 +5367,8 @@
       "NSwag.AspNetCore >= 14.6.3",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 10.0.0",
       "Polly.Core >= 8.6.5",
+      "RedisRateLimiting >= 1.2.1",
+      "RedisRateLimiting.AspNetCore >= 1.2.1",
       "Serilog >= 4.3.0",
       "Serilog.AspNetCore >= 10.0.0",
       "Serilog.Sinks.Console >= 6.1.1",
@@ -5418,6 +5479,14 @@
           "Polly.Core": {
             "target": "Package",
             "version": "[8.6.5, )"
+          },
+          "RedisRateLimiting": {
+            "target": "Package",
+            "version": "[1.2.1, )"
+          },
+          "RedisRateLimiting.AspNetCore": {
+            "target": "Package",
+            "version": "[1.2.1, )"
           },
           "Serilog": {
             "target": "Package",

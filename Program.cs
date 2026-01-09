@@ -24,6 +24,8 @@ using Hangfire.PostgreSql;
 using Polly; 
 using Polly.Retry;
 using FluentValidation;
+using StackExchange.Redis;
+using RedisRateLimiting.AspNetCore;
 
 // using var log = ... (Local Logger) Once the method (like Main) finishes, the logger is destroyed (disposed).
 // Log.Logger = ... (Global Static Logger) It lives as long as your application is running.
@@ -98,6 +100,18 @@ try {
 
     // Fluent Validation
     builder.Services.AddValidatorsFromAssemblyContaining<Program>();
+
+    // API Rate Limiting
+    var redis = ConnectionMultiplexer.Connect(redisConnection);
+    builder.Services.AddRateLimiter(options =>
+    {
+        options.AddRedisFixedWindowLimiter("fixed", opt =>
+        {
+            opt.ConnectionMultiplexerFactory = () => redis;
+            opt.Window = TimeSpan.FromSeconds(10);
+            opt.PermitLimit = 5; // Only 5 requests every 10 seconds
+        });
+    });
 
     // Provides helpful error pages during development if a database-related error occurs.
     builder.Services.AddDatabaseDeveloperPageExceptionFilter();
@@ -272,7 +286,7 @@ try {
     // This final section of your code defines the Protected CRUD Operations (Create, Read, Update, Delete). It connects your HTTP routes to the actual database logic and ensures that only users with a valid "ID Card" (JWT) can get past the gate.
 
     // 1. Creates a group of routes starting with "/Customer" and locks them all behind JWT authorization.
-    RouteGroupBuilder customer = app.MapGroup("/Customer").RequireAuthorization();
+    RouteGroupBuilder customer = app.MapGroup("/Customer").RequireAuthorization().RequireRateLimiting("fixed");;
 
     // List all
     customer.MapGet("/", async (IMediator mediator) => 
