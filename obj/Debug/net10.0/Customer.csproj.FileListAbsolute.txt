@@ -241,3 +241,11 @@ c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\M
 c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Polly.Core.dll
 c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Polly.Extensions.dll
 c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Polly.RateLimiting.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\FluentValidation.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\FluentValidation.AspNetCore.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\FluentValidation.DependencyInjectionExtensions.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Pipelines.Sockets.Unofficial.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\RedisRateLimiting.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\RedisRateLimiting.AspNetCore.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\StackExchange.Redis.dll

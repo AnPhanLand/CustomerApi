@@ -113,6 +113,17 @@ try {
         });
     });
 
+    // CORS Policy
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy("MyFrontendPolicy", policy =>
+        {
+            policy.WithOrigins("http://localhost:3000") // Only allow your React/Angular app
+                .AllowAnyMethod()                    // Allow GET, POST, PUT, DELETE
+                .AllowAnyHeader();                   // Allow JWT headers
+        });
+    });
+
     // Provides helpful error pages during development if a database-related error occurs.
     builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
@@ -189,6 +200,8 @@ try {
     // This creates the "/hangfire" URL where you can monitor your background jobs.
     app.UseHangfireDashboard("/hangfire");
 
+    // Apply CORS
+    app.UseCors("MyFrontendPolicy");
 
     // This section contains your Identity Logic (the /login endpoint) and your Development Tools (Swagger/OpenAPI). This is where your API transitions from being a passive database to an active security authority
 
