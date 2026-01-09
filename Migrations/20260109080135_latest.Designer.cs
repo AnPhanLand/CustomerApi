@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CustomerApp.Migrations
 {
     [DbContext(typeof(CustomerDb))]
-    [Migration("20260109063104_latest")]
+    [Migration("20260109080135_latest")]
     partial class latest
     {
         /// <inheritdoc />
