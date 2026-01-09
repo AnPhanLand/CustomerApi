@@ -2,6 +2,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
+using FluentValidation;
 
 namespace CustomerApp;
 
@@ -21,16 +22,26 @@ public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, IRes
     private readonly CustomerDb _db;
     
     private readonly IDistributedCache _cache;
+    private readonly IValidator<UpdateCustomerCommand> _validator;
 
     // Injecting the database context. Remember to keep CustomerDb 'public'.
-    public UpdateCustomerHandler(CustomerDb db, IDistributedCache cache)
+    public UpdateCustomerHandler(CustomerDb db, IDistributedCache cache, IValidator<UpdateCustomerCommand> validator)
     {
         _db = db;
         _cache = cache;
+        _validator = validator;
     }
 
     public async Task<IResult> Handle(UpdateCustomerCommand request, CancellationToken ct)
     {
+        var validationResult = await _validator.ValidateAsync(request, ct);
+
+        if (!validationResult.IsValid)
+        {
+            return TypedResults.ValidationProblem(validationResult.ToDictionary());
+        }
+
+
         // 1. Find the existing customer using the ID from the command.
         // We use the object array syntax to include the CancellationToken 'ct'.
         var customer = await _db.Customers.FindAsync(new object[] { request.Id }, ct);

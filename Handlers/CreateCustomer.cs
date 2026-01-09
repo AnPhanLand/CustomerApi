@@ -35,7 +35,7 @@ public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, IRes
 
     public async Task<IResult> Handle(CreateCustomerCommand request, CancellationToken ct)
     {
-        var validationResult = await _validator.ValidateAsync(request);
+        var validationResult = await _validator.ValidateAsync(request, ct);
 
         if (!validationResult.IsValid)
         {
