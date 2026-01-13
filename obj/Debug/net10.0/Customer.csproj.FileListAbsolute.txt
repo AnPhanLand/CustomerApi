@@ -249,3 +249,9 @@ c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\P
 c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\RedisRateLimiting.dll
 c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\RedisRateLimiting.AspNetCore.dll
 c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\StackExchange.Redis.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\DnsClient.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\MongoDB.Bson.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\MongoDB.Driver.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\SharpCompress.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\Snappier.dll
+c:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\bin\Debug\net10.0\ZstdSharp.dll

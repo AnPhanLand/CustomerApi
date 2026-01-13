@@ -33,11 +33,11 @@ public class GetCustomerHandler : IRequestHandler<GetCustomerQuery, IResult>
 
     // CONSTRUCTOR: We inject the database here so the handler can use it.
     // Ensure 'CustomerDb' is marked as 'public' in your data folder.
-    public GetCustomerHandler(CustomerDb db, IDistributedCache cache, IMongoCollection<CustomerActivity> logs)
+    public GetCustomerHandler(CustomerDb db, IDistributedCache cache, IMongoDatabase mongoDb)
     {
         _db = db;
         _cache = cache;
-        _logs = logs;
+        _logs = mongoDb.GetCollection<CustomerActivity>("Activities");
     }
 
     // THE HANDLE METHOD: The logic triggered by 'mediator.Send()'.

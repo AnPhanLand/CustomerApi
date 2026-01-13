@@ -81,9 +81,17 @@ try {
 
     // MongoDB Configuration
     var mongoConnectionString = "mongodb://localhost:27017";
-    
+
     builder.Services.AddSingleton<IMongoClient>(new MongoClient(mongoConnectionString));
 
+    builder.Services.AddScoped<IMongoDatabase>(sp => 
+    {
+        // This looks up the client we just registered
+        var client = sp.GetRequiredService<IMongoClient>();
+        
+        // Replace "CustomerLogs" with whatever name you want for your DB
+        return client.GetDatabase("CustomerLogs"); 
+    });
 
     // --- HANGFIRE CONFIGURATION ---
     // 1. Tell Hangfire to use your Postgres database to store job data
