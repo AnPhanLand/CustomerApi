@@ -7,7 +7,6 @@ public class CreateCustomerCommandValidator : AbstractValidator<CreateCustomerCo
 {
     public CreateCustomerCommandValidator()
     {
-        // Rule 1: Name cannot be empty
         RuleFor(x => x.CustomerDTO.FirstName)
             .NotEmpty().WithMessage("First name is required.")
             .MinimumLength(2).WithMessage("Name must be at least 2 characters long.");
@@ -16,7 +15,6 @@ public class CreateCustomerCommandValidator : AbstractValidator<CreateCustomerCo
             .NotEmpty().WithMessage("Last name is required.")
             .MinimumLength(2).WithMessage("Name must be at least 2 characters long.");
 
-        // Rule 2: If you had an Email property
         RuleFor(x => x.CustomerDTO.Email)
             .EmailAddress().WithMessage("A valid email is required.");
 

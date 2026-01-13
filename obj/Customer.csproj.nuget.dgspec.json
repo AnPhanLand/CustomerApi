@@ -94,6 +94,10 @@
               "target": "Package",
               "version": "[10.1.0, )"
             },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.5.2, )"
+            },
             "NSwag.AspNetCore": {
               "target": "Package",
               "version": "[14.6.3, )"
