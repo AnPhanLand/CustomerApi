@@ -205,6 +205,10 @@ try {
     // 5. Finalizes the builder and creates the 'app' instance ready for the pipeline.
     var app = builder.Build();
 
+    // Apply CORS
+    // CORS: Needs to be near the top. If a browser can't get past CORS, it won't even try to send the username or password.
+    app.UseCors("MyFrontendPolicy");
+
     // 6. Middleware: Inspects incoming headers for a JWT and identifies the user.
     app.UseAuthentication();
 
@@ -214,9 +218,6 @@ try {
     // --- HANGFIRE DASHBOARD ---
     // This creates the "/hangfire" URL where you can monitor your background jobs.
     app.UseHangfireDashboard("/hangfire");
-
-    // Apply CORS
-    app.UseCors("MyFrontendPolicy");
 
     // This section contains your Identity Logic (the /login endpoint) and your Development Tools (Swagger/OpenAPI). This is where your API transitions from being a passive database to an active security authority
 
