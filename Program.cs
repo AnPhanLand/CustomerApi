@@ -26,6 +26,7 @@ using Polly.Retry;
 using FluentValidation;
 using StackExchange.Redis;
 using RedisRateLimiting.AspNetCore;
+using MongoDB.Driver;
 
 // using var log = ... (Local Logger) Once the method (like Main) finishes, the logger is destroyed (disposed).
 // Log.Logger = ... (Global Static Logger) It lives as long as your application is running.
@@ -77,6 +78,12 @@ try {
     // Registers your Database Context (CustomerDb) to use the Npgsql provider for PostgreSQL.
     builder.Services.AddDbContext<CustomerDb>(options =>
         options.UseNpgsql(connectionString));
+
+    // MongoDB Configuration
+    var mongoConnectionString = "mongodb://localhost:27017";
+    
+    builder.Services.AddSingleton<IMongoClient>(new MongoClient(mongoConnectionString));
+
 
     // --- HANGFIRE CONFIGURATION ---
     // 1. Tell Hangfire to use your Postgres database to store job data

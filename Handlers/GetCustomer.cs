@@ -3,6 +3,7 @@ using MediatR;
 // EntityFrameworkCore provides the database methods like 'FindAsync'.
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
+using MongoDB.Driver;
 using System.Text.Json;
 
 namespace CustomerApp;
@@ -27,14 +28,16 @@ public class GetCustomerHandler : IRequestHandler<GetCustomerQuery, IResult>
 {
     // A private field to hold our database context instance.
     private readonly CustomerDb _db;
+    private readonly IMongoCollection<CustomerActivity> _logs;
     private readonly IDistributedCache _cache;
 
     // CONSTRUCTOR: We inject the database here so the handler can use it.
     // Ensure 'CustomerDb' is marked as 'public' in your data folder.
-    public GetCustomerHandler(CustomerDb db, IDistributedCache cache)
+    public GetCustomerHandler(CustomerDb db, IDistributedCache cache, IMongoCollection<CustomerActivity> logs)
     {
         _db = db;
         _cache = cache;
+        _logs = logs;
     }
 
     // THE HANDLE METHOD: The logic triggered by 'mediator.Send()'.
@@ -55,6 +58,13 @@ public class GetCustomerHandler : IRequestHandler<GetCustomerQuery, IResult>
         var customer = await _db.Customers.FindAsync(new object[] { request.Id }, ct);
 
         if (customer is null) return TypedResults.NotFound();
+
+        // 2. Log activity to Mongo (Don't wait for it if you want speed)
+        await _logs.InsertOneAsync(new CustomerActivity 
+        { 
+            CustomerId = request.Id, 
+            Action = "ViewedProfile" 
+        });
 
         var response = new CustomerReadDTO(customer);
 
