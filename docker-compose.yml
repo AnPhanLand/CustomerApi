@@ -20,6 +20,21 @@ services:
       - "6379:6379"
     restart: always
 
+  # NEW: The "Library" - Flexible Document Store
+  mongodb:
+    image: mongo:latest
+    container_name: customer_mongo
+    environment:
+      # Optional: You can add MONGO_INITDB_ROOT_USERNAME/PASSWORD here for security
+      # For local dev, no auth is often used.
+      ALLOW_EMPTY_PASSWORD: "yes" 
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: always
+
 # This ensures your data stays safe even if you delete the containers
 volumes:
   postgres_data:
+  mongo_data:
