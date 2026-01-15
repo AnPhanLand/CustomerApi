@@ -26,7 +26,8 @@ using Polly.Retry;
 using FluentValidation;
 using StackExchange.Redis;
 using RedisRateLimiting.AspNetCore;
-using MongoDB.Driver;
+using CustomerApp.Application.Common.Interfaces;
+using CustomerApp.Infrastructure.Persistence.Mongo;
 
 // using var log = ... (Local Logger) Once the method (like Main) finishes, the logger is destroyed (disposed).
 // Log.Logger = ... (Global Static Logger) It lives as long as your application is running.
@@ -80,18 +81,21 @@ try {
         options.UseNpgsql(connectionString));
 
     // MongoDB Configuration
-    var mongoConnectionString = "mongodb://localhost:27017";
+    // var mongoConnectionString = "mongodb://localhost:27017";
 
-    builder.Services.AddSingleton<IMongoClient>(new MongoClient(mongoConnectionString));
+    // builder.Services.AddSingleton<IMongoClient>(new MongoClient(mongoConnectionString));
 
-    builder.Services.AddScoped<IMongoDatabase>(sp => 
-    {
-        // This looks up the client we just registered
-        var client = sp.GetRequiredService<IMongoClient>();
+    // builder.Services.AddScoped<IMongoDatabase>(sp => 
+    // {
+    //     // This looks up the client we just registered
+    //     var client = sp.GetRequiredService<IMongoClient>();
         
-        // Replace "CustomerLogs" with whatever name you want for your DB
-        return client.GetDatabase("CustomerLogs"); 
-    });
+    //     // Replace "CustomerLogs" with whatever name you want for your DB
+    //     return client.GetDatabase("CustomerLogs"); 
+    // });
+    
+    // Register the Logger: Whenever a class asks for IActivityLogger, give it MongoActivityLogger
+    builder.Services.AddScoped<IActivityLogger, MongoActivityLogger>();
 
     // --- HANGFIRE CONFIGURATION ---
     // 1. Tell Hangfire to use your Postgres database to store job data

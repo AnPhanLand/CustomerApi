@@ -1,9 +1,9 @@
 // MediatR allows the "Mediator" pattern to work (sending messages between classes).
+using CustomerApp.Application.Common.Interfaces;
 using MediatR;
 // EntityFrameworkCore provides the database methods like 'FindAsync'.
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
-using MongoDB.Driver;
 using System.Text.Json;
 
 namespace CustomerApp;
@@ -28,16 +28,16 @@ public class GetCustomerHandler : IRequestHandler<GetCustomerQuery, IResult>
 {
     // A private field to hold our database context instance.
     private readonly CustomerDb _db;
-    private readonly IMongoCollection<CustomerActivity> _logs;
+    private readonly IActivityLogger _logger;
     private readonly IDistributedCache _cache;
 
     // CONSTRUCTOR: We inject the database here so the handler can use it.
     // Ensure 'CustomerDb' is marked as 'public' in your data folder.
-    public GetCustomerHandler(CustomerDb db, IDistributedCache cache, IMongoDatabase mongoDb)
+    public GetCustomerHandler(CustomerDb db, IDistributedCache cache, IActivityLogger logger)
     {
         _db = db;
         _cache = cache;
-        _logs = mongoDb.GetCollection<CustomerActivity>("Activities");
+        _logger = logger;
     }
 
     // THE HANDLE METHOD: The logic triggered by 'mediator.Send()'.
@@ -60,11 +60,7 @@ public class GetCustomerHandler : IRequestHandler<GetCustomerQuery, IResult>
         if (customer is null) return TypedResults.NotFound();
 
         // 2. Log activity to Mongo (Don't wait for it if you want speed)
-        await _logs.InsertOneAsync(new CustomerActivity 
-        { 
-            CustomerId = request.Id, 
-            Action = "ViewedProfile" 
-        });
+        await _logger.LogActivityAsync(request.Id, "Customer Viewed");
 
         var response = new CustomerReadDTO(customer);
 
