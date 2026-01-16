@@ -9,4 +9,5 @@ public class Customer
     public string FullName => $"{FirstName} {LastName}";
     // Using the Enum here
     public CustomerStatus Status { get; set; } = CustomerStatus.Pending;
+    public MembershipLevel MembershipLevel { get; set; } = MembershipLevel.Standard;
 }
