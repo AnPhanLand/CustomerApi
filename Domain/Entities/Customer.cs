@@ -7,4 +7,6 @@ public class Customer
     public string Email { get; set; } = string.Empty;
     public string Password { get; set; } = string.Empty;
     public string FullName => $"{FirstName} {LastName}";
+    // Using the Enum here
+    public CustomerStatus Status { get; set; } = CustomerStatus.Pending;
 }

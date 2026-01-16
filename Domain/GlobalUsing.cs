@@ -1,0 +1,1 @@
+global using CustomerApp.Domain.Enums;
