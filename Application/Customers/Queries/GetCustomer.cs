@@ -5,6 +5,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
+using CustomerApp.Domain.Exceptions;
 
 namespace CustomerApp;
 
@@ -57,7 +58,7 @@ public class GetCustomerHandler : IRequestHandler<GetCustomerQuery, IResult>
         // 2. CACHE MISS: Go to the slow Database
         var customer = await _db.Customers.FindAsync(new object[] { request.Id }, ct);
 
-        if (customer is null) return TypedResults.NotFound();
+        if (customer is null) throw new CustomerNotFoundException(request.Id);
 
         // 2. Log activity to Mongo (Don't wait for it if you want speed)
         await _logger.LogActivityAsync(request.Id, "Customer Viewed");
