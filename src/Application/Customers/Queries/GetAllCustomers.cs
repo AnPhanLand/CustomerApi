@@ -6,7 +6,7 @@ using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
 
 // Namespaces organize your code. This should match your project name or folder.
-namespace CustomerApp;
+namespace CustomerApi.Application.Customers.Queries;
 
 // ==========================================
 // 1. THE REQUEST (The "What")

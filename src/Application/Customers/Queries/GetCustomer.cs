@@ -1,13 +1,13 @@
 // MediatR allows the "Mediator" pattern to work (sending messages between classes).
-using CustomerApp.Application.Common.Interfaces;
+using CustomerApi.Application.Common.Interfaces;
 using MediatR;
 // EntityFrameworkCore provides the database methods like 'FindAsync'.
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
-using CustomerApp.Domain.Exceptions;
 
-namespace CustomerApp;
+
+namespace CustomerApi.Application.Customers.Queries;
 
 // ==========================================
 // 1. THE REQUEST (The "What")

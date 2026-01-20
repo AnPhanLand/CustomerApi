@@ -1,4 +1,4 @@
-namespace CustomerApp.Domain.Constants;
+namespace CustomerApi.Domain.Constants;
 
 public static class CustomerRules
 {

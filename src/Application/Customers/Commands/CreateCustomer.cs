@@ -5,7 +5,7 @@ using Microsoft.Extensions.Caching.Distributed;
 using System.Text.Json;
 using FluentValidation;
 
-namespace CustomerApp;
+namespace CustomerApi.Application.Customers.Commands;
 
 // ==========================================
 // 1. THE COMMAND (The "What")

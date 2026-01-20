@@ -1,4 +1,4 @@
-namespace CustomerApp;
+namespace CustomerApi.Application.Customers.DTOs;
 public class CustomerCreateDTO
 {
     public string FirstName { get; set; } = string.Empty;

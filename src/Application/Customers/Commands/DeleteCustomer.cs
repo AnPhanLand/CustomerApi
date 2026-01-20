@@ -2,7 +2,7 @@ using MediatR;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Caching.Distributed;
 
-namespace CustomerApp;
+namespace CustomerApi.Application.Customers.Commands;
 
 // ==========================================
 // 1. THE COMMAND (The "What")

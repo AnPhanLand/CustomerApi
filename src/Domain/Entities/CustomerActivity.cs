@@ -1,6 +1,6 @@
 using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
-namespace CustomerApp;
+namespace CustomerApi.Domain.Entities;
 
 public class CustomerActivity
 {

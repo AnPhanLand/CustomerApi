@@ -1,4 +1,4 @@
-namespace CustomerApp.Domain.Common;
+namespace CustomerApi.Domain.Common;
 
 public abstract class BaseEntity
 {

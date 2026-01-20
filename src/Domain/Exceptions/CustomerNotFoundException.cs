@@ -1,4 +1,4 @@
-namespace CustomerApp.Domain.Exceptions;
+namespace CustomerApi.Domain.Exceptions;
 
 public class CustomerNotFoundException : Exception
 {

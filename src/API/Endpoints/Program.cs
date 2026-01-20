@@ -9,25 +9,8 @@
 // The Data Transfer Zone (DTOs): How we safely move data between the database and the user without exposing sensitive fields like passwords.
 
 
-using Microsoft.EntityFrameworkCore;
-using CustomerApp;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using System.Text;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using Serilog;
-using Serilog.Events;
-using MediatR;
-using Hangfire; 
-using Hangfire.PostgreSql;
-using Polly; 
-using Polly.Retry;
-using FluentValidation;
-using StackExchange.Redis;
-using RedisRateLimiting.AspNetCore;
-using CustomerApp.Application.Common.Interfaces;
-using CustomerApp.Infrastructure.Persistence.Mongo;
+using CustomerApi.Application.Common.Interfaces;
+using CustomerApi.Infrastructure.Persistence.Mongo;
 
 // using var log = ... (Local Logger) Once the method (like Main) finishes, the logger is destroyed (disposed).
 // Log.Logger = ... (Global Static Logger) It lives as long as your application is running.
@@ -78,7 +61,7 @@ try {
 
     // Registers your Database Context (CustomerDb) to use the Npgsql provider for PostgreSQL.
     builder.Services.AddDbContext<CustomerDb>(options =>
-        options.UseNpgsql(connectionString));
+        options.UseNpgsql(connectionString, x => x.MigrationsAssembly("Customer")));
 
     // MongoDB Configuration
     // var mongoConnectionString = "mongodb://localhost:27017";
@@ -368,7 +351,7 @@ try {
 // Serilog exception catch
 } catch (Exception ex) {
     // 3. This catches "Startup Crashes" (e.g., bad connection strings)
-    Log.Fatal(ex, "The application failed to start correctly.");
+    Log.Information( "The application failed to start correctly.");
 }
 finally {
     // 4. Important: Ensures all log messages are written before the app closes

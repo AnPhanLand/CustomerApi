@@ -1,4 +1,4 @@
-namespace CustomerApp;
+namespace CustomerApi.Application.Customers.DTOs;
 public class CustomerUpdateDTO
 {
     // public Guid Id { get; set; } = Guid.NewGuid();

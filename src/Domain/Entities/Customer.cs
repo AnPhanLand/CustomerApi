@@ -1,4 +1,4 @@
-namespace CustomerApp;
+namespace CustomerApi.Domain.Entities;
 public class Customer : BaseEntity
 {
     public string FirstName { get; set; } = string.Empty;
@@ -10,5 +10,4 @@ public class Customer : BaseEntity
     public CustomerStatus Status { get; set; } = CustomerStatus.Pending;
     public MembershipLevel MembershipLevel { get; set; } = MembershipLevel.Standard;
     public string Region { get; set; } = CustomerRules.DefaultRegion;
-    public Address? HomeAddress { get; set; }
 }

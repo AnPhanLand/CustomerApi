@@ -1,6 +1,6 @@
 using FluentValidation;
 
-namespace CustomerApp.Validators;
+namespace CustomerApi.Validators;
 
 // This is where the "Rules" are born
 public class CreateCustomerCommandValidator : AbstractValidator<CreateCustomerCommand>

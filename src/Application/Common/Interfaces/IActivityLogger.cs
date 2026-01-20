@@ -1,4 +1,4 @@
-namespace CustomerApp.Application.Common.Interfaces;
+namespace CustomerApi.Application.Common.Interfaces;
 
 public interface IActivityLogger
 {
