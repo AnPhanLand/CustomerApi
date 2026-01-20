@@ -42,12 +42,21 @@ public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, IRes
             return TypedResults.ValidationProblem(validationResult.ToDictionary());
         }
 
+        // 1. VALUE OBJECT CREATION
+        // We create the Value Objects first. This ensures data integrity 
+        // before the Entity even exists.
+        var email = EmailAddress.Create(request.CustomerDTO.Email);
+        
+        // Assuming your DTO has CountryCode and PhoneNumber fields
+        var phone = PhoneNumber.Create(
+            request.CustomerDTO.CountryCode ?? "+1", 
+            request.CustomerDTO.PhoneNumber);
+
         // 1. Mapping: Convert the DTO inside the 'request' into a new 'Customer' Entity
-        var customer = new Customer
+        var customer = new Customer(email, phone)
         {
             FirstName = request.CustomerDTO.FirstName,
             LastName = request.CustomerDTO.LastName,
-            Email = request.CustomerDTO.Email,
             Password = request.CustomerDTO.Password 
         };
 
