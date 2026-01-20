@@ -18,8 +18,5 @@ public class UpdateCustomerCommandValidator : AbstractValidator<UpdateCustomerCo
         RuleFor(x => x.CustomerDTO.Email)
             .EmailAddress().WithMessage("A valid email is required.");
 
-        RuleFor(x => x.CustomerDTO.Password)
-            .NotEmpty().WithMessage("Password is required.")
-            .MinimumLength(6).WithMessage("Password must be at least 6 characters long.");
     }
 }
