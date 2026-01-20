@@ -1,40 +1,52 @@
 namespace CustomerApi.Domain.Entities;
+
+// Inheriting from BaseEntity gives Customer a unique Guid Id and the ability 
+// to track Domain Events (messages for other parts of the system).
 public class Customer : BaseEntity
 {
+    // Primitive properties for basic data.
     public string FirstName { get; set; } = string.Empty;
     public string LastName { get; set; } = string.Empty;
-    // public string Email { get; set; } = string.Empty;
     public string Password { get; set; } = string.Empty;
+
+    // A computed property that isn't saved in the database but used in the UI.
     public string FullName => $"{FirstName} {LastName}";
-    // Using the Enum here
+
+    // Enums ensure the status and level can only be specific, valid values.
     public CustomerStatus Status { get; set; } = CustomerStatus.Pending;
     public MembershipLevel MembershipLevel { get; set; } = MembershipLevel.Standard;
+    
+    // Constant or default business rules often live in a 'Rules' class.
     public string Region { get; set; } = CustomerRules.DefaultRegion;
-// Using Value Objects instead of strings
+
+    // Value Objects: These handle their own validation (e.g., checking for an '@' symbol)
+    // and are immutable. 'private set' ensures they can only be changed via methods.
     public EmailAddress Email { get; private set; } 
     public PhoneNumber ContactNumber { get; private set; }
-    // Constructor ensures these are set immediately
+
+    // Public Constructor: Forces any new Customer to have an Email and Phone.
     public Customer(EmailAddress email, PhoneNumber contactNumber)
     {
         Email = email;
         ContactNumber = contactNumber;
     }
-    // Required for EF Core to recreate the entity from the database
+
+    // Private Constructor: Needed by EF Core to load data from PostgreSQL.
     private Customer() { }
 
-    // The "n" part of the relationship: A list of orders
+    // One-to-Many Relationship: Encapsulates the list of orders so they 
+    // can't be modified from outside this class without a method.
     private readonly List<Order> _orders = new();
     public IReadOnlyCollection<Order> Orders => _orders.AsReadOnly();
 
+    // Business Method: Handles logic for creating a new order for this customer.
     public void PlaceOrder(decimal amount)
     {
-        // Business logic: perhaps check if customer status is Active first
         var order = new Order(this.Id, amount);
         _orders.Add(order);
-        
-        // You could also raise a 'OrderPlacedEvent' here
     }
     
+    // Business Method: Changes state and announces it to the system via an Event.
     public void UpgradeMembership(MembershipLevel newLevel)
     {
         if (this.MembershipLevel != newLevel)
@@ -42,15 +54,16 @@ public class Customer : BaseEntity
             var oldLevel = this.MembershipLevel;
             this.MembershipLevel = newLevel;
 
-            // Add the event to the entity's internal list
+            // This 'shouts' that an upgrade happened so handlers can send emails.
             this.AddDomainEvent(new MembershipLevelUpgradedEvent(this.Id, oldLevel, newLevel));
         }
     }
 
+    // Specialized Update: Uses Value Object validation before assignment.
     public void UpdateEmail(string newEmail)
     {
-        var emailObject = EmailAddress.Create(newEmail); // Validation happens here!
-        if (this.Email != emailObject)
+        var emailObject = EmailAddress.Create(newEmail); 
+        if (this.Email != emailObject) // Only update if data actually changed.
         {
             this.Email = emailObject;
         }
@@ -58,14 +71,10 @@ public class Customer : BaseEntity
 
     public void UpdatePhoneNumber(string countryCode, string number)
     {
-        // The Value Object logic validates the input
         var newPhoneNumber = PhoneNumber.Create(countryCode, number);
-
-        // Only update if the value actually changed
         if (this.ContactNumber != newPhoneNumber)
         {
             this.ContactNumber = newPhoneNumber;
         }
     }
 }
-
