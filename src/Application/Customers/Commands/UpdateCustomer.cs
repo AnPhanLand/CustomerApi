@@ -55,9 +55,10 @@ public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, IRes
         // 3. Update the properties of the tracked entity.
         customer.FirstName = request.CustomerDTO.FirstName;
         customer.LastName = request.CustomerDTO.LastName;
-        customer.Email = request.CustomerDTO.Email;
         customer.Status = request.CustomerDTO.Status;
-        customer.MembershipLevel = request.CustomerDTO.MembershipLevel;
+        customer.UpdateEmail(request.CustomerDTO.Email);
+        customer.UpdatePhoneNumber(request.CustomerDTO.CountryCode, request.CustomerDTO.PhoneNumber);
+        customer.UpgradeMembership(request.CustomerDTO.MembershipLevel);
 
         // 4. Save the changes. 
         // Since EF Core is "tracking" this customer, it knows exactly what changed.
