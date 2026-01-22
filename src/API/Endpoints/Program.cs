@@ -9,6 +9,7 @@
 // The Data Transfer Zone (DTOs): How we safely move data between the database and the user without exposing sensitive fields like passwords.
 
 
+using CustomerApi.Application;
 using CustomerApi.Application.Common.Interfaces;
 using CustomerApi.Infrastructure.Persistence.Mongo;
 
@@ -42,6 +43,8 @@ try {
 
     // Initializes the web application builder, which manages configuration, logging, and services.
     var builder = WebApplication.CreateBuilder(args);
+
+    builder.Services.AddApplication();
 
     // dotnet add package Serilog.AspNetCore
     // 2. Tell .NET to use Serilog instead of the built-in logger
