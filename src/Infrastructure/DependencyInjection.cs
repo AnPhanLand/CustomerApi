@@ -8,8 +8,16 @@ public static class DependencyInjection
         var connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=mysecretpassword";
 
         // Registers your Database Context (CustomerDb) to use the Npgsql provider for PostgreSQL.
+        // services.AddDbContext<CustomerDb>(options =>
+        //     options.UseNpgsql(connectionString, x => x.MigrationsAssembly("Customer")));
         services.AddDbContext<CustomerDb>(options =>
-            options.UseNpgsql(connectionString, x => x.MigrationsAssembly("Customer")));
+            options.UseNpgsql(connectionString, x => 
+                // This automatically uses the correct assembly name (Infrastructure)
+                x.MigrationsAssembly(typeof(CustomerDb).Assembly.FullName)));
+        
+        // This tells the app: "When someone asks for the interface, give them the Postgres DB"
+        services.AddScoped<IApplicationDbContext>(provider => 
+            provider.GetRequiredService<CustomerDb>());
 
         // Register the Logger: Whenever a class asks for IActivityLogger, give it MongoActivityLogger
         services.AddScoped<IActivityLogger, MongoActivityLogger>();
