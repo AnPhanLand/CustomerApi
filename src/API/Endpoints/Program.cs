@@ -1,217 +1,29 @@
-// The Configuration Zone (builder): How we tell the app to use Npgsql (Postgres), NSwag (Swagger), and JWT Authentication.
-
-// The Middleware Pipeline (app.Use...): How a request travels through your security checks before reaching your logic.
-
-// The Identity Zone (/login): How the API issues the digital "passport" (the token) to a user.
-
-// The Protected Data Zone (/Customer): How EF Core interacts with the database while checking if the user is authorized.
-
-// The Data Transfer Zone (DTOs): How we safely move data between the database and the user without exposing sensitive fields like passwords.
-
-
+using CustomerApi.Infrastructure;
 using CustomerApi.Application;
 using CustomerApi.Application.Common.Interfaces;
 using CustomerApi.Infrastructure.Persistence.Mongo;
 
-// using var log = ... (Local Logger) Once the method (like Main) finishes, the logger is destroyed (disposed).
-// Log.Logger = ... (Global Static Logger) It lives as long as your application is running.
 Log.Logger = new LoggerConfiguration()
-    // MinimumLevel prevents any logs belows the given log level to appear.
-    // The level from lowest to highest: Verbose, Debug, Information, Warning, Error, Fatal
-    // Usage: Level Switching (Runtime Control)
-    // MinimalLevel.Debug(): you want to fix bugs
-    // MinimalLevel.Information(): you want to clean up the log when you finished fixing bugs
     .MinimumLevel.Debug()
-
-    // Sink is where log can be stored. Console and File are the basic, there are many more and you can make a custome one too.
-    // https://github.com/serilog/serilog/wiki/Provided-Sinks
-
-    // Need using Serilog.Events for LogEventLevel
-    // Add MinimumLevel to Console only
     .WriteTo.Console(restrictedToMinimumLevel: LogEventLevel.Information)
-    // RollingInterval.Day tells Serilog: "At midnight, close the current file and start a brand new one for the new day."
     .WriteTo.File("logs/myapp.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
-    // Additional infomation for Enrichers, Filters, and Sub-loggers: https://github.com/serilog/serilog/wiki/Configuration-Basics
-
 try {
-    // Other level: Log.Verbose(""), Log.Debug(""), Log.Information(""), Log.Warning(""), Log.Error(""), Log.Fatal("")
     Log.Information("Starting the API...");
 
-
-    // This section of your Program.cs is the Configuration Zone. It tells the web server which "tools" (services) it needs to have ready before the application actually starts running.
-
-    // Initializes the web application builder, which manages configuration, logging, and services.
     var builder = WebApplication.CreateBuilder(args);
 
     builder.Services.AddApplication();
-
-    // dotnet add package Serilog.AspNetCore
-    // 2. Tell .NET to use Serilog instead of the built-in logger
-    // Without UseSerilog():
-    // Manual Logging: Only the logs you manually write (e.g., Log.Information(...)) will show up.
-    // With UseSerilog():
-    // Full Visibility: You will see internal .NET events, like "Request Started," "Authentication Failed," or "SQL Query Executed."
+    builder.Services.AddInfrastructure(builder.Configuration);
     builder.Host.UseSerilog();
 
-    // MediatR
-    builder.Services.AddMediatR(cfg => {
-        cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
-    });
-
-    // The connection string containing the address, credentials, and database name for your PostgreSQL instance.
-    var connectionString = "Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=mysecretpassword";
-
-    // Registers your Database Context (CustomerDb) to use the Npgsql provider for PostgreSQL.
-    builder.Services.AddDbContext<CustomerDb>(options =>
-        options.UseNpgsql(connectionString, x => x.MigrationsAssembly("Customer")));
-
-    // MongoDB Configuration
-    // var mongoConnectionString = "mongodb://localhost:27017";
-
-    // builder.Services.AddSingleton<IMongoClient>(new MongoClient(mongoConnectionString));
-
-    // builder.Services.AddScoped<IMongoDatabase>(sp => 
-    // {
-    //     // This looks up the client we just registered
-    //     var client = sp.GetRequiredService<IMongoClient>();
-        
-    //     // Replace "CustomerLogs" with whatever name you want for your DB
-    //     return client.GetDatabase("CustomerLogs"); 
-    // });
-    
-    // Register the Logger: Whenever a class asks for IActivityLogger, give it MongoActivityLogger
-    builder.Services.AddScoped<IActivityLogger, MongoActivityLogger>();
-
-    // --- HANGFIRE CONFIGURATION ---
-    // 1. Tell Hangfire to use your Postgres database to store job data
-    builder.Services.AddHangfire(config => config
-        .SetDataCompatibilityLevel(CompatibilityLevel.Version_180)
-        .UseSimpleAssemblyNameTypeSerializer()
-        .UseRecommendedSerializerSettings()
-        .UsePostgreSqlStorage(options => options.UseNpgsqlConnection(connectionString)));
-
-    // 2. Add the Hangfire Server (the background worker that actually runs the jobs)
-    builder.Services.AddHangfireServer();
-
-    // The default Redis port is 6379
-    var redisConnection = "localhost:6379"; 
-
-    builder.Services.AddStackExchangeRedisCache(options =>
-    {
-        options.Configuration = redisConnection;
-        options.InstanceName = "CustomerAPI_"; // Keeps your keys organized
-    });
-
-    // Fluent Validation
-    builder.Services.AddValidatorsFromAssemblyContaining<Program>();
-
-    // API Rate Limiting
-    var redis = ConnectionMultiplexer.Connect(redisConnection);
-    builder.Services.AddRateLimiter(options =>
-    {
-        options.AddRedisFixedWindowLimiter("fixed", opt =>
-        {
-            opt.ConnectionMultiplexerFactory = () => redis;
-            opt.Window = TimeSpan.FromSeconds(10);
-            opt.PermitLimit = 5; // Only 5 requests every 10 seconds
-        });
-    });
-
-    // CORS Policy
-    builder.Services.AddCors(options =>
-    {
-        options.AddPolicy("MyFrontendPolicy", policy =>
-        {
-            policy.WithOrigins("http://localhost:3000") // Only allow your React/Angular app
-                .AllowAnyMethod()                    // Allow GET, POST, PUT, DELETE
-                .AllowAnyHeader();                   // Allow JWT headers
-        });
-    });
-
-    // Provides helpful error pages during development if a database-related error occurs.
-    builder.Services.AddDatabaseDeveloperPageExceptionFilter();
-
-    // Required for Minimal APIs to discover your endpoints and generate metadata for Swagger/OpenAPI.
-    builder.Services.AddEndpointsApiExplorer();
-
-    // Configures NSwag to generate the OpenAPI (Swagger) documentation for your API.
-    builder.Services.AddOpenApiDocument(config =>
-    {
-        config.DocumentName = "CustomerAPI"; // The internal name of the document.
-        config.Title = "CustomerAPI";        // The title displayed at the top of the Swagger UI.
-        config.Version = "v1";               // The version of your API.
-
-        // Adds the "Authorize" button to the Swagger UI so you can test protected routes.
-        config.AddSecurity("JWT", Enumerable.Empty<string>(), new NSwag.OpenApiSecurityScheme
-        {
-            // Defines the security type as an API Key (JWT falls under this in Swagger).
-            Type = NSwag.OpenApiSecuritySchemeType.ApiKey, 
-            
-            // Tells Swagger to look for the "Authorization" field in the HTTP Header.
-            Name = "Authorization", 
-            In = NSwag.OpenApiSecurityApiKeyLocation.Header, 
-            
-            // The instruction shown to the user inside the Swagger UI.
-            Description = "Type into the textbox: Bearer {your JWT token}." 
-        });
-    });
-
-    // So this part remains generally the same across all similar Api?
-
-    // Yes, for the most part, this configuration becomes a standard template you will reuse across almost all of your .NET Web API projects. While the specific names change, the "skeleton" remains consistent.
-
-
-    // This section is the Security Engine of your application. While the previous part told Swagger how to talk about security, this part actually builds the "Guard" that checks every request coming into your server.
-
-    // 1. Retrieves the secret string from appsettings.json to use for digital signatures.
-    var secretKey = builder.Configuration["Jwt:Key"];
-
-    Log.Information("This is var secretKey: {@SecretKey}", secretKey);
-
-    // 2. Registers the Authentication service and sets JWT as the default scheme.
-    builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-        .AddJwtBearer(options =>
-        {
-            // 3. Defines the strict "checklist" the server uses to decide if a token is valid.
-            options.TokenValidationParameters = new TokenValidationParameters
-            {
-                ValidateIssuer = true,           // Ensure the token came from YOUR server.
-                ValidateAudience = true,         // Ensure the token was meant for YOUR client app.
-                ValidateLifetime = true,         // Ensure the token hasn't expired.
-                ValidateIssuerSigningKey = true, // Ensure the digital "seal" hasn't been tampered with.
-                
-                ValidIssuer = "your-api",        // The expected name of your API.
-                ValidAudience = "your-client",   // The expected name of your frontend.
-                
-                // Converts your secret string into a mathematical key for verification.
-                IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!))
-            };
-        });
-
-    // 4. Registers the Authorization service (checks if a user has specific permissions/roles).
-    builder.Services.AddAuthorization();
-
-    // 5. Finalizes the builder and creates the 'app' instance ready for the pipeline.
     var app = builder.Build();
 
-    // Apply CORS
-    // CORS: Needs to be near the top. If a browser can't get past CORS, it won't even try to send the username or password.
     app.UseCors("MyFrontendPolicy");
-
-    // 6. Middleware: Inspects incoming headers for a JWT and identifies the user.
     app.UseAuthentication();
-
-    // 7. Middleware: Decides if the identified user is allowed to access the specific route.
     app.UseAuthorization();
-
-    // --- HANGFIRE DASHBOARD ---
-    // This creates the "/hangfire" URL where you can monitor your background jobs.
     app.UseHangfireDashboard("/hangfire");
 
-    // This section contains your Identity Logic (the /login endpoint) and your Development Tools (Swagger/OpenAPI). This is where your API transitions from being a passive database to an active security authority
-
-    // Defines a POST endpoint at "/login" that accepts login credentials and the database context.
     app.MapPost("/login", async (LoginRequest login, CustomerDb db) => 
     {
         // 1. DEFINE THE POLICY
@@ -302,9 +114,6 @@ try {
     }
 
 
-    // This final section of your code defines the Protected CRUD Operations (Create, Read, Update, Delete). It connects your HTTP routes to the actual database logic and ensures that only users with a valid "ID Card" (JWT) can get past the gate.
-
-    // 1. Creates a group of routes starting with "/Customer" and locks them all behind JWT authorization.
     RouteGroupBuilder customer = app.MapGroup("/Customer").RequireAuthorization().RequireRateLimiting("fixed");;
 
     // List all
@@ -339,15 +148,6 @@ try {
         return await mediator.Send(new DeleteCustomerCommand(id));
     });
 
-
-    // Maps specific HTTP verbs (GET, POST, etc.) to the logic functions defined below.
-    // customer.MapGet("/", GetAllCustomers);          // List all
-    // customer.MapGet("/{id}", GetCustomer);        // Get one by ID
-    // customer.MapPost("/", CreateCustomer);         // Create new
-    // customer.MapPut("/{id}", UpdateCustomer);      // Update existing
-    // customer.MapDelete("/{id}", DeleteCustomer);   // Remove
-
-    // The command that officially starts the web server to listen for requests.
     app.Run();
 
 
@@ -360,69 +160,3 @@ finally {
     // 4. Important: Ensures all log messages are written before the app closes
     Log.CloseAndFlush();
 }
-
-// --- LOGIC FUNCTIONS (HANDLERS) ---
-
-// Fetches all customers from the database and converts them into "ReadDTOs" to hide sensitive data.
-// static async Task<IResult> GetAllCustomers(CustomerDb db)
-// {
-//     var customers = await db.Customers.Select(x => new CustomerReadDTO(x)).ToArrayAsync();
-//     return TypedResults.Ok(customers);
-// }
-
-// // Searches for one customer by their Unique ID (Guid).
-// static async Task<IResult> GetCustomer(Guid id, CustomerDb db)
-// {
-//     // FindAsync(id) is optimized for looking up the Primary Key (the ID). It's the fastest way to find one specific person.
-//     return await db.Customers.FindAsync(id)
-//         is Customer customer
-//             ? TypedResults.Ok(new CustomerReadDTO(customer)) // Found: Return 200 OK
-//             : TypedResults.NotFound();                       // Not Found: Return 404
-// }
-
-// // Receives a "CreateDTO" from the user and saves a new Customer record to PostgreSQL.
-// static async Task<IResult> CreateCustomer(CustomerCreateDTO customerDTO, CustomerDb db)
-// {
-//     var customer = new Customer
-//     {
-//         FirstName = customerDTO.FirstName,
-//         LastName = customerDTO.LastName,
-//         Email = customerDTO.Email,
-//         Password = customerDTO.Password // Maps DTO password to the database entity.
-//     };
-
-//     db.Customers.Add(customer);       // Stages the change.
-//     await db.SaveChangesAsync();      // Pushes the change to the Docker database.
-
-//     // Returns a 201 Created status and the URL where the new resource can be found.
-//     return TypedResults.Created($"/Customer/{customer.Id}", new CustomerCreateDTO(customer));
-// }
-
-// // Finds an existing customer and updates their details.
-// static async Task<IResult> UpdateCustomer(Guid id, CustomerUpdateDTO customerDTO, CustomerDb db)
-// {
-//     var customer = await db.Customers.FindAsync(id);
-
-//     if (customer is null) return TypedResults.NotFound();
-
-//     customer.FirstName = customerDTO.FirstName;
-//     customer.LastName = customerDTO.LastName;
-//     customer.Email = customerDTO.Email;
-
-//     await db.SaveChangesAsync(); // Saves the updates.
-
-//     return TypedResults.NoContent(); // Returns 204 (Success, but no data to send back).
-// }
-
-// // Deletes a customer record from the database.
-// static async Task<IResult> DeleteCustomer(Guid id, CustomerDb db)
-// {
-//     if (await db.Customers.FindAsync(id) is Customer customer)
-//     {
-//         db.Customers.Remove(customer);
-//         await db.SaveChangesAsync();
-//         return TypedResults.NoContent();
-//     }
-
-//     return TypedResults.NotFound();
-// }
