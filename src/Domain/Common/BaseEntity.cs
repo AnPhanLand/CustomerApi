@@ -1,4 +1,3 @@
-using System.ComponentModel.DataAnnotations.Schema;
 namespace CustomerApi.Domain.Common;
 
 public abstract class BaseEntity

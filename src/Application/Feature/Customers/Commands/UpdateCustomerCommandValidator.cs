@@ -1,5 +1,3 @@
-using FluentValidation;
-
 namespace CustomerApi.Validators;
 
 // This is where the "Rules" are born

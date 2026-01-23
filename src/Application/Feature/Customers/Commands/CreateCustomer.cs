@@ -1,10 +1,3 @@
-using Hangfire;
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Distributed;
-using System.Text.Json;
-using FluentValidation;
-
 namespace CustomerApi.Application.Customers.Commands;
 
 // ==========================================
@@ -13,33 +6,33 @@ namespace CustomerApi.Application.Customers.Commands;
 
 // We use the DTO as the input for our Command.
 // This tells MediatR: "I want to create a customer, and I expect an IResult back."
-public record CreateCustomerCommand(CustomerCreateDTO CustomerDTO) : IRequest<IResult>;
+public record CreateCustomerCommand(CustomerCreateDTO CustomerDTO) : IRequest<Guid>;
 
 // ==========================================
 // 2. THE HANDLER (The "How")
 // ==========================================
 
-public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, IResult>
+public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, Guid>
 {
-    private readonly CustomerDb _db;
+    private readonly IApplicationDbContext _db;
     private readonly IDistributedCache _cache;
     private readonly IValidator<CreateCustomerCommand> _validator;
 
     // Injecting the database context. Ensure it is 'public' to avoid CS0051.
-    public CreateCustomerHandler(CustomerDb db, IDistributedCache cache, IValidator<CreateCustomerCommand> validator)
+    public CreateCustomerHandler(IApplicationDbContext db, IDistributedCache cache, IValidator<CreateCustomerCommand> validator)
     {
         _db = db;
         _cache = cache;
         _validator = validator;
     }
 
-    public async Task<IResult> Handle(CreateCustomerCommand request, CancellationToken ct)
+    public async Task<Guid> Handle(CreateCustomerCommand request, CancellationToken ct)
     {
         var validationResult = await _validator.ValidateAsync(request, ct);
 
         if (!validationResult.IsValid)
         {
-            return TypedResults.ValidationProblem(validationResult.ToDictionary());
+            throw new ValidationException(validationResult.Errors);
         }
 
         // 1. VALUE OBJECT CREATION
@@ -72,9 +65,9 @@ public class CreateCustomerHandler : IRequestHandler<CreateCustomerCommand, IRes
         // --- HANGFIRE JOB ---
         // This doesn't run the code NOW. It saves the "Plan" into Postgres
         // and returns immediately.
-        BackgroundJob.Enqueue(() => Console.WriteLine($"Sending Welcome Email to: {customer.Email}"));
+        // BackgroundJob.Enqueue(() => Console.WriteLine($"Sending Welcome Email to: {customer.Email}"));
 
         // 4. Response: Return a 201 Created status and the location of the new resource
-        return TypedResults.Created($"/customers/{customer.Id}", new CustomerCreateDTO(customer));
+        return customer.Id; 
     }
 }

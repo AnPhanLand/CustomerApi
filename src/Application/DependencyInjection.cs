@@ -1,7 +1,5 @@
-using System.Reflection;
-using CustomerApi.Infrastructure.Persistence.Mongo;
-using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using FluentValidation; 
 
 namespace CustomerApi.Application;
 
@@ -12,15 +10,12 @@ public static class DependencyInjection
         // 1. Register MediatR
         // This scans the current assembly to find all Handlers (like UpdateCustomerHandler).
         services.AddMediatR(cfg => {
-            cfg.RegisterServicesFromAssembly(typeof(Program).Assembly);
+            cfg.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly);
         });
-
-        // Register the MongoDB Activity Logger
-        services.AddScoped<IActivityLogger, MongoActivityLogger>();
 
         // 2. Register FluentValidation
         // This scans the assembly for all classes that inherit from AbstractValidator.
-        services.AddValidatorsFromAssemblyContaining<Program>();
+        services.AddValidatorsFromAssemblyContaining(typeof(DependencyInjection));
 
         return services;
     }

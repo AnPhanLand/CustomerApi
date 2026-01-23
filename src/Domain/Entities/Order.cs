@@ -1,5 +1,3 @@
-using CustomerApi.Domain.Common;
-
 namespace CustomerApi.Domain.Entities;
 
 public class Order : BaseEntity

@@ -1,5 +1,10 @@
 global using CustomerApi.Domain.Entities;
 global using CustomerApi.Application.Customers.DTOs;
-global using CustomerApi.Infrastructure.Persistence.Postgres;
 global using CustomerApi.Application.Customers.Commands;
 global using CustomerApi.Domain.Exceptions;
+global using CustomerApi.Domain.Enums;
+global using MediatR;
+global using FluentValidation;
+global using Microsoft.Extensions.Caching.Distributed;
+global using CustomerApi.Application.Common.Interfaces;
+global using CustomerApi.Domain.ValueObjects;

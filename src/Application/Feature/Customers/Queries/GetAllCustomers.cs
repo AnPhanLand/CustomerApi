@@ -15,7 +15,7 @@ namespace CustomerApi.Application.Customers.Queries;
 // We use a 'record' here because it's a lightweight way to hold data.
 // 'IRequest<IResult>' tells MediatR: "When this request is finished, 
 // it will return a standard ASP.NET Result (like 200 OK or 404 Not Found)."
-public record GetAllCustomersQuery() : IRequest<IResult>;
+public record GetAllCustomersQuery() : IRequest<List<CustomerReadDTO>>;
 
 
 // ==========================================
@@ -24,16 +24,16 @@ public record GetAllCustomersQuery() : IRequest<IResult>;
 
 // This class is the "Worker" that waits for the 'GetAllCustomersQuery' to be sent.
 // It implements 'IRequestHandler', which links this specific class to that specific Request.
-public class GetAllCustomersHandler : IRequestHandler<GetAllCustomersQuery, IResult>
+public class GetAllCustomersHandler : IRequestHandler<GetAllCustomersQuery, List<CustomerReadDTO>>
 {
     // We create a private variable to hold our Database connection.
-    private readonly CustomerDb _db;
+    private readonly IApplicationDbContext _db;
     private readonly IDistributedCache _cache;
     private const string CacheKey = "all_customers";
 
     // CONSTRUCTOR: We ask .NET to "inject" our Database (CustomerDb) here.
     // Note: CustomerDb must be 'public' for this to work without errors.
-    public GetAllCustomersHandler(CustomerDb db, IDistributedCache cache)
+    public GetAllCustomersHandler(IApplicationDbContext db, IDistributedCache cache)
     {
         _db = db;
         _cache = cache;
@@ -41,7 +41,7 @@ public class GetAllCustomersHandler : IRequestHandler<GetAllCustomersQuery, IRes
 
     // THE HANDLE METHOD: This is the actual engine room of the feature.
     // This code runs only when you call 'mediator.Send(new GetAllCustomersQuery())' in Program.cs.
-    public async Task<IResult> Handle(GetAllCustomersQuery request, CancellationToken ct)
+    public async Task<List<CustomerReadDTO>> Handle(GetAllCustomersQuery request, CancellationToken ct)
     {
         // 1. Try to get the list from Redis
         var cachedData = await _cache.GetStringAsync(CacheKey, ct);
@@ -50,7 +50,7 @@ public class GetAllCustomersHandler : IRequestHandler<GetAllCustomersQuery, IRes
         {
             // Deserialize the JSON string back into a List
             var customers = JsonSerializer.Deserialize<List<CustomerReadDTO>>(cachedData);
-            return TypedResults.Ok(customers);
+            return customers!;
         }
 
         // 2. If not in cache, go to Postgres
@@ -67,7 +67,7 @@ public class GetAllCustomersHandler : IRequestHandler<GetAllCustomersQuery, IRes
         var serializedData = JsonSerializer.Serialize(customersFromDb);
         await _cache.SetStringAsync(CacheKey, serializedData, options, ct);
 
-        return TypedResults.Ok(customersFromDb);
+        return customersFromDb;
         
         // 1. Go to the 'Customers' table.
         // 2. 'Select' transforms the raw database model into a 'CustomerReadDTO' for security/cleanliness.

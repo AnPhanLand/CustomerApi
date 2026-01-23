@@ -1,8 +1,3 @@
-using System.Reflection;
-using CustomerApi.Infrastructure.Persistence.Mongo;
-using FluentValidation;
-using Microsoft.Extensions.DependencyInjection;
-
 namespace CustomerApi.API;
 
 public static class DependencyInjection

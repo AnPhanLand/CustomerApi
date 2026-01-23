@@ -1,6 +1,5 @@
-using Microsoft.EntityFrameworkCore;
 namespace CustomerApi.Infrastructure.Persistence.Postgres;
-public class CustomerDb : DbContext
+public class CustomerDb : DbContext, IApplicationDbContext
 {
     public CustomerDb(DbContextOptions<CustomerDb> options)
         : base(options) { }

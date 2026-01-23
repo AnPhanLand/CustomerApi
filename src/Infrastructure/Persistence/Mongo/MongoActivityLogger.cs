@@ -1,6 +1,3 @@
-using MongoDB.Driver;
-using CustomerApi.Application.Common.Interfaces;
-
 namespace CustomerApi.Infrastructure.Persistence.Mongo;
 
 public class MongoActivityLogger : IActivityLogger

@@ -1,9 +1,3 @@
-using MediatR;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Caching.Distributed;
-using System.Text.Json;
-using FluentValidation;
-
 namespace CustomerApi.Application.Customers.Commands;
 
 // ==========================================
@@ -11,34 +5,34 @@ namespace CustomerApi.Application.Customers.Commands;
 // ==========================================
 
 // This record takes both the ID (from the URL) and the DTO (from the Body).
-public record UpdateCustomerCommand(Guid Id, CustomerUpdateDTO CustomerDTO) : IRequest<IResult>;
+public record UpdateCustomerCommand(Guid Id, CustomerUpdateDTO CustomerDTO) : IRequest<Guid>;
 
 // ==========================================
 // 2. THE HANDLER (The "How")
 // ==========================================
 
-public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, IResult>
+public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, Guid>
 {
-    private readonly CustomerDb _db;
+    private readonly IApplicationDbContext _db;
     
     private readonly IDistributedCache _cache;
     private readonly IValidator<UpdateCustomerCommand> _validator;
 
     // Injecting the database context. Remember to keep CustomerDb 'public'.
-    public UpdateCustomerHandler(CustomerDb db, IDistributedCache cache, IValidator<UpdateCustomerCommand> validator)
+    public UpdateCustomerHandler(IApplicationDbContext db, IDistributedCache cache, IValidator<UpdateCustomerCommand> validator)
     {
         _db = db;
         _cache = cache;
         _validator = validator;
     }
 
-    public async Task<IResult> Handle(UpdateCustomerCommand request, CancellationToken ct)
+    public async Task<Guid> Handle(UpdateCustomerCommand request, CancellationToken ct)
     {
         var validationResult = await _validator.ValidateAsync(request, ct);
 
         if (!validationResult.IsValid)
         {
-            return TypedResults.ValidationProblem(validationResult.ToDictionary());
+            throw new ValidationException(validationResult.Errors);
         }
 
 
@@ -49,7 +43,7 @@ public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, IRes
         // 2. If the customer doesn't exist, stop and return 404.
         if (customer is null) 
         {
-            return TypedResults.NotFound();
+            return Guid.Empty;
         }
 
         // 3. Update the properties of the tracked entity.
@@ -68,6 +62,6 @@ public class UpdateCustomerHandler : IRequestHandler<UpdateCustomerCommand, IRes
         await _cache.RemoveAsync("all_customers", ct);
 
         // 5. Return 204 No Content (Standard for successful updates).
-        return TypedResults.NoContent();
+        return customer.Id;
     }
 }

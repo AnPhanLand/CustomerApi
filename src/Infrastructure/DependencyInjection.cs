@@ -1,8 +1,3 @@
-using System.Reflection;
-using CustomerApi.Infrastructure.Persistence.Mongo;
-using FluentValidation;
-using Microsoft.Extensions.DependencyInjection;
-
 namespace CustomerApi.Infrastructure;
 
 public static class DependencyInjection
@@ -74,7 +69,32 @@ public static class DependencyInjection
                 };
             });
 
+        // Register the MongoDB Activity Logger
+        services.AddScoped<IActivityLogger, MongoActivityLogger>();
+
+        ConfigureMongoMappings();
 
         return services;
+    }
+
+    private static void ConfigureMongoMappings()
+    {
+        // Only register if it hasn't been registered yet to avoid errors during integration tests
+        if (!BsonClassMap.IsClassMapRegistered(typeof(CustomerActivity)))
+        {
+            BsonClassMap.RegisterClassMap<CustomerActivity>(cm => 
+            {
+                cm.AutoMap();
+                
+                // Maps the 'Id' property to the MongoDB _id and tells it to treat it as a string
+                cm.MapIdMember(c => c.Id)
+                  .SetIdGenerator(StringObjectIdGenerator.Instance)
+                  .SetSerializer(new StringSerializer(BsonType.ObjectId));
+
+                // Ensures the Guid is stored in a readable string format if desired
+                cm.MapMember(c => c.CustomerId)
+                  .SetSerializer(new GuidSerializer(BsonType.String));
+            });
+        }
     }
 }

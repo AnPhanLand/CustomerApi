@@ -1,6 +1,3 @@
-using System.Text.RegularExpressions;
-using CustomerApi.Domain.Common;
-
 namespace CustomerApi.Domain.ValueObjects;
 
 public record EmailAddress

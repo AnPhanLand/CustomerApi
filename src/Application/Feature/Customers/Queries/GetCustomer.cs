@@ -16,7 +16,7 @@ namespace CustomerApi.Application.Customers.Queries;
 // We use a 'record' to define the input needed for this specific task.
 // It accepts a 'Guid Id' as a parameter.
 // 'IRequest<IResult>' confirms that the person sending this request expects an HTTP Result back.
-public record GetCustomerQuery(Guid Id) : IRequest<IResult>;
+public record GetCustomerQuery(Guid Id) : IRequest<List<CustomerReadDTO>>;
 
 
 // ==========================================
@@ -24,17 +24,17 @@ public record GetCustomerQuery(Guid Id) : IRequest<IResult>;
 // ==========================================
 
 // This class is the "Worker" that performs the database search.
-// It is linked to the 'GetCustomerQuery' and returns an 'IResult'.
-public class GetCustomerHandler : IRequestHandler<GetCustomerQuery, IResult>
+// It is linked to the 'GetCustomerQuery' and returns a 'List<CustomerReadDTO>'.
+public class GetCustomerHandler : IRequestHandler<GetCustomerQuery, List<CustomerReadDTO>>
 {
     // A private field to hold our database context instance.
-    private readonly CustomerDb _db;
+    private readonly IApplicationDbContext _db;
     private readonly IActivityLogger _logger;
     private readonly IDistributedCache _cache;
 
     // CONSTRUCTOR: We inject the database here so the handler can use it.
     // Ensure 'CustomerDb' is marked as 'public' in your data folder.
-    public GetCustomerHandler(CustomerDb db, IDistributedCache cache, IActivityLogger logger)
+    public GetCustomerHandler(IApplicationDbContext db, IDistributedCache cache, IActivityLogger logger)
     {
         _db = db;
         _cache = cache;
@@ -42,7 +42,7 @@ public class GetCustomerHandler : IRequestHandler<GetCustomerQuery, IResult>
     }
 
     // THE HANDLE METHOD: The logic triggered by 'mediator.Send()'.
-    public async Task<IResult> Handle(GetCustomerQuery request, CancellationToken ct)
+    public async Task<List<CustomerReadDTO>> Handle(GetCustomerQuery request, CancellationToken ct)
     {
         string cacheKey = $"customer_{request.Id}";
         // 1. Try to get data from Redis
@@ -52,7 +52,7 @@ public class GetCustomerHandler : IRequestHandler<GetCustomerQuery, IResult>
         {
             // CACHE HIT: Turn the JSON string back into an object
             var customerDto = JsonSerializer.Deserialize<CustomerReadDTO>(cachedCustomer);
-            return TypedResults.Ok(customerDto);
+            return new List<CustomerReadDTO> { customerDto };
         }
         
         // 2. CACHE MISS: Go to the slow Database
@@ -74,7 +74,7 @@ public class GetCustomerHandler : IRequestHandler<GetCustomerQuery, IResult>
         var serializedData = JsonSerializer.Serialize(response);
         await _cache.SetStringAsync(cacheKey, serializedData, cacheOptions, ct);
 
-        return TypedResults.Ok(response);
+        return new List<CustomerReadDTO> { response };
 
 
 

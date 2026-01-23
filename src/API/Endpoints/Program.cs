@@ -1,7 +1,13 @@
+
 using CustomerApi.Infrastructure;
 using CustomerApi.Application;
 using CustomerApi.Application.Common.Interfaces;
 using CustomerApi.Infrastructure.Persistence.Mongo;
+using CustomerApi.Infrastructure.Persistence.Postgres;
+using CustomerApi.Domain.Entities;
+using CustomerApi.Domain.ValueObjects;
+using CustomerApi.Application.Customers.DTOs;
+using CustomerApi.Application.Customers.Commands;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -24,6 +30,7 @@ try {
     app.UseAuthorization();
     app.UseHangfireDashboard("/hangfire");
 
+    var secretKey = builder.Configuration["Jwt:Key"];
     app.MapPost("/login", async (LoginRequest login, CustomerDb db) => 
     {
         // 1. DEFINE THE POLICY
@@ -41,7 +48,7 @@ try {
             .Build();
 
         // 1. Logic for a 'backdoor' account to allow testing without database entries.
-        bool isTestAccount = (login.Email == "admin@test.com" && login.Password == "password123");
+        bool isTestAccount = (login.Email.Value == "admin@test.com" && login.Password == "password123");
         
         // Declares a variable to hold a Customer object, initializing it as 'null' (empty).
         // The '?' means this variable is "nullable"—it is allowed to be empty if no user is found.
@@ -50,7 +57,7 @@ try {
         if (isTestAccount)
         {
             // Creates a temporary in-memory user object for the test account.
-            user = new Customer { Id = Guid.Empty, Email = "admin@test.com" };
+            user?.UpdateEmail("admin@test.com");
         }
         else
         {
@@ -59,7 +66,7 @@ try {
             // The code inside 'ExecuteAsync' is what Polly will watch over.
             user = await pipeline.ExecuteAsync(async ct => 
             {
-                return await db.Customers.FirstOrDefaultAsync(u => u.Email == login.Email, ct);
+                return await db.Customers.FirstOrDefaultAsync(u => u.Email.Value == login.Email.Value, ct);
             });
             
             // Security check: If user doesn't exist or password doesn't match, block access.
@@ -73,7 +80,7 @@ try {
         var claims = new[]
         {
             new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()), // Unique ID of the user.
-            new Claim(JwtRegisteredClaimNames.Email, user.Email),       // User's email address.
+            new Claim(JwtRegisteredClaimNames.Email, user.Email.Value),       // User's email address.
             new Claim(ClaimTypes.Role, "Admin")                         // User's permission level.
         };
 
