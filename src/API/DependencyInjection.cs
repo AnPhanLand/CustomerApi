@@ -9,7 +9,7 @@ public static class DependencyInjection
         {
             options.AddPolicy("MyFrontendPolicy", policy =>
             {
-                policy.WithOrigins("http://localhost:3000") // Only allow your React/Angular app
+                policy.WithOrigins("http://localhost:5067") // Only allow your React/Angular app
                     .AllowAnyMethod()                    // Allow GET, POST, PUT, DELETE
                     .AllowAnyHeader();                   // Allow JWT headers
             });
