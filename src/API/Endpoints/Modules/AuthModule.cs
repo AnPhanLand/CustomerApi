@@ -1,5 +1,4 @@
-using Carter;
-using MediatR;
+namespace CustomerApi.API.Endpoints.Modules;
 
 public class AuthModule : ICarterModule
 {
