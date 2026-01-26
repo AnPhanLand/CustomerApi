@@ -6,9 +6,14 @@ public class ExcelService : IExcelService
     {
         using var workbook = new XLWorkbook();
         var worksheet = workbook.Worksheets.Add("Customers");
-        worksheet.Cell(1, 1).Value = "First Name";
-        worksheet.Cell(1, 2).Value = "Last Name";
-        // ... fill data ...
+
+        // This one line replaces the manual headers and the loop!
+        // It starts at row 1, column 1 and creates a formatted Excel table.
+        worksheet.Cell(1, 1).InsertTable(customers);
+
+        // Optional: Adjust column widths to fit the text automatically
+        worksheet.Columns().AdjustToContents();
+
         using var stream = new MemoryStream();
         workbook.SaveAs(stream);
         return stream.ToArray();
