@@ -2222,3 +2222,703 @@ LIMIT 1
 2026-01-26 10:37:26.341 +07:00 [DBG] Aggregating records in 'Counter' table...
 2026-01-26 10:37:26.409 +07:00 [INF] 1 servers were removed due to timeout
 2026-01-26 10:37:26.545 +07:00 [DBG] Server desktop-l31jdro:17004:0b0d5803 heartbeat successfully sent
+2026-01-26 11:07:02.260 +07:00 [INF] Starting the API...
+2026-01-26 11:07:02.826 +07:00 [INF] Start installing Hangfire SQL objects...
+2026-01-26 11:07:02.894 +07:00 [INF] Hangfire SQL objects installed.
+2026-01-26 11:07:02.929 +07:00 [DBG] Found validator CreateCustomerCommandValidator
+2026-01-26 11:07:02.929 +07:00 [DBG] Found validator UpdateCustomerCommandValidator
+2026-01-26 11:07:02.929 +07:00 [DBG] Found module AuthModule
+2026-01-26 11:07:02.929 +07:00 [DBG] Found module CustomerApi.API.Endpoints.Modules.CustomerModule
+2026-01-26 11:07:02.970 +07:00 [DBG] Hosting starting
+2026-01-26 11:07:02.987 +07:00 [INF] User profile is available. Using 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-01-26 11:07:02.992 +07:00 [DBG] Reading data from file 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys\key-e0e4c711-e38d-4994-9c4d-b0c1ef741012.xml'.
+2026-01-26 11:07:02.997 +07:00 [DBG] Found key {e0e4c711-e38d-4994-9c4d-b0c1ef741012}.
+2026-01-26 11:07:03.004 +07:00 [DBG] Considering key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} with expiration date 2026-03-29 06:37:16Z as default key.
+2026-01-26 11:07:03.006 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-01-26 11:07:03.007 +07:00 [DBG] Decrypting secret element using Windows DPAPI.
+2026-01-26 11:07:03.007 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-01-26 11:07:03.009 +07:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2026-01-26 11:07:03.010 +07:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2026-01-26 11:07:03.011 +07:00 [DBG] Using key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} as the default key.
+2026-01-26 11:07:03.011 +07:00 [DBG] Key ring with default key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} was loaded during application startup.
+2026-01-26 11:07:03.014 +07:00 [DBG] Middleware loaded
+2026-01-26 11:07:03.015 +07:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (16459 B).
+2026-01-26 11:07:03.018 +07:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2026-01-26 11:07:03.095 +07:00 [DBG] Middleware configuration started with options: {AllowedHosts = *, AllowEmptyHosts = True, IncludeFailureMessage = True}
+2026-01-26 11:07:03.095 +07:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2026-01-26 11:07:03.096 +07:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2026-01-26 11:07:03.103 +07:00 [INF] Now listening on: http://localhost:5067
+2026-01-26 11:07:03.103 +07:00 [DBG] Loaded hosting startup assembly API
+2026-01-26 11:07:03.104 +07:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2026-01-26 11:07:03.108 +07:00 [INF] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: postgres, Schema: hangfire'
+2026-01-26 11:07:03.108 +07:00 [INF] Using the following options for PostgreSQL job storage:
+2026-01-26 11:07:03.108 +07:00 [INF]     Queue poll interval: 00:00:15.
+2026-01-26 11:07:03.108 +07:00 [INF]     Invisibility timeout: 00:30:00.
+2026-01-26 11:07:03.108 +07:00 [INF]     Use sliding invisibility timeout: False.
+2026-01-26 11:07:03.108 +07:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-01-26 11:07:03.117 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-01-26 11:07:03.117 +07:00 [INF] Hosting environment: Development
+2026-01-26 11:07:03.117 +07:00 [INF] Content root path: C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\API
+2026-01-26 11:07:03.117 +07:00 [DBG] Hosting started
+2026-01-26 11:07:03.123 +07:00 [DBG] Execution loop BackgroundServerProcess:fb7808de has started in 3.1584 ms
+2026-01-26 11:07:03.265 +07:00 [INF] Server desktop-l31jdro:19104:15a615a0 successfully announced in 138.4564 ms
+2026-01-26 11:07:03.271 +07:00 [DBG] Execution loop ServerHeartbeatProcess:54b86a59 has started in 3.9895 ms
+2026-01-26 11:07:03.272 +07:00 [INF] Server desktop-l31jdro:19104:15a615a0 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-01-26 11:07:03.274 +07:00 [DBG] Execution loop ServerWatchdog:ae0f0377 has started in 1.5359 ms
+2026-01-26 11:07:03.275 +07:00 [DBG] Execution loop ServerJobCancellationWatcher:4e826cb8 has started in 1.3354 ms
+2026-01-26 11:07:03.277 +07:00 [DBG] Execution loop ExpirationManager:fffaa231 has started in 1.5553 ms
+2026-01-26 11:07:03.279 +07:00 [DBG] Execution loop CountersAggregator:222ea0c0 has started in 1.3874 ms
+2026-01-26 11:07:03.279 +07:00 [DBG] Removing outdated records from table 'aggregatedcounter'...
+2026-01-26 11:07:03.279 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-01-26 11:07:03.280 +07:00 [INF] 1 servers were removed due to timeout
+2026-01-26 11:07:03.280 +07:00 [DBG] Execution loop Worker:0ec03531 has started in 1.6464 ms
+2026-01-26 11:07:03.283 +07:00 [DBG] Execution loop Worker:70c636e0 has started in 4.5002 ms
+2026-01-26 11:07:03.285 +07:00 [DBG] Execution loop Worker:aceaede7 has started in 6.4652 ms
+2026-01-26 11:07:03.287 +07:00 [DBG] Execution loop Worker:dd9162bd has started in 8.1425 ms
+2026-01-26 11:07:03.289 +07:00 [DBG] Execution loop Worker:2ce9a726 has started in 10.1982 ms
+2026-01-26 11:07:03.290 +07:00 [DBG] Execution loop Worker:a1e4c51e has started in 11.3831 ms
+2026-01-26 11:07:03.291 +07:00 [DBG] Execution loop Worker:a5e78886 has started in 12.4883 ms
+2026-01-26 11:07:03.300 +07:00 [DBG] Execution loop Worker:1140962d has started in 21.4375 ms
+2026-01-26 11:07:03.305 +07:00 [DBG] Execution loop Worker:ce21ae85 has started in 25.7737 ms
+2026-01-26 11:07:03.306 +07:00 [DBG] Execution loop Worker:18560e66 has started in 27.6279 ms
+2026-01-26 11:07:03.310 +07:00 [DBG] Execution loop Worker:17e1249a has started in 31.0515 ms
+2026-01-26 11:07:03.313 +07:00 [DBG] Execution loop Worker:8aee809b has started in 34.029 ms
+2026-01-26 11:07:03.316 +07:00 [DBG] Execution loop Worker:a975f5fd has started in 36.9524 ms
+2026-01-26 11:07:03.322 +07:00 [DBG] Execution loop Worker:523365ca has started in 43.1779 ms
+2026-01-26 11:07:03.325 +07:00 [DBG] Execution loop Worker:748a97f4 has started in 41.7561 ms
+2026-01-26 11:07:03.325 +07:00 [DBG] Execution loop Worker:90ad2d93 has started in 46.5935 ms
+2026-01-26 11:07:03.332 +07:00 [DBG] Execution loop Worker:218e37a7 has started in 52.7375 ms
+2026-01-26 11:07:03.337 +07:00 [DBG] Execution loop Worker:11f23441 has started in 58.2679 ms
+2026-01-26 11:07:03.344 +07:00 [DBG] Execution loop Worker:fe18329c has started in 65.6656 ms
+2026-01-26 11:07:03.356 +07:00 [DBG] Execution loop Worker:6325b337 has started in 77.5163 ms
+2026-01-26 11:07:03.363 +07:00 [DBG] Execution loop DelayedJobScheduler:56127958 has started in 6.6065 ms
+2026-01-26 11:07:03.393 +07:00 [DBG] Execution loop RecurringJobScheduler:7174a226 has started in 29.2818 ms
+2026-01-26 11:07:03.393 +07:00 [INF] Server desktop-l31jdro:19104:15a615a0 all the dispatchers started
+2026-01-26 11:07:03.444 +07:00 [DBG] Removing outdated records from table 'counter'...
+2026-01-26 11:07:03.470 +07:00 [DBG] Removing outdated records from table 'job'...
+2026-01-26 11:07:03.479 +07:00 [DBG] Connection id "0HNISI1ECE9KB" accepted.
+2026-01-26 11:07:03.480 +07:00 [DBG] Connection id "0HNISI1ECE9KB" started.
+2026-01-26 11:07:03.480 +07:00 [DBG] Removing outdated records from table 'list'...
+2026-01-26 11:07:03.489 +07:00 [DBG] Removing outdated records from table 'set'...
+2026-01-26 11:07:03.498 +07:00 [DBG] Removing outdated records from table 'hash'...
+2026-01-26 11:07:03.521 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/ - null null
+2026-01-26 11:07:03.555 +07:00 [DBG] No candidates found for the request path '/'
+2026-01-26 11:07:03.555 +07:00 [DBG] Request did not match any endpoints
+2026-01-26 11:07:03.577 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-26 11:07:03.580 +07:00 [DBG] The request path  does not match the path filter
+2026-01-26 11:07:03.582 +07:00 [DBG] Connection id "0HNISI1ECE9KB" completed keep alive response.
+2026-01-26 11:07:03.583 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/ - 404 null null 61.9209ms
+2026-01-26 11:07:03.585 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5067/, Response status code: 404
+2026-01-26 11:07:06.695 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger - null null
+2026-01-26 11:07:06.696 +07:00 [DBG] No candidates found for the request path '/swagger'
+2026-01-26 11:07:06.696 +07:00 [DBG] Request did not match any endpoints
+2026-01-26 11:07:06.698 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-26 11:07:06.703 +07:00 [DBG] Connection id "0HNISI1ECE9KB" completed keep alive response.
+2026-01-26 11:07:06.703 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger - 302 null null 8.0036ms
+2026-01-26 11:07:06.743 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger/index.html - null null
+2026-01-26 11:07:06.744 +07:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2026-01-26 11:07:06.744 +07:00 [DBG] Request did not match any endpoints
+2026-01-26 11:07:06.747 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-26 11:07:06.760 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2026-01-26 11:07:06.765 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2026-01-26 11:07:06.765 +07:00 [DBG] Connection id "0HNISI1ECE9KB" completed keep alive response.
+2026-01-26 11:07:06.765 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger/index.html - 200 null text/html; charset=utf-8 21.6325ms
+2026-01-26 11:07:06.811 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/_framework/aspnetcore-browser-refresh.js - null null
+2026-01-26 11:07:06.812 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2026-01-26 11:07:06.813 +07:00 [DBG] Connection id "0HNISI1ECE9KB" completed keep alive response.
+2026-01-26 11:07:06.813 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/_framework/aspnetcore-browser-refresh.js - 200 16459 application/javascript; charset=utf-8 1.8564ms
+2026-01-26 11:07:07.132 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger/CustomerAPI/swagger.json - null null
+2026-01-26 11:07:07.133 +07:00 [DBG] No candidates found for the request path '/swagger/CustomerAPI/swagger.json'
+2026-01-26 11:07:07.133 +07:00 [DBG] Request did not match any endpoints
+2026-01-26 11:07:07.133 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-26 11:07:07.135 +07:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-01-26 11:07:07.138 +07:00 [DBG] Executing API description provider 'EndpointMetadataApiDescriptionProvider' from assembly Microsoft.AspNetCore.Mvc.ApiExplorer v10.0.0.0.
+2026-01-26 11:07:07.498 +07:00 [DBG] Connection id "0HNISI1ECE9KB" completed keep alive response.
+2026-01-26 11:07:07.499 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger/CustomerAPI/swagger.json - 200 null application/json; charset=utf-8 366.2581ms
+2026-01-26 11:07:12.074 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5067/login - application/json 66
+2026-01-26 11:07:12.076 +07:00 [DBG] 1 candidate(s) found for the request path '/login'
+2026-01-26 11:07:12.077 +07:00 [DBG] Request matched endpoint 'HTTP: POST /login'
+2026-01-26 11:07:12.077 +07:00 [DBG] The request has an origin header: 'http://localhost:5067'.
+2026-01-26 11:07:12.078 +07:00 [INF] CORS policy execution successful.
+2026-01-26 11:07:12.078 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-26 11:07:12.078 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-01-26 11:07:12.079 +07:00 [INF] Executing endpoint 'HTTP: POST /login'
+2026-01-26 11:07:12.082 +07:00 [DBG] Connection id "0HNISI1ECE9KB", Request id "0HNISI1ECE9KB:00000006": started reading request body.
+2026-01-26 11:07:12.082 +07:00 [DBG] Connection id "0HNISI1ECE9KB", Request id "0HNISI1ECE9KB:00000006": done reading request body.
+2026-01-26 11:07:12.091 +07:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-01-26 11:07:12.164 +07:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2026-01-26 11:07:12.653 +07:00 [DBG] The property 'EmailAddress.CustomerId' was created in shadow state because there are no eligible CLR members with a matching name.
+2026-01-26 11:07:12.653 +07:00 [DBG] The property 'PhoneNumber.CustomerId' was created in shadow state because there are no eligible CLR members with a matching name.
+2026-01-26 11:07:12.732 +07:00 [DBG] Entity Framework Core 10.0.2 initialized 'CustomerDb' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:10.0.0+7624373747b28d693b45cea8174471d4b312e2a5' with options: MigrationsAssembly=Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2026-01-26 11:07:12.774 +07:00 [DBG] Compiling query expression: 
+'DbSet<Customer>()
+    .FirstOrDefault(u => u.Email.Value == @command_Request_Email_Value)'
+2026-01-26 11:07:12.808 +07:00 [DBG] Including navigation: 'Customer.ContactNumber'.
+2026-01-26 11:07:12.808 +07:00 [DBG] Including navigation: 'Customer.Email'.
+2026-01-26 11:07:13.004 +07:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<Customer>(
+    asyncEnumerable: SingleQueryingEnumerable.Create<Customer>(
+        relationalQueryContext: (RelationalQueryContext)queryContext, 
+        relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+            Client Projections:
+                0 -> Dictionary<IPropertyBase, int> { [Property: Customer.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Customer.CreatedAt (DateTime) Required, 1], [Property: Customer.FirstName (string) Required, 2], [Property: Customer.LastName (string) Required, 3], [Property: Customer.MembershipLevel (MembershipLevel) Required, 4], [Property: Customer.Password (string) Required, 5], [Property: Customer.Region (string) Required, 6], [Property: Customer.Status (CustomerStatus) Required, 7], [Property: Customer.UpdatedAt (DateTime?), 8] }
+                1 -> Dictionary<IPropertyBase, int> { [Property: PhoneNumber.CustomerId (no field, Guid) Shadow Required PK FK AfterSave:Throw, 0], [Property: PhoneNumber.CountryCode (string) Required, 9], [Property: PhoneNumber.Number (string) Required, 10] }
+                2 -> Dictionary<IPropertyBase, int> { [Property: EmailAddress.CustomerId (no field, Guid) Shadow Required PK FK AfterSave:Throw, 0], [Property: EmailAddress.Value (string) Required, 11] }
+            SELECT TOP(1) c.Id, c.CreatedAt, c.FirstName, c.LastName, c.MembershipLevel, c.Password, c.Region, c.Status, c.UpdatedAt, c.CountryCode, c.PhoneNumber, c.Email
+            FROM Customers AS c
+            WHERE c.Email == @command_Request_Email_Value) | Resolver: c => new RelationalCommandCache(
+            c.Dependencies.MemoryCache, 
+            c.RelationalDependencies.QuerySqlGeneratorFactory, 
+            c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+            Client Projections:
+                0 -> Dictionary<IPropertyBase, int> { [Property: Customer.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Customer.CreatedAt (DateTime) Required, 1], [Property: Customer.FirstName (string) Required, 2], [Property: Customer.LastName (string) Required, 3], [Property: Customer.MembershipLevel (MembershipLevel) Required, 4], [Property: Customer.Password (string) Required, 5], [Property: Customer.Region (string) Required, 6], [Property: Customer.Status (CustomerStatus) Required, 7], [Property: Customer.UpdatedAt (DateTime?), 8] }
+                1 -> Dictionary<IPropertyBase, int> { [Property: PhoneNumber.CustomerId (no field, Guid) Shadow Required PK FK AfterSave:Throw, 0], [Property: PhoneNumber.CountryCode (string) Required, 9], [Property: PhoneNumber.Number (string) Required, 10] }
+                2 -> Dictionary<IPropertyBase, int> { [Property: EmailAddress.CustomerId (no field, Guid) Shadow Required PK FK AfterSave:Throw, 0], [Property: EmailAddress.Value (string) Required, 11] }
+            SELECT TOP(1) c.Id, c.CreatedAt, c.FirstName, c.LastName, c.MembershipLevel, c.Password, c.Region, c.Status, c.UpdatedAt, c.CountryCode, c.PhoneNumber, c.Email
+            FROM Customers AS c
+            WHERE c.Email == @command_Request_Email_Value, 
+            False, 
+            Parameter
+        )].GetRelationalCommandTemplate(parameters), 
+        readerColumns: null, 
+        shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+        {
+            Customer entity;
+            PhoneNumber entity;
+            EmailAddress entity;
+            entity = 
+            {
+                MaterializationContext materializationContext1;
+                IEntityType entityType1;
+                Customer instance1;
+                InternalEntityEntry entry1;
+                bool hasNullKey1;
+                materializationContext1 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance1 = default(Customer);
+                entry1 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: Customer.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetGuid(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey1);
+                !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+                {
+                    entityType1 = entry1.EntityType;
+                    return instance1 = (Customer)entry1.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot1;
+                    shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType1 = [LIFTABLE Constant: EntityType: Customer | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer")];
+                    instance1 = switch (entityType1)
+                    {
+                        case [LIFTABLE Constant: EntityType: Customer | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer")]: 
+                            {
+                                return 
+                                {
+                                    Customer instance;
+                                    instance = new Customer();
+                                    instance.<Id>k__BackingField = dataReader.GetGuid(0);
+                                    instance.<CreatedAt>k__BackingField = dataReader.GetDateTime(1);
+                                    instance.<FirstName>k__BackingField = dataReader.GetString(2);
+                                    instance.<LastName>k__BackingField = dataReader.GetString(3);
+                                    instance.<MembershipLevel>k__BackingField = Invoke(((EnumToNumberConverter<MembershipLevel, int>)((IReadOnlyProperty)[LIFTABLE Constant: Property: Customer.MembershipLevel (MembershipLevel) Required | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer").FindProperty("MembershipLevel")]).GetTypeMapping().Converter).ConvertFromProviderTyped, dataReader.GetInt32(4));
+                                    instance.<Password>k__BackingField = dataReader.GetString(5);
+                                    instance.<Region>k__BackingField = dataReader.GetString(6);
+                                    instance.<Status>k__BackingField = Invoke(((EnumToNumberConverter<CustomerStatus, int>)((IReadOnlyProperty)[LIFTABLE Constant: Property: Customer.Status (CustomerStatus) Required | Resolver: namelessParameter{3} => namelessParameter{3}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer").FindProperty("Status")]).GetTypeMapping().Converter).ConvertFromProviderTyped, dataReader.GetInt32(7));
+                                    instance.<UpdatedAt>k__BackingField = dataReader.IsDBNull(8) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(8);
+                                    (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                        context: materializationContext1.Context, 
+                                        entity: instance, 
+                                        queryTrackingBehavior: TrackAll, 
+                                        structuralType: [LIFTABLE Constant: EntityType: Customer | Resolver: namelessParameter{4} => namelessParameter{4}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer")]) : default(void);
+                                    return instance;
+                                }}
+                        default: 
+                            default(Customer)
+                    }
+                    ;
+                    entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType1, 
+                        entity: instance1, 
+                        snapshot: shadowSnapshot1);
+                    return instance1;
+                } : default(void);
+                return instance1;
+            };
+            entity = 
+            {
+                MaterializationContext materializationContext2;
+                IEntityType entityType2;
+                PhoneNumber instance2;
+                InternalEntityEntry entry2;
+                bool hasNullKey2;
+                materializationContext2 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance2 = default(PhoneNumber);
+                entry2 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: PhoneNumber.CustomerId PK | Resolver: c => c.Dependencies.Model.FindEntityType("CustomerApi.Domain.ValueObjects.PhoneNumber").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetGuid(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey2);
+                !(hasNullKey2) ? entry2 != default(InternalEntityEntry) ? 
+                {
+                    entityType2 = entry2.EntityType;
+                    return instance2 = (PhoneNumber)entry2.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot2;
+                    shadowSnapshot2 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType2 = [LIFTABLE Constant: EntityType: PhoneNumber Owned | Resolver: namelessParameter{5} => namelessParameter{5}.Dependencies.Model.FindEntityType("CustomerApi.Domain.ValueObjects.PhoneNumber")];
+                    instance2 = switch (entityType2)
+                    {
+                        case [LIFTABLE Constant: EntityType: PhoneNumber Owned | Resolver: namelessParameter{6} => namelessParameter{6}.Dependencies.Model.FindEntityType("CustomerApi.Domain.ValueObjects.PhoneNumber")]: 
+                            {
+                                shadowSnapshot2 = (ISnapshot)new Snapshot<Guid>(dataReader.GetGuid(0));
+                                return new PhoneNumber(
+                                    dataReader.GetString(9), 
+                                    dataReader.GetString(10)
+                                );
+                            }
+                        default: 
+                            default(PhoneNumber)
+                    }
+                    ;
+                    entry2 = entityType2 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType2, 
+                        entity: instance2, 
+                        snapshot: shadowSnapshot2);
+                    return instance2;
+                } : default(void);
+                return instance2;
+            };
+            entity = 
+            {
+                MaterializationContext materializationContext3;
+                IEntityType entityType3;
+                EmailAddress instance3;
+                InternalEntityEntry entry3;
+                bool hasNullKey3;
+                materializationContext3 = new MaterializationContext(
+                    [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                    queryContext.Context
+                );
+                instance3 = default(EmailAddress);
+                entry3 = queryContext.TryGetEntry(
+                    key: [LIFTABLE Constant: Key: EmailAddress.CustomerId PK | Resolver: c => c.Dependencies.Model.FindEntityType("CustomerApi.Domain.ValueObjects.EmailAddress").FindPrimaryKey()], 
+                    keyValues: new object[]{ (object)dataReader.GetGuid(0) }, 
+                    throwOnNullKey: True, 
+                    hasNullKey: hasNullKey3);
+                !(hasNullKey3) ? entry3 != default(InternalEntityEntry) ? 
+                {
+                    entityType3 = entry3.EntityType;
+                    return instance3 = (EmailAddress)entry3.Entity;
+                } : 
+                {
+                    ISnapshot shadowSnapshot3;
+                    shadowSnapshot3 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                    entityType3 = [LIFTABLE Constant: EntityType: EmailAddress Owned | Resolver: namelessParameter{7} => namelessParameter{7}.Dependencies.Model.FindEntityType("CustomerApi.Domain.ValueObjects.EmailAddress")];
+                    instance3 = switch (entityType3)
+                    {
+                        case [LIFTABLE Constant: EntityType: EmailAddress Owned | Resolver: namelessParameter{8} => namelessParameter{8}.Dependencies.Model.FindEntityType("CustomerApi.Domain.ValueObjects.EmailAddress")]: 
+                            {
+                                shadowSnapshot3 = (ISnapshot)new Snapshot<Guid>(dataReader.GetGuid(0));
+                                return new EmailAddress(dataReader.GetString(11));
+                            }
+                        default: 
+                            default(EmailAddress)
+                    }
+                    ;
+                    entry3 = entityType3 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                        entityType: entityType3, 
+                        entity: instance3, 
+                        snapshot: shadowSnapshot3);
+                    return instance3;
+                } : default(void);
+                return instance3;
+            };
+            ShaperProcessingExpressionVisitor.IncludeReference<Customer, Customer, PhoneNumber>(
+                queryContext: queryContext, 
+                entity: entity, 
+                relatedEntity: entity, 
+                navigation: [LIFTABLE Constant: Navigation: Customer.ContactNumber (PhoneNumber) Required ToDependent PhoneNumber | Resolver: namelessParameter{9} => namelessParameter{9}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer").FindNavigation("ContactNumber")], 
+                inverseNavigation: default(INavigation), 
+                fixup: (namelessParameter{10}, namelessParameter{11}) => 
+                {
+                    return namelessParameter{10}.<ContactNumber>k__BackingField = namelessParameter{11};
+                }, 
+                trackingQuery: True);
+            ShaperProcessingExpressionVisitor.IncludeReference<Customer, Customer, EmailAddress>(
+                queryContext: queryContext, 
+                entity: entity, 
+                relatedEntity: entity, 
+                navigation: [LIFTABLE Constant: Navigation: Customer.Email (EmailAddress) Required ToDependent EmailAddress | Resolver: namelessParameter{12} => namelessParameter{12}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer").FindNavigation("Email")], 
+                inverseNavigation: default(INavigation), 
+                fixup: (namelessParameter{13}, namelessParameter{14}) => 
+                {
+                    return namelessParameter{13}.<Email>k__BackingField = namelessParameter{14};
+                }, 
+                trackingQuery: True);
+            return entity;
+        }, 
+        contextType: CustomerApi.Infrastructure.Persistence.Postgres.CustomerDb, 
+        standAloneStateManager: False, 
+        detailedErrorsEnabled: False, 
+        threadSafetyChecksEnabled: True), 
+    cancellationToken: queryContext.CancellationToken)'
+2026-01-26 11:07:13.032 +07:00 [DBG] Creating DbConnection.
+2026-01-26 11:07:13.035 +07:00 [DBG] Created DbConnection. (1ms).
+2026-01-26 11:07:13.037 +07:00 [DBG] Opening connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:13.039 +07:00 [DBG] Opened connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:13.042 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-01-26 11:07:13.047 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2026-01-26 11:07:13.048 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (6ms).
+2026-01-26 11:07:13.054 +07:00 [DBG] Executing DbCommand [Parameters=[@command_Request_Email_Value='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CreatedAt", c."FirstName", c."LastName", c."MembershipLevel", c."Password", c."Region", c."Status", c."UpdatedAt", c."CountryCode", c."PhoneNumber", c."Email"
+FROM "Customers" AS c
+WHERE c."Email" = @command_Request_Email_Value
+LIMIT 1
+2026-01-26 11:07:13.067 +07:00 [INF] Executed DbCommand (13ms) [Parameters=[@command_Request_Email_Value='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CreatedAt", c."FirstName", c."LastName", c."MembershipLevel", c."Password", c."Region", c."Status", c."UpdatedAt", c."CountryCode", c."PhoneNumber", c."Email"
+FROM "Customers" AS c
+WHERE c."Email" = @command_Request_Email_Value
+LIMIT 1
+2026-01-26 11:07:13.072 +07:00 [DBG] Closing data reader to 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:13.076 +07:00 [DBG] A data reader for 'postgres' on server 'tcp://localhost:5432' is being disposed after spending 5ms reading results.
+2026-01-26 11:07:13.078 +07:00 [DBG] Closing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:13.079 +07:00 [DBG] Closed connection to database 'postgres' on server 'tcp://localhost:5432' (0ms).
+2026-01-26 11:07:13.083 +07:00 [INF] Setting HTTP status code 401.
+2026-01-26 11:07:13.083 +07:00 [INF] Executed endpoint 'HTTP: POST /login'
+2026-01-26 11:07:13.086 +07:00 [DBG] Connection id "0HNISI1ECE9KB" completed keep alive response.
+2026-01-26 11:07:13.087 +07:00 [DBG] 'CustomerDb' disposed.
+2026-01-26 11:07:13.090 +07:00 [DBG] Disposing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:13.091 +07:00 [DBG] Disposed connection to database 'postgres' on server 'tcp://localhost:5432' (1ms).
+2026-01-26 11:07:13.091 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5067/login - 401 0 null 1017.3426ms
+2026-01-26 11:07:22.076 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5067/login - application/json 72
+2026-01-26 11:07:22.076 +07:00 [DBG] 1 candidate(s) found for the request path '/login'
+2026-01-26 11:07:22.076 +07:00 [DBG] Request matched endpoint 'HTTP: POST /login'
+2026-01-26 11:07:22.076 +07:00 [DBG] The request has an origin header: 'http://localhost:5067'.
+2026-01-26 11:07:22.076 +07:00 [INF] CORS policy execution successful.
+2026-01-26 11:07:22.076 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-01-26 11:07:22.076 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-01-26 11:07:22.076 +07:00 [INF] Executing endpoint 'HTTP: POST /login'
+2026-01-26 11:07:22.076 +07:00 [DBG] Connection id "0HNISI1ECE9KB", Request id "0HNISI1ECE9KB:00000007": started reading request body.
+2026-01-26 11:07:22.076 +07:00 [DBG] Connection id "0HNISI1ECE9KB", Request id "0HNISI1ECE9KB:00000007": done reading request body.
+2026-01-26 11:07:22.130 +07:00 [DBG] Entity Framework Core 10.0.2 initialized 'CustomerDb' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:10.0.0+7624373747b28d693b45cea8174471d4b312e2a5' with options: MigrationsAssembly=Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2026-01-26 11:07:22.134 +07:00 [DBG] Creating DbConnection.
+2026-01-26 11:07:22.134 +07:00 [DBG] Created DbConnection. (0ms).
+2026-01-26 11:07:22.134 +07:00 [DBG] Opening connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:22.134 +07:00 [DBG] Opened connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:22.134 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-01-26 11:07:22.134 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2026-01-26 11:07:22.134 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2026-01-26 11:07:22.134 +07:00 [DBG] Executing DbCommand [Parameters=[@command_Request_Email_Value='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CreatedAt", c."FirstName", c."LastName", c."MembershipLevel", c."Password", c."Region", c."Status", c."UpdatedAt", c."CountryCode", c."PhoneNumber", c."Email"
+FROM "Customers" AS c
+WHERE c."Email" = @command_Request_Email_Value
+LIMIT 1
+2026-01-26 11:07:22.136 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[@command_Request_Email_Value='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CreatedAt", c."FirstName", c."LastName", c."MembershipLevel", c."Password", c."Region", c."Status", c."UpdatedAt", c."CountryCode", c."PhoneNumber", c."Email"
+FROM "Customers" AS c
+WHERE c."Email" = @command_Request_Email_Value
+LIMIT 1
+2026-01-26 11:07:22.168 +07:00 [DBG] Context 'CustomerDb' started tracking 'Customer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-01-26 11:07:22.201 +07:00 [DBG] The navigation 'Customer.ContactNumber' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-01-26 11:07:22.203 +07:00 [DBG] Context 'CustomerDb' started tracking 'PhoneNumber' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-01-26 11:07:22.209 +07:00 [DBG] The navigation 'Customer.Email' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-01-26 11:07:22.209 +07:00 [DBG] Context 'CustomerDb' started tracking 'EmailAddress' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-01-26 11:07:22.212 +07:00 [DBG] Closing data reader to 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:22.212 +07:00 [DBG] A data reader for 'postgres' on server 'tcp://localhost:5432' is being disposed after spending 76ms reading results.
+2026-01-26 11:07:22.212 +07:00 [DBG] Closing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:22.212 +07:00 [DBG] Closed connection to database 'postgres' on server 'tcp://localhost:5432' (0ms).
+2026-01-26 11:07:22.232 +07:00 [INF] Setting HTTP status code 200.
+2026-01-26 11:07:22.234 +07:00 [INF] Writing value of type 'LoginResponse' as Json.
+2026-01-26 11:07:22.237 +07:00 [INF] Executed endpoint 'HTTP: POST /login'
+2026-01-26 11:07:22.237 +07:00 [DBG] Connection id "0HNISI1ECE9KB" completed keep alive response.
+2026-01-26 11:07:22.237 +07:00 [DBG] 'CustomerDb' disposed.
+2026-01-26 11:07:22.237 +07:00 [DBG] Disposing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:22.237 +07:00 [DBG] Disposed connection to database 'postgres' on server 'tcp://localhost:5432' (0ms).
+2026-01-26 11:07:22.237 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5067/login - 200 null application/json; charset=utf-8 161.7838ms
+2026-01-26 11:07:33.301 +07:00 [DBG] Server desktop-l31jdro:19104:15a615a0 heartbeat successfully sent
+2026-01-26 11:07:39.788 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Customer - null null
+2026-01-26 11:07:39.788 +07:00 [DBG] 1 candidate(s) found for the request path '/Customer'
+2026-01-26 11:07:39.788 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Customer/'
+2026-01-26 11:07:39.819 +07:00 [DBG] Successfully validated the token.
+2026-01-26 11:07:39.820 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2026-01-26 11:07:39.823 +07:00 [DBG] Authorization was successful.
+2026-01-26 11:07:39.823 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-01-26 11:07:39.823 +07:00 [INF] Executing endpoint 'HTTP: GET /Customer/'
+2026-01-26 11:07:39.869 +07:00 [DBG] Entity Framework Core 10.0.2 initialized 'CustomerDb' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:10.0.0+7624373747b28d693b45cea8174471d4b312e2a5' with options: MigrationsAssembly=Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2026-01-26 11:07:39.873 +07:00 [DBG] Compiling query expression: 
+'DbSet<Customer>()
+    .Select(c => new CustomerReadDTO(c))'
+2026-01-26 11:07:39.874 +07:00 [DBG] Including navigation: 'Customer.ContactNumber'.
+2026-01-26 11:07:39.874 +07:00 [DBG] Including navigation: 'Customer.Email'.
+2026-01-26 11:07:39.882 +07:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<CustomerReadDTO>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Client Projections:
+            0 -> Dictionary<IPropertyBase, int> { [Property: Customer.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Customer.CreatedAt (DateTime) Required, 1], [Property: Customer.FirstName (string) Required, 2], [Property: Customer.LastName (string) Required, 3], [Property: Customer.MembershipLevel (MembershipLevel) Required, 4], [Property: Customer.Password (string) Required, 5], [Property: Customer.Region (string) Required, 6], [Property: Customer.Status (CustomerStatus) Required, 7], [Property: Customer.UpdatedAt (DateTime?), 8] }
+            1 -> Dictionary<IPropertyBase, int> { [Property: PhoneNumber.CustomerId (no field, Guid) Shadow Required PK FK AfterSave:Throw, 0], [Property: PhoneNumber.CountryCode (string) Required, 9], [Property: PhoneNumber.Number (string) Required, 10] }
+            2 -> Dictionary<IPropertyBase, int> { [Property: EmailAddress.CustomerId (no field, Guid) Shadow Required PK FK AfterSave:Throw, 0], [Property: EmailAddress.Value (string) Required, 11] }
+        SELECT c.Id, c.CreatedAt, c.FirstName, c.LastName, c.MembershipLevel, c.Password, c.Region, c.Status, c.UpdatedAt, c.CountryCode, c.PhoneNumber, c.Email
+        FROM Customers AS c) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Client Projections:
+            0 -> Dictionary<IPropertyBase, int> { [Property: Customer.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Customer.CreatedAt (DateTime) Required, 1], [Property: Customer.FirstName (string) Required, 2], [Property: Customer.LastName (string) Required, 3], [Property: Customer.MembershipLevel (MembershipLevel) Required, 4], [Property: Customer.Password (string) Required, 5], [Property: Customer.Region (string) Required, 6], [Property: Customer.Status (CustomerStatus) Required, 7], [Property: Customer.UpdatedAt (DateTime?), 8] }
+            1 -> Dictionary<IPropertyBase, int> { [Property: PhoneNumber.CustomerId (no field, Guid) Shadow Required PK FK AfterSave:Throw, 0], [Property: PhoneNumber.CountryCode (string) Required, 9], [Property: PhoneNumber.Number (string) Required, 10] }
+            2 -> Dictionary<IPropertyBase, int> { [Property: EmailAddress.CustomerId (no field, Guid) Shadow Required PK FK AfterSave:Throw, 0], [Property: EmailAddress.Value (string) Required, 11] }
+        SELECT c.Id, c.CreatedAt, c.FirstName, c.LastName, c.MembershipLevel, c.Password, c.Region, c.Status, c.UpdatedAt, c.CountryCode, c.PhoneNumber, c.Email
+        FROM Customers AS c, 
+        False, 
+        Parameter
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        Customer entity;
+        PhoneNumber entity;
+        EmailAddress entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            Customer instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(Customer);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: Customer.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetGuid(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (Customer)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: Customer | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: Customer | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer")]: 
+                        {
+                            return 
+                            {
+                                Customer instance;
+                                instance = new Customer();
+                                instance.<Id>k__BackingField = dataReader.GetGuid(0);
+                                instance.<CreatedAt>k__BackingField = dataReader.GetDateTime(1);
+                                instance.<FirstName>k__BackingField = dataReader.GetString(2);
+                                instance.<LastName>k__BackingField = dataReader.GetString(3);
+                                instance.<MembershipLevel>k__BackingField = Invoke(((EnumToNumberConverter<MembershipLevel, int>)((IReadOnlyProperty)[LIFTABLE Constant: Property: Customer.MembershipLevel (MembershipLevel) Required | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer").FindProperty("MembershipLevel")]).GetTypeMapping().Converter).ConvertFromProviderTyped, dataReader.GetInt32(4));
+                                instance.<Password>k__BackingField = dataReader.GetString(5);
+                                instance.<Region>k__BackingField = dataReader.GetString(6);
+                                instance.<Status>k__BackingField = Invoke(((EnumToNumberConverter<CustomerStatus, int>)((IReadOnlyProperty)[LIFTABLE Constant: Property: Customer.Status (CustomerStatus) Required | Resolver: namelessParameter{3} => namelessParameter{3}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer").FindProperty("Status")]).GetTypeMapping().Converter).ConvertFromProviderTyped, dataReader.GetInt32(7));
+                                instance.<UpdatedAt>k__BackingField = dataReader.IsDBNull(8) ? default(DateTime?) : (DateTime?)dataReader.GetDateTime(8);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: Customer | Resolver: namelessParameter{4} => namelessParameter{4}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(Customer)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        entity = 
+        {
+            MaterializationContext materializationContext2;
+            IEntityType entityType2;
+            PhoneNumber instance2;
+            InternalEntityEntry entry2;
+            bool hasNullKey2;
+            materializationContext2 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance2 = default(PhoneNumber);
+            entry2 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: PhoneNumber.CustomerId PK | Resolver: c => c.Dependencies.Model.FindEntityType("CustomerApi.Domain.ValueObjects.PhoneNumber").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetGuid(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey2);
+            !(hasNullKey2) ? entry2 != default(InternalEntityEntry) ? 
+            {
+                entityType2 = entry2.EntityType;
+                return instance2 = (PhoneNumber)entry2.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot2;
+                shadowSnapshot2 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType2 = [LIFTABLE Constant: EntityType: PhoneNumber Owned | Resolver: namelessParameter{5} => namelessParameter{5}.Dependencies.Model.FindEntityType("CustomerApi.Domain.ValueObjects.PhoneNumber")];
+                instance2 = switch (entityType2)
+                {
+                    case [LIFTABLE Constant: EntityType: PhoneNumber Owned | Resolver: namelessParameter{6} => namelessParameter{6}.Dependencies.Model.FindEntityType("CustomerApi.Domain.ValueObjects.PhoneNumber")]: 
+                        {
+                            shadowSnapshot2 = (ISnapshot)new Snapshot<Guid>(dataReader.GetGuid(0));
+                            return new PhoneNumber(
+                                dataReader.GetString(9), 
+                                dataReader.GetString(10)
+                            );
+                        }
+                    default: 
+                        default(PhoneNumber)
+                }
+                ;
+                entry2 = entityType2 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType2, 
+                    entity: instance2, 
+                    snapshot: shadowSnapshot2);
+                return instance2;
+            } : default(void);
+            return instance2;
+        };
+        entity = 
+        {
+            MaterializationContext materializationContext3;
+            IEntityType entityType3;
+            EmailAddress instance3;
+            InternalEntityEntry entry3;
+            bool hasNullKey3;
+            materializationContext3 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance3 = default(EmailAddress);
+            entry3 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: EmailAddress.CustomerId PK | Resolver: c => c.Dependencies.Model.FindEntityType("CustomerApi.Domain.ValueObjects.EmailAddress").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetGuid(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey3);
+            !(hasNullKey3) ? entry3 != default(InternalEntityEntry) ? 
+            {
+                entityType3 = entry3.EntityType;
+                return instance3 = (EmailAddress)entry3.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot3;
+                shadowSnapshot3 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType3 = [LIFTABLE Constant: EntityType: EmailAddress Owned | Resolver: namelessParameter{7} => namelessParameter{7}.Dependencies.Model.FindEntityType("CustomerApi.Domain.ValueObjects.EmailAddress")];
+                instance3 = switch (entityType3)
+                {
+                    case [LIFTABLE Constant: EntityType: EmailAddress Owned | Resolver: namelessParameter{8} => namelessParameter{8}.Dependencies.Model.FindEntityType("CustomerApi.Domain.ValueObjects.EmailAddress")]: 
+                        {
+                            shadowSnapshot3 = (ISnapshot)new Snapshot<Guid>(dataReader.GetGuid(0));
+                            return new EmailAddress(dataReader.GetString(11));
+                        }
+                    default: 
+                        default(EmailAddress)
+                }
+                ;
+                entry3 = entityType3 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType3, 
+                    entity: instance3, 
+                    snapshot: shadowSnapshot3);
+                return instance3;
+            } : default(void);
+            return instance3;
+        };
+        ShaperProcessingExpressionVisitor.IncludeReference<Customer, Customer, PhoneNumber>(
+            queryContext: queryContext, 
+            entity: entity, 
+            relatedEntity: entity, 
+            navigation: [LIFTABLE Constant: Navigation: Customer.ContactNumber (PhoneNumber) Required ToDependent PhoneNumber | Resolver: namelessParameter{9} => namelessParameter{9}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer").FindNavigation("ContactNumber")], 
+            inverseNavigation: default(INavigation), 
+            fixup: (namelessParameter{10}, namelessParameter{11}) => 
+            {
+                return namelessParameter{10}.<ContactNumber>k__BackingField = namelessParameter{11};
+            }, 
+            trackingQuery: True);
+        ShaperProcessingExpressionVisitor.IncludeReference<Customer, Customer, EmailAddress>(
+            queryContext: queryContext, 
+            entity: entity, 
+            relatedEntity: entity, 
+            navigation: [LIFTABLE Constant: Navigation: Customer.Email (EmailAddress) Required ToDependent EmailAddress | Resolver: namelessParameter{12} => namelessParameter{12}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Customer").FindNavigation("Email")], 
+            inverseNavigation: default(INavigation), 
+            fixup: (namelessParameter{13}, namelessParameter{14}) => 
+            {
+                return namelessParameter{13}.<Email>k__BackingField = namelessParameter{14};
+            }, 
+            trackingQuery: True);
+        return new CustomerReadDTO(entity);
+    }, 
+    contextType: CustomerApi.Infrastructure.Persistence.Postgres.CustomerDb, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)'
+2026-01-26 11:07:39.885 +07:00 [DBG] Creating DbConnection.
+2026-01-26 11:07:39.885 +07:00 [DBG] Created DbConnection. (0ms).
+2026-01-26 11:07:39.885 +07:00 [DBG] Opening connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:39.885 +07:00 [DBG] Opened connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:39.885 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-01-26 11:07:39.885 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2026-01-26 11:07:39.885 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2026-01-26 11:07:39.885 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CreatedAt", c."FirstName", c."LastName", c."MembershipLevel", c."Password", c."Region", c."Status", c."UpdatedAt", c."CountryCode", c."PhoneNumber", c."Email"
+FROM "Customers" AS c
+2026-01-26 11:07:39.887 +07:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c."Id", c."CreatedAt", c."FirstName", c."LastName", c."MembershipLevel", c."Password", c."Region", c."Status", c."UpdatedAt", c."CountryCode", c."PhoneNumber", c."Email"
+FROM "Customers" AS c
+2026-01-26 11:07:39.887 +07:00 [DBG] Context 'CustomerDb' started tracking 'Customer' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-01-26 11:07:39.887 +07:00 [DBG] The navigation 'Customer.ContactNumber' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-01-26 11:07:39.887 +07:00 [DBG] Context 'CustomerDb' started tracking 'PhoneNumber' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-01-26 11:07:39.887 +07:00 [DBG] The navigation 'Customer.Email' was detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-01-26 11:07:39.887 +07:00 [DBG] Context 'CustomerDb' started tracking 'EmailAddress' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-01-26 11:07:39.889 +07:00 [DBG] Closing data reader to 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:39.889 +07:00 [DBG] A data reader for 'postgres' on server 'tcp://localhost:5432' is being disposed after spending 2ms reading results.
+2026-01-26 11:07:39.889 +07:00 [DBG] Closing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:39.889 +07:00 [DBG] Closed connection to database 'postgres' on server 'tcp://localhost:5432' (0ms).
+2026-01-26 11:07:39.901 +07:00 [INF] Executed endpoint 'HTTP: GET /Customer/'
+2026-01-26 11:07:39.901 +07:00 [DBG] Connection id "0HNISI1ECE9KB" completed keep alive response.
+2026-01-26 11:07:39.901 +07:00 [DBG] 'CustomerDb' disposed.
+2026-01-26 11:07:39.901 +07:00 [DBG] Disposing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-01-26 11:07:39.901 +07:00 [DBG] Disposed connection to database 'postgres' on server 'tcp://localhost:5432' (0ms).
+2026-01-26 11:07:39.901 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Customer - 200 null application/json; charset=utf-8 112.8848ms
+2026-01-26 11:07:41.807 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Customer - null null
+2026-01-26 11:07:41.808 +07:00 [DBG] 1 candidate(s) found for the request path '/Customer'
+2026-01-26 11:07:41.808 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Customer/'
+2026-01-26 11:07:41.808 +07:00 [DBG] Successfully validated the token.
+2026-01-26 11:07:41.808 +07:00 [DBG] AuthenticationScheme: Bearer was successfully authenticated.
+2026-01-26 11:07:41.810 +07:00 [DBG] Authorization was successful.
+2026-01-26 11:07:41.810 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-01-26 11:07:41.810 +07:00 [INF] Executing endpoint 'HTTP: GET /Customer/'
+2026-01-26 11:07:41.817 +07:00 [INF] Executed endpoint 'HTTP: GET /Customer/'
+2026-01-26 11:07:41.817 +07:00 [DBG] Connection id "0HNISI1ECE9KB" completed keep alive response.
+2026-01-26 11:07:41.817 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Customer - 200 null application/json; charset=utf-8 9.2532ms
+2026-01-26 11:08:03.308 +07:00 [DBG] Server desktop-l31jdro:19104:15a615a0 heartbeat successfully sent
+2026-01-26 11:08:33.315 +07:00 [DBG] Server desktop-l31jdro:19104:15a615a0 heartbeat successfully sent
+2026-01-26 11:09:03.330 +07:00 [DBG] Server desktop-l31jdro:19104:15a615a0 heartbeat successfully sent
+2026-01-26 11:09:33.358 +07:00 [DBG] Server desktop-l31jdro:19104:15a615a0 heartbeat successfully sent
+2026-01-26 11:09:37.467 +07:00 [DBG] Connection id "0HNISI1ECE9KB" received FIN.
+2026-01-26 11:09:37.468 +07:00 [DBG] Connection id "0HNISI1ECE9KB" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-01-26 11:09:37.468 +07:00 [DBG] Connection id "0HNISI1ECE9KB" disconnecting.
+2026-01-26 11:09:37.483 +07:00 [DBG] Connection id "0HNISI1ECE9KB" stopped.
+2026-01-26 11:10:03.372 +07:00 [DBG] Server desktop-l31jdro:19104:15a615a0 heartbeat successfully sent
+2026-01-26 11:10:33.391 +07:00 [DBG] Server desktop-l31jdro:19104:15a615a0 heartbeat successfully sent

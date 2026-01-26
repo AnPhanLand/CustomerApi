@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "yF7f0sBpc/w=",
+  "dgSpecHash": "YQRVars//hw=",
   "success": true,
   "projectFilePath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\phant\\.nuget\\packages\\carter\\10.0.0\\carter.10.0.0.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\carter.analyzers\\10.0.0\\carter.analyzers.10.0.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",

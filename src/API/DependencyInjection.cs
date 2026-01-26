@@ -1,3 +1,5 @@
+using Carter;
+
 namespace CustomerApi.API;
 
 public static class DependencyInjection
@@ -45,6 +47,8 @@ public static class DependencyInjection
 
         // 4. Registers the Authorization service (checks if a user has specific permissions/roles).
         services.AddAuthorization();
+
+        services.AddCarter();
 
         return services;
     }
