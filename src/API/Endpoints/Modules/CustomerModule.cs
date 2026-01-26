@@ -41,7 +41,7 @@ public class CustomerModule : ICarterModule
         });
 
         // Export to Excel
-        customer.MapGet("/export", async (IMediator mediator, IExcelService excelService) => 
+        customer.MapGet("/export-excel", async (IMediator mediator, IExcelService excelService) => 
         {
             // 1. Get data from DB via MediatR
             var customers = await mediator.Send(new GetAllCustomersQuery());
@@ -57,7 +57,7 @@ public class CustomerModule : ICarterModule
         });
 
         // Import from Excel
-        customer.MapPost("/import", async (IFormFile file, IMediator mediator, IExcelService excelService) => 
+        customer.MapPost("/import-excel", async (IFormFile file, IMediator mediator, IExcelService excelService) => 
         {
             if (file == null || file.Length == 0) return Results.BadRequest("No file uploaded");
 
