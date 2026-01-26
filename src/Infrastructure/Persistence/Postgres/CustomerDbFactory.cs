@@ -1,6 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
-
 namespace CustomerApi.Infrastructure.Persistence.Postgres;
 
 public class CustomerDbFactory : IDesignTimeDbContextFactory<CustomerDb>

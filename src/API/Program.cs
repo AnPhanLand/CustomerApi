@@ -1,16 +1,3 @@
-
-using CustomerApi.Infrastructure;
-using CustomerApi.Application;
-using CustomerApi.Application.Common.Interfaces;
-using CustomerApi.Infrastructure.Persistence.Mongo;
-using CustomerApi.Infrastructure.Persistence.Postgres;
-using CustomerApi.Domain.Entities;
-using CustomerApi.Domain.ValueObjects;
-using CustomerApi.Application.Customers.DTOs;
-using CustomerApi.Application.Customers.Commands;
-using CustomerApi.API;
-using Carter;
-
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console(restrictedToMinimumLevel: LogEventLevel.Information)

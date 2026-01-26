@@ -1,6 +1,3 @@
-using Microsoft.Extensions.DependencyInjection;
-using FluentValidation; 
-
 namespace CustomerApi.Application;
 
 public static class DependencyInjection

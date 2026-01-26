@@ -1,7 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using CustomerApi.Domain.Entities;
-
 namespace CustomerApi.Infrastructure.Persistence.Postgres.Configurations;
 
 public class CustomerConfiguration : IEntityTypeConfiguration<Customer>

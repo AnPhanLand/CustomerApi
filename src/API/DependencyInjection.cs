@@ -1,5 +1,3 @@
-using Carter;
-
 namespace CustomerApi.API;
 
 public static class DependencyInjection

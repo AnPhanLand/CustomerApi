@@ -1,9 +1,3 @@
-using Carter;
-using MediatR;
-using CustomerApi.Application.Customers.Queries;
-using CustomerApi.Application.Customers.Commands;
-using CustomerApi.Application.Customers.DTOs;
-
 namespace CustomerApi.API.Endpoints.Modules;
 
 public class CustomerModule : ICarterModule

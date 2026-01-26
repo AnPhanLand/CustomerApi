@@ -8,3 +8,4 @@ global using FluentValidation;
 global using Microsoft.Extensions.Caching.Distributed;
 global using CustomerApi.Application.Common.Interfaces;
 global using CustomerApi.Domain.ValueObjects;
+global using Microsoft.Extensions.DependencyInjection;

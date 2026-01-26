@@ -18,3 +18,5 @@ global using MongoDB.Bson.Serialization.Serializers;
 global using RedisRateLimiting.AspNetCore;
 global using StackExchange.Redis;
 global using MongoDB.Driver;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.EntityFrameworkCore.Design;
