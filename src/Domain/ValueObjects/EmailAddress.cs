@@ -1,9 +1,14 @@
+using System.Text.Json.Serialization;
+
 namespace CustomerApi.Domain.ValueObjects;
 
 public record EmailAddress
 {
     public string Value { get; init; }
 
+    // 1. Make this public so the JSON tools can reach it
+    // 2. Add the attribute to tell .NET to use this specific constructor
+    [JsonConstructor]
     private EmailAddress(string value) => Value = value;
 
     public static EmailAddress Create(string email)

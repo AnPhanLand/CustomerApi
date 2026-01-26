@@ -8,6 +8,7 @@ using CustomerApi.Domain.Entities;
 using CustomerApi.Domain.ValueObjects;
 using CustomerApi.Application.Customers.DTOs;
 using CustomerApi.Application.Customers.Commands;
+using CustomerApi.API;
 
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
@@ -21,6 +22,7 @@ try {
 
     builder.Services.AddApplication();
     builder.Services.AddInfrastructure(builder.Configuration);
+    builder.Services.AddApi();
     builder.Host.UseSerilog();
 
     var app = builder.Build();
@@ -30,78 +32,17 @@ try {
     app.UseAuthorization();
     app.UseHangfireDashboard("/hangfire");
 
-    var secretKey = builder.Configuration["Jwt:Key"];
-    app.MapPost("/login", async (LoginRequest login, CustomerDb db) => 
+    app.MapPost("/login", async (LoginRequest request, IMediator mediator) => 
     {
-        // 1. DEFINE THE POLICY
-        // We create a "Pipeline" that retries 3 times if a database exception occurs.
-        var pipeline = new ResiliencePipelineBuilder<Customer?>()
-            .AddRetry(new RetryStrategyOptions<Customer?>
-            {
-                ShouldHandle = new PredicateBuilder<Customer?>()
-                    .Handle<DbUpdateException>()
-                    .Handle<OperationCanceledException>(), // Handle timeouts
-                MaxRetryAttempts = 3,
-                Delay = TimeSpan.FromSeconds(1),
-                BackoffType = DelayBackoffType.Constant // Wait exactly 1s between tries
-            })
-            .Build();
-
-        // 1. Logic for a 'backdoor' account to allow testing without database entries.
-        bool isTestAccount = (login.Email.Value == "admin@test.com" && login.Password == "password123");
-        
-        // Declares a variable to hold a Customer object, initializing it as 'null' (empty).
-        // The '?' means this variable is "nullable"—it is allowed to be empty if no user is found.
-        Customer? user = null;
-
-        if (isTestAccount)
+        try 
         {
-            // Creates a temporary in-memory user object for the test account.
-            user?.UpdateEmail("admin@test.com");
+            var result = await mediator.Send(new LoginCommand(request));
+            return Results.Ok(result);
         }
-        else
+        catch (UnauthorizedAccessException) 
         {
-            // 2. Database lookup: Finds a real customer matching the provided email.
-            // 2. EXECUTE THE LOOKUP INSIDE THE PIPELINE
-            // The code inside 'ExecuteAsync' is what Polly will watch over.
-            user = await pipeline.ExecuteAsync(async ct => 
-            {
-                return await db.Customers.FirstOrDefaultAsync(u => u.Email.Value == login.Email.Value, ct);
-            });
-            
-            // Security check: If user doesn't exist or password doesn't match, block access.
-            if (user is null || user.Password != login.Password) 
-            {
-                return Results.Unauthorized(); // Returns HTTP 401.
-            }
+            return Results.Unauthorized();
         }
-
-        // 3. Claims: Key-value pairs describing the user that will be encoded into the JWT.
-        var claims = new[]
-        {
-            new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()), // Unique ID of the user.
-            new Claim(JwtRegisteredClaimNames.Email, user.Email.Value),       // User's email address.
-            new Claim(ClaimTypes.Role, "Admin")                         // User's permission level.
-        };
-
-        // Prepares the mathematical key and algorithm used to sign the token.
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!));
-        var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
-
-        // Creates the JWT object with metadata, expiration, and the user's claims.
-        var token = new JwtSecurityToken(
-            issuer: "your-api",
-            audience: "your-client",
-            claims: claims,
-            expires: DateTime.Now.AddMinutes(30), // Token becomes invalid after 30 mins.
-            signingCredentials: creds
-        );
-
-        // 4. Returns a JSON object containing the finalized string token to the client.
-        return Results.Ok(new { 
-            token = new JwtSecurityTokenHandler().WriteToken(token),
-            email = user.Email 
-        });
     });
 
     // Checks if the application is running in 'Development' mode (not production).
@@ -161,7 +102,7 @@ try {
 // Serilog exception catch
 } catch (Exception ex) {
     // 3. This catches "Startup Crashes" (e.g., bad connection strings)
-    Log.Information( "The application failed to start correctly.");
+    Log.Fatal(ex, "The application failed to start correctly.");
 }
 finally {
     // 4. Important: Ensures all log messages are written before the app closes

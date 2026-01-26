@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "3kjmn+Bw5OQ=",
+  "dgSpecHash": "LOIZhrLk61s=",
   "success": true,
   "projectFilePath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj",
   "expectedPackageFiles": [
@@ -39,13 +39,14 @@
     "C:\\Users\\phant\\.nuget\\packages\\microsoft.extensions.resilience\\10.1.0\\microsoft.extensions.resilience.10.1.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\microsoft.extensions.telemetry\\10.1.0\\microsoft.extensions.telemetry.10.1.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\microsoft.extensions.telemetry.abstractions\\10.1.0\\microsoft.extensions.telemetry.abstractions.10.1.0.nupkg.sha512",
-    "C:\\Users\\phant\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.14.0\\microsoft.identitymodel.abstractions.8.14.0.nupkg.sha512",
-    "C:\\Users\\phant\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.14.0\\microsoft.identitymodel.jsonwebtokens.8.14.0.nupkg.sha512",
-    "C:\\Users\\phant\\.nuget\\packages\\microsoft.identitymodel.logging\\8.14.0\\microsoft.identitymodel.logging.8.14.0.nupkg.sha512",
-    "C:\\Users\\phant\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.14.0\\microsoft.identitymodel.tokens.8.14.0.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\microsoft.identitymodel.abstractions\\8.15.0\\microsoft.identitymodel.abstractions.8.15.0.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\8.15.0\\microsoft.identitymodel.jsonwebtokens.8.15.0.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\microsoft.identitymodel.logging\\8.15.0\\microsoft.identitymodel.logging.8.15.0.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.15.0\\microsoft.identitymodel.tokens.8.15.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\polly.core\\8.6.5\\polly.core.8.6.5.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\polly.extensions\\8.4.2\\polly.extensions.8.4.2.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\polly.ratelimiting\\8.4.2\\polly.ratelimiting.8.4.2.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.15.0\\system.identitymodel.tokens.jwt.8.15.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512"
   ],
   "logs": []
