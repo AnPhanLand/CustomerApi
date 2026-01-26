@@ -20,3 +20,8 @@ global using StackExchange.Redis;
 global using MongoDB.Driver;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
 global using Microsoft.EntityFrameworkCore.Design;
+global using ClosedXML.Excel;
+global using CustomerApi.Application.Customers.DTOs;
+global using System.Globalization;
+global using CsvHelper;
+global using CustomerApi.Infrastructure.Files;

@@ -82,6 +82,9 @@ public static class DependencyInjection
 
         ConfigureMongoMappings();
 
+        services.AddScoped<IExcelService, ExcelService>();
+        services.AddScoped<ICsvService, CsvService>();
+
         return services;
     }
 
