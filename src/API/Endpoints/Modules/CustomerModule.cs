@@ -41,36 +41,25 @@ public class CustomerModule : ICarterModule
         });
 
         // Export to Excel
-        customer.MapGet("/export-excel", async (IMediator mediator, IExcelService excelService) => 
+        customer.MapGet("/export-excel", async (IMediator mediator) => 
         {
-            // 1. Get data from DB via MediatR
-            var customers = await mediator.Send(new GetAllCustomersQuery());
-            
-            // 2. Generate the Excel bytes
-            var fileContents = excelService.ExportCustomers(customers);
-            
-            // 3. Return as a file download
-            return Results.File(
-                fileContents, 
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", 
-                "Customers.xlsx");
+            var result = await mediator.Send(new ExportCustomersQuery());
+
+            return Results.File(result.Content, result.ContentType, result.FileName);
         });
 
         // Import from Excel
         customer.MapPost("/import-excel", async (IFormFile file, IMediator mediator, IExcelService excelService) => 
         {
-            if (file == null || file.Length == 0) return Results.BadRequest("No file uploaded");
+            // Basic HTTP Validation
+            if (file == null || file.Length == 0) 
+                return Results.BadRequest("No file uploaded");
 
-            // 1. Open the file stream
+            // Open the stream and send it to the Application layer
             using var stream = file.OpenReadStream();
+            var count = await mediator.Send(new ImportCustomersCommand(stream));
             
-            // 2. Turn Excel rows into DTOs
-            var customerDtos = excelService.ImportCustomers(stream);
-            
-            // 3. Send to a Command to save them to Postgres
-            // await mediator.Send(new ImportCustomersCommand(customerDtos));
-            
-            return Results.Ok($"{customerDtos.Count} customers imported successfully.");
+            return Results.Ok($"{count} customers imported successfully.");
         });
 
         // Export to CSV
