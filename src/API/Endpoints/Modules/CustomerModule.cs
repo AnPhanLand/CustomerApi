@@ -63,33 +63,24 @@ public class CustomerModule : ICarterModule
         });
 
         // Export to CSV
-        customer.MapGet("/export-csv", async (IMediator mediator, ICsvService csvService) => 
+        customer.MapGet("/export-csv", async (IMediator mediator) => 
         {
-            // 1. Fetch data from the database
-            var customers = await mediator.Send(new GetAllCustomersQuery());
-            
-            // 2. Generate the CSV bytes using the generic service
-            var fileContents = csvService.ExportToCsv(customers);
-            
-            // 3. Return the file with the "text/csv" content type
-            return Results.File(
-                fileContents, 
-                "text/csv", 
-                "Customers.csv");
+            var result = await mediator.Send(new ExportCSVQuery());
+
+            return Results.File(result.Content, result.ContentType, result.FileName);
         });
 
         // Import from CSV
         customer.MapPost("/import-csv", async (IFormFile file, IMediator mediator, ICsvService csvService) => 
         {
-            if (file == null || file.Length == 0) return Results.BadRequest("No file uploaded");
+            if (file == null || file.Length == 0) 
+                return Results.BadRequest("No file uploaded");
 
+            // Open the stream and send the command
             using var stream = file.OpenReadStream();
-            using var reader = new StreamReader(stream);
-
-            // Logic here would call a CSV parsing method in your service
-            // var customerDtos = csvService.ImportFromCsv<CustomerCreateDTO>(reader);
+            var count = await mediator.Send(new ImportCSVCommand(stream));
             
-            return Results.Ok("CSV data received for processing.");
+            return Results.Ok($"{count} customers imported from CSV successfully.");
         });
     }
 }

@@ -12,4 +12,13 @@ public class CsvService : ICsvService
         writer.Flush();
         return stream.ToArray();
     }
+
+    public IEnumerable<T> ImportFromCsv<T>(Stream stream)
+    {
+        using var reader = new StreamReader(stream);
+        using var csv = new CsvReader(reader, CultureInfo.InvariantCulture);
+        
+        // GetRecords is "lazy"—it reads the file as you iterate
+        return csv.GetRecords<T>().ToList(); 
+    }
 }
