@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Rok2VRXnIe8=",
+  "dgSpecHash": "0AM7r14bqAI=",
   "success": true,
   "projectFilePath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -10,9 +10,6 @@
     "C:\\Users\\phant\\.nuget\\packages\\closedxml.parser\\2.0.0\\closedxml.parser.2.0.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\csvhelper\\33.1.0\\csvhelper.33.1.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
-    "C:\\Users\\phant\\.nuget\\packages\\devexpress.data\\25.2.3\\devexpress.data.25.2.3.nupkg.sha512",
-    "C:\\Users\\phant\\.nuget\\packages\\devexpress.data.desktop\\25.2.3\\devexpress.data.desktop.25.2.3.nupkg.sha512",
-    "C:\\Users\\phant\\.nuget\\packages\\devexpress.drawing\\25.2.3\\devexpress.drawing.25.2.3.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\documentformat.openxml\\3.1.1\\documentformat.openxml.3.1.1.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\documentformat.openxml.framework\\3.1.1\\documentformat.openxml.framework.3.1.1.nupkg.sha512",
@@ -62,7 +59,6 @@
     "C:\\Users\\phant\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\8.0.1\\microsoft.identitymodel.protocols.openidconnect.8.0.1.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\microsoft.identitymodel.tokens\\8.15.0\\microsoft.identitymodel.tokens.8.15.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\microsoft.visualstudio.solutionpersistence\\1.0.52\\microsoft.visualstudio.solutionpersistence.1.0.52.nupkg.sha512",
-    "C:\\Users\\phant\\.nuget\\packages\\microsoft.win32.systemevents\\8.0.0\\microsoft.win32.systemevents.8.0.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\mongodb.bson\\3.5.2\\mongodb.bson.3.5.2.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\mongodb.driver\\3.5.2\\mongodb.driver.3.5.2.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\mono.texttemplating\\3.0.0\\mono.texttemplating.3.0.0.nupkg.sha512",
@@ -107,24 +103,10 @@
     "C:\\Users\\phant\\.nuget\\packages\\system.composition.hosting\\9.0.0\\system.composition.hosting.9.0.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\system.composition.runtime\\9.0.0\\system.composition.runtime.9.0.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\system.composition.typedparts\\9.0.0\\system.composition.typedparts.9.0.0.nupkg.sha512",
-    "C:\\Users\\phant\\.nuget\\packages\\system.drawing.common\\8.0.15\\system.drawing.common.8.0.15.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\system.identitymodel.tokens.jwt\\8.15.0\\system.identitymodel.tokens.jwt.8.15.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\system.io.packaging\\8.0.1\\system.io.packaging.8.0.1.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\yamldotnet\\16.3.0\\yamldotnet.16.3.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\zstdsharp.port\\0.7.3\\zstdsharp.port.0.7.3.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "message": "Package 'DevExpress.Data.Desktop 25.2.3' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net10.0'. This package may not be fully compatible with your project.",
-      "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\API.csproj",
-      "warningLevel": 1,
-      "filePath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\API.csproj",
-      "libraryId": "DevExpress.Data.Desktop",
-      "targetGraphs": [
-        "net10.0"
-      ]
-    }
-  ]
+  "logs": []
 }
