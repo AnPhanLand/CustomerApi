@@ -1286,6 +1286,10 @@
               "target": "Package",
               "version": "[33.1.0, )"
             },
+            "DevExpress.Data.Desktop": {
+              "target": "Package",
+              "version": "[25.2.3, )"
+            },
             "Hangfire": {
               "target": "Package",
               "version": "[1.8.22, )"
