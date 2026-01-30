@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "zf1WS932mNQ=",
+  "dgSpecHash": "0AM7r14bqAI=",
   "success": true,
   "projectFilePath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\API.csproj",
   "expectedPackageFiles": [
@@ -68,7 +68,7 @@
     "C:\\Users\\phant\\.nuget\\packages\\njsonschema.annotations\\11.5.2\\njsonschema.annotations.11.5.2.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\njsonschema.newtonsoftjson\\11.5.2\\njsonschema.newtonsoftjson.11.5.2.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\njsonschema.yaml\\11.5.2\\njsonschema.yaml.11.5.2.nupkg.sha512",
-    "C:\\Users\\phant\\.nuget\\packages\\npgsql\\10.0.0\\npgsql.10.0.0.nupkg.sha512",
+    "C:\\Users\\phant\\.nuget\\packages\\npgsql\\10.0.1\\npgsql.10.0.1.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\10.0.0\\npgsql.entityframeworkcore.postgresql.10.0.0.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\nswag.annotations\\14.6.3\\nswag.annotations.14.6.3.nupkg.sha512",
     "C:\\Users\\phant\\.nuget\\packages\\nswag.aspnetcore\\14.6.3\\nswag.aspnetcore.14.6.3.nupkg.sha512",

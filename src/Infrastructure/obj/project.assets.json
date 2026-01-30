@@ -1912,7 +1912,7 @@
           }
         }
       },
-      "Npgsql/10.0.0": {
+      "Npgsql/10.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.Extensions.Logging.Abstractions": "10.0.0"
@@ -5383,10 +5383,10 @@
         "packageIcon.png"
       ]
     },
-    "Npgsql/10.0.0": {
-      "sha512": "xZAYhPOU2rUIFpV48xsqhCx9vXs6Y+0jX2LCoSEfDFYMw9jtAOUk3iQsCnDLrFIv9NT3JGMihn7nnuZsPKqJmA==",
+    "Npgsql/10.0.1": {
+      "sha512": "XyUcxEfqlFomhNTG/ZdGlec+uSOQArKz0Mzz8jYKP/Jj9GM2YabU5CVZtp0yiC4f9hRp+tRZTnHMatJeJ3rwgw==",
       "type": "package",
-      "path": "npgsql/10.0.0",
+      "path": "npgsql/10.0.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -5397,7 +5397,7 @@
         "lib/net8.0/Npgsql.xml",
         "lib/net9.0/Npgsql.dll",
         "lib/net9.0/Npgsql.xml",
-        "npgsql.10.0.0.nupkg.sha512",
+        "npgsql.10.0.1.nupkg.sha512",
         "npgsql.nuspec",
         "postgresql.png"
       ]
@@ -6257,6 +6257,7 @@
       "Microsoft.EntityFrameworkCore.InMemory >= 10.0.1",
       "Microsoft.Extensions.Caching.StackExchangeRedis >= 10.0.1",
       "MongoDB.Driver >= 3.5.2",
+      "Npgsql >= 10.0.1",
       "Npgsql.EntityFrameworkCore.PostgreSQL >= 10.0.0",
       "RedisRateLimiting >= 1.2.1",
       "RedisRateLimiting.AspNetCore >= 1.2.1"
@@ -6350,6 +6351,10 @@
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[3.5.2, )"
+          },
+          "Npgsql": {
+            "target": "Package",
+            "version": "[10.0.1, )"
           },
           "Npgsql.EntityFrameworkCore.PostgreSQL": {
             "target": "Package",

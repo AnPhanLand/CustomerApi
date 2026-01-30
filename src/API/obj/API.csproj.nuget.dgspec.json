@@ -76,6 +76,10 @@
               "target": "Package",
               "version": "[14.6.3, )"
             },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[10.0.1, )"
+            },
             "Serilog": {
               "target": "Package",
               "version": "[4.3.0, )"
@@ -1315,6 +1319,10 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[3.5.2, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[10.0.1, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
