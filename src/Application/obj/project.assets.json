@@ -2350,8 +2350,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
-              "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
+            "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
             }
           }
         }

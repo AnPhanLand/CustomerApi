@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {}
+    "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {}
   },
   "projects": {
-    "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
+    "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\phant\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\obj\\",
+        "outputPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phant\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -26,8 +26,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
+              "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
               }
             }
           }
@@ -111,14 +111,14 @@
         }
       }
     },
-    "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
+    "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\phant\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phant\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -184,14 +184,14 @@
         }
       }
     },
-    "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\phant\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phant\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -206,8 +206,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
-                "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj"
+              "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj"
               }
             }
           }
@@ -250,29 +250,29 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[8.0.23, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[9.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[9.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[9.0.12, )"
             },
             "Microsoft.EntityFrameworkCore.Relational": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[9.0.12, )"
             },
             "Microsoft.Extensions.Caching.StackExchangeRedis": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[9.0.12, )"
             },
             "MongoDB.Driver": {
               "target": "Package",
@@ -280,11 +280,11 @@
             },
             "Npgsql": {
               "target": "Package",
-              "version": "[8.0.3, )"
+              "version": "[10.0.1, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
-              "version": "[8.0.2, )"
+              "version": "[9.0.4, )"
             },
             "RedisRateLimiting": {
               "target": "Package",
