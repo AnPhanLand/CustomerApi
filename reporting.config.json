@@ -1,8 +1,4 @@
 {
-    "runtimeAssemblies": [
-        "src/Infrastructure/bin/Debug/net10.0/Npgsql.dll",
-        "src/API/bin/Debug/net10.0/Npgsql.dll"
-    ],
     "SqlConnectionStrings": {
         "MyPostgresConnection": "XpoProvider=Postgres;Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=mysecretpassword"
     },

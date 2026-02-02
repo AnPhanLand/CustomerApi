@@ -87,6 +87,7 @@ C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net10.0\Microsoft.Extensions.Caching.Memory.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net10.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net10.0\Microsoft.Extensions.Compliance.Abstractions.dll
+C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net10.0\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net10.0\Microsoft.Extensions.DependencyInjection.AutoActivation.dll
