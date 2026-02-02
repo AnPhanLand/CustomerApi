@@ -1,28 +1,9 @@
-using System.Data.Common;
-using Npgsql;
-using System.Reflection;
-
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console(restrictedToMinimumLevel: LogEventLevel.Information)
     .WriteTo.File("logs/myapp.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 try {
-    AppDomain.CurrentDomain.AssemblyResolve += (sender, args) => {
-    if (args.Name.StartsWith("Npgsql")) {
-        // Point this exactly to where you put the v8.0.3 DLL
-        string path = @"C:\Users\phant\.vscode\extensions\devexpress.devexpress-report-designer-ex-25.2.3\back\bin\net8.0\Npgsql.dll";
-        return System.Reflection.Assembly.LoadFrom(path);
-    }
-    return null;
-};
-    // Register the Postgres provider for DevExpress
-    var npgsqlPath = @"C:\Users\phant\.vscode\extensions\devexpress.devexpress-report-designer-ex-25.2.3\back\bin\net8.0\Npgsql.dll";
-    if (File.Exists(npgsqlPath)) {
-        Assembly.LoadFrom(npgsqlPath);
-    }
-    DevExpress.Xpo.DB.PostgreSqlConnectionProvider.Register();
-
     Log.Information("Starting the API...");
 
     var builder = WebApplication.CreateBuilder(args);

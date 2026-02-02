@@ -22,6 +22,7 @@ C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\MediatR.Contracts.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
@@ -34,22 +35,12 @@ C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.AmbientMetadata.Application.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Compliance.Abstractions.dll
-C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Configuration.Binder.dll
-C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.AutoActivation.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.dll
-C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.DiagnosticAdapter.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Diagnostics.ExceptionSummarization.dll
-C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Hosting.Abstractions.dll
-C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Http.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Http.Diagnostics.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Http.Resilience.dll
-C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
-C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Logging.Configuration.dll
-C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.ObjectPool.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Resilience.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.Extensions.Telemetry.dll
@@ -60,6 +51,7 @@ C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Microsoft.IO.RecyclableMemoryStream.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\MongoDB.Bson.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\MongoDB.Driver.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\Mono.TextTemplating.dll
@@ -83,7 +75,6 @@ C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\System.Composition.Hosting.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\System.Composition.Runtime.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\System.Composition.TypedParts.dll
-C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\System.Diagnostics.DiagnosticSource.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\System.IO.Packaging.dll
 C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\Infrastructure\bin\Debug\net8.0\ZstdSharp.dll
