@@ -1,6 +1,6 @@
 {
-    "SqlConnectionStrings": {
-        "PostgresConnection": "XpoProvider=Postgres;Server=127.0.0.1;Port=5432;User ID=postgres;Password=mysecretpassword;Database=postgres;Encoding=UNICODE"
-    },
-    "JsonConnectionStrings": {}
+    "SqlConnectionStrings": {},
+    "JsonConnectionStrings": {
+        "LocalData": "Uri=C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\data\\Customers.json"   
+    }
 }

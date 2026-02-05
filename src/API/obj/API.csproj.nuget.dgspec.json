@@ -26,14 +26,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj"
+              "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
+                "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj"
               },
-              "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
+              "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
               },
-              "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj"
+              "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -154,14 +154,14 @@
         }
       }
     },
-    "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
+    "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj",
+        "projectUniqueName": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj",
+        "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\phant\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\obj\\",
+        "outputPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phant\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -176,8 +176,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
+              "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
+                "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
               }
             }
           }
@@ -261,14 +261,14 @@
         }
       }
     },
-    "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
+    "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj",
+        "projectUniqueName": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj",
+        "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\phant\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\obj\\",
+        "outputPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phant\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -334,14 +334,14 @@
         }
       }
     },
-    "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {
+    "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\phant\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\obj\\",
+        "outputPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phant\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -356,8 +356,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
-                "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj"
+              "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
+                "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj"
               }
             }
           }
