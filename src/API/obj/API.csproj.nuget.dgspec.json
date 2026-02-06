@@ -26,14 +26,14 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
-                "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj"
+              "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj"
               },
-              "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
+              "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
               },
-              "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {
-                "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj"
+              "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj"
               }
             }
           }
@@ -60,11 +60,31 @@
             },
             "DevExpress.AspNetCore.Reporting": {
               "target": "Package",
-              "version": "[25.2.3, )"
+              "version": "[25.2.4, )"
+            },
+            "DevExpress.CodeParser": {
+              "target": "Package",
+              "version": "[25.2.4, )"
             },
             "DevExpress.DataAccess": {
               "target": "Package",
-              "version": "[25.2.3, )"
+              "version": "[25.2.4, )"
+            },
+            "DevExpress.Drawing": {
+              "target": "Package",
+              "version": "[25.2.4, )"
+            },
+            "DevExpress.Office.Core": {
+              "target": "Package",
+              "version": "[25.2.4, )"
+            },
+            "DevExpress.RichEdit.Core": {
+              "target": "Package",
+              "version": "[25.2.4, )"
+            },
+            "DevExpress.Xpo": {
+              "target": "Package",
+              "version": "[25.2.4, )"
             },
             "FluentValidation.AspNetCore": {
               "target": "Package",
@@ -154,14 +174,14 @@
         }
       }
     },
-    "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
+    "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj",
+        "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj",
         "packagesPath": "C:\\Users\\phant\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\obj\\",
+        "outputPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phant\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -176,8 +196,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
-                "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
+              "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
               }
             }
           }
@@ -198,6 +218,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "DevExpress.Reporting.Core": {
+              "target": "Package",
+              "version": "[25.2.4, )"
+            },
             "FluentValidation": {
               "target": "Package",
               "version": "[11.8.1, )"
@@ -261,14 +285,14 @@
         }
       }
     },
-    "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
+    "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\phant\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phant\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -334,14 +358,14 @@
         }
       }
     },
-    "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {
+    "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj",
         "projectName": "Infrastructure",
-        "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj",
+        "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj",
         "packagesPath": "C:\\Users\\phant\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\obj\\",
+        "outputPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\phant\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -356,8 +380,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
-                "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj"
+              "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
+                "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj"
               }
             }
           }

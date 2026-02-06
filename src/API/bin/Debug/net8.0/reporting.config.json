@@ -1,5 +1,6 @@
 {
     "SqlConnectionStrings": {},
     "JsonConnectionStrings": {
+        "LocalData": "Uri=C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\data\\Customers.json"   
     }
 }

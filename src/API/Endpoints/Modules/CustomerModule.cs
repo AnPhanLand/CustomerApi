@@ -1,4 +1,6 @@
+using Application.Features.Customers.Queries;
 using CustomerApi.Application.Common.Interfaces;
+using DevExpress.XtraReports.UI;
 
 namespace CustomerApi.API.Endpoints.Modules;
 
@@ -81,6 +83,15 @@ public class CustomerModule : ICarterModule
             var count = await mediator.Send(new ImportCSVCommand(stream));
             
             return Results.Ok($"{count} customers imported from CSV successfully.");
+        });
+
+        customer.MapGet("/export-pdf", async (IMediator mediator) =>
+        {
+            // Send the query to the Application Layer
+            var pdfBytes = await mediator.Send(new GetCustomerReportPdfQuery());
+
+            // Return the file result
+            return Results.File(pdfBytes, "application/pdf", "Customers.pdf");
         });
     }
 }
