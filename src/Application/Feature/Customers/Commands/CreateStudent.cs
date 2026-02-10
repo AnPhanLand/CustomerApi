@@ -11,7 +11,8 @@ public class CreateStudentHandler : IRequestHandler<CreateStudentCommand, Guid>
         {
             FirstName = request.StudentDTO.FirstName,
             LastName = request.StudentDTO.LastName,
-            ClassName = request.StudentDTO.ClassName
+            ClassName = request.StudentDTO.ClassName,
+            PhuHuynhId = request.StudentDTO.PhuHuynhId
         };
 
         _context.Students.Add(entity);

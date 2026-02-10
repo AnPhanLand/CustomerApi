@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Persistence.Postgres.Migrations
 {
     [DbContext(typeof(CustomerDb))]
-    [Migration("20260210074039_new1")]
+    [Migration("20260210081304_new1")]
     partial class new1
     {
         /// <inheritdoc />
@@ -102,11 +102,11 @@ namespace Infrastructure.Persistence.Postgres.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<decimal>("InterestRate")
+                    b.Property<decimal>("DiscountRate")
                         .HasColumnType("numeric");
 
-                    b.Property<DateTime>("PaymentDeadline")
-                        .HasColumnType("timestamp with time zone");
+                    b.Property<decimal>("InterestRate")
+                        .HasColumnType("numeric");
 
                     b.Property<decimal>("Price")
                         .HasColumnType("numeric");

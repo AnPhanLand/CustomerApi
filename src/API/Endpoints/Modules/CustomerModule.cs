@@ -109,6 +109,13 @@ public class CustomerModule : ICarterModule
             return await mediator.Send(new CreateStudentCommand(StudentDTO));
         });
 
+        // Remove
+        students.MapDelete("/{id}", async (Guid id, IMediator mediator) => 
+        {
+            return await mediator.Send(new DeleteStudentCommand(id));
+        });
+
+
         RouteGroupBuilder phuHuynhs = app.MapGroup("/PhuHuynh").RequireRateLimiting("fixed"); 
 
         // List all

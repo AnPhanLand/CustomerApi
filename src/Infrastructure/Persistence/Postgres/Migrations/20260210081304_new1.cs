@@ -17,9 +17,9 @@ namespace Infrastructure.Persistence.Postgres.Migrations
                 {
                     Id = table.Column<Guid>(type: "uuid", nullable: false),
                     Description = table.Column<string>(type: "text", nullable: false),
-                    PaymentDeadline = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     Price = table.Column<decimal>(type: "numeric", nullable: false),
                     InterestRate = table.Column<decimal>(type: "numeric", nullable: false),
+                    DiscountRate = table.Column<decimal>(type: "numeric", nullable: false),
                     StudentId = table.Column<Guid>(type: "uuid", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)

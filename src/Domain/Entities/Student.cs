@@ -8,5 +8,5 @@ public class Student : BaseEntity
     
     public string ClassName { get; set; } = string.Empty;
 
-    public Guid PhuHuynhId { get; set; }
+    public Guid PhuHuynhId { get; set; } 
 }
