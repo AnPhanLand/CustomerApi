@@ -131,6 +131,13 @@ public class CustomerModule : ICarterModule
             return await mediator.Send(new CreatePhuHuynhCommand(PhuHuynhDTO));
         });
 
+        // Remove
+        phuHuynhs.MapDelete("/{id}", async (Guid id, IMediator mediator) => 
+        {
+            return await mediator.Send(new DeletePhuHuynhCommand(id));
+        });
+        
+
         RouteGroupBuilder payments = app.MapGroup("/Payment").RequireRateLimiting("fixed"); 
 
         // List all

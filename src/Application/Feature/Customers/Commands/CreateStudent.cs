@@ -12,6 +12,12 @@ public class CreateStudentHandler : IRequestHandler<CreateStudentCommand, Guid>
             FirstName = request.StudentDTO.FirstName,
             LastName = request.StudentDTO.LastName,
             ClassName = request.StudentDTO.ClassName,
+            Status = request.StudentDTO.Status,
+            Address = request.StudentDTO.Address,
+            Gender = request.StudentDTO.Gender,
+            DateOfBirth = request.StudentDTO.DateOfBirth,
+            ClassID = request.StudentDTO.ClassID,
+            Grade = request.StudentDTO.Grade,
             PhuHuynhId = request.StudentDTO.PhuHuynhId
         };
 
