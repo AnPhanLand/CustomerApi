@@ -83,165 +83,11 @@ namespace Infrastructure.Persistence.Postgres.Migrations
 
                     b.HasIndex("CustomerId");
 
-                    b.ToTable("Order");
-                });
-
-            modelBuilder.Entity("CustomerApi.Domain.Entities.Payment", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<decimal>("DiscountRate")
-                        .HasColumnType("numeric");
-
-                    b.Property<decimal>("InterestRate")
-                        .HasColumnType("numeric");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("numeric");
-
-                    b.Property<Guid>("StudentId")
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Payments");
-                });
-
-            modelBuilder.Entity("CustomerApi.Domain.Entities.PhieuThu", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<bool>("DaThanhToan")
-                        .HasColumnType("boolean");
-
-                    b.Property<DateTime>("HanThanhToan")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("MaPhieu")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("PaymentId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("PhuHuynhId")
-                        .HasColumnType("uuid");
-
-                    b.Property<Guid>("StudentId")
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PaymentId");
-
-                    b.HasIndex("PhuHuynhId");
-
-                    b.HasIndex("StudentId");
-
-                    b.ToTable("PhieuThus");
-                });
-
-            modelBuilder.Entity("CustomerApi.Domain.Entities.PhuHuynh", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PhuHuynhs");
-                });
-
-            modelBuilder.Entity("CustomerApi.Domain.Entities.Student", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uuid");
-
-                    b.Property<string>("ClassName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<DateTime>("CreatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.Property<string>("FirstName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<string>("LastName")
-                        .IsRequired()
-                        .HasColumnType("text");
-
-                    b.Property<Guid>("PhuHuynhId")
-                        .HasColumnType("uuid");
-
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("timestamp with time zone");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Students");
+                    b.ToTable("Order", (string)null);
                 });
 
             modelBuilder.Entity("CustomerApi.Domain.Entities.Customer", b =>
                 {
-                    b.OwnsOne("CustomerApi.Domain.ValueObjects.EmailAddress", "Email", b1 =>
-                        {
-                            b1.Property<Guid>("CustomerId")
-                                .HasColumnType("uuid");
-
-                            b1.Property<string>("Value")
-                                .IsRequired()
-                                .HasColumnType("text")
-                                .HasColumnName("Email");
-
-                            b1.HasKey("CustomerId");
-
-                            b1.ToTable("Customers");
-
-                            b1.WithOwner()
-                                .HasForeignKey("CustomerId");
-                        });
-
                     b.OwnsOne("CustomerApi.Domain.ValueObjects.PhoneNumber", "ContactNumber", b1 =>
                         {
                             b1.Property<Guid>("CustomerId")
@@ -259,7 +105,25 @@ namespace Infrastructure.Persistence.Postgres.Migrations
 
                             b1.HasKey("CustomerId");
 
-                            b1.ToTable("Customers");
+                            b1.ToTable("Customers", (string)null);
+
+                            b1.WithOwner()
+                                .HasForeignKey("CustomerId");
+                        });
+
+                    b.OwnsOne("CustomerApi.Domain.ValueObjects.EmailAddress", "Email", b1 =>
+                        {
+                            b1.Property<Guid>("CustomerId")
+                                .HasColumnType("uuid");
+
+                            b1.Property<string>("Value")
+                                .IsRequired()
+                                .HasColumnType("text")
+                                .HasColumnName("Email");
+
+                            b1.HasKey("CustomerId");
+
+                            b1.ToTable("Customers", (string)null);
 
                             b1.WithOwner()
                                 .HasForeignKey("CustomerId");
@@ -281,33 +145,6 @@ namespace Infrastructure.Persistence.Postgres.Migrations
                         .IsRequired();
 
                     b.Navigation("Customer");
-                });
-
-            modelBuilder.Entity("CustomerApi.Domain.Entities.PhieuThu", b =>
-                {
-                    b.HasOne("CustomerApi.Domain.Entities.Payment", "Payment")
-                        .WithMany()
-                        .HasForeignKey("PaymentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CustomerApi.Domain.Entities.PhuHuynh", "PhuHuynh")
-                        .WithMany()
-                        .HasForeignKey("PhuHuynhId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("CustomerApi.Domain.Entities.Student", "Student")
-                        .WithMany()
-                        .HasForeignKey("StudentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Payment");
-
-                    b.Navigation("PhuHuynh");
-
-                    b.Navigation("Student");
                 });
 
             modelBuilder.Entity("CustomerApi.Domain.Entities.Customer", b =>

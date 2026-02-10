@@ -2,7 +2,6 @@ namespace CustomerApi.Domain.Entities;
 
 public class PhieuThu : BaseEntity
 {
-    public string MaPhieu { get; set; } = string.Empty; 
     public DateTime HanThanhToan { get; set; } 
     public bool DaThanhToan { get; set; } 
 

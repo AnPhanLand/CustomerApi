@@ -145,5 +145,20 @@ public class CustomerModule : ICarterModule
         {
             return await mediator.Send(new CreatePaymentCommand(PaymentDTO));
         });
+
+        RouteGroupBuilder phieuthu = app.MapGroup("/PhieuThu").RequireRateLimiting("fixed"); 
+
+        // List all
+        phieuthu.MapGet("/", async (IMediator mediator) => 
+        {
+            // We send the "Query" object, and MediatR handles the rest
+            return await mediator.Send(new GetAllPhieuThuQuery());
+        });
+
+        // Create new
+        phieuthu.MapPost("/", async (PhieuThuCreateDTO PhieuThuDTO, IMediator mediator) => 
+        {
+            return await mediator.Send(new CreatePhieuThuCommand(PhieuThuDTO));
+        });
     }
 }
