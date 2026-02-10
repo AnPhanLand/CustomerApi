@@ -12,6 +12,7 @@ public class CreatePaymentHandler : IRequestHandler<CreatePaymentCommand, Guid>
             Description = request.PaymentDTO.Description,
             Price = request.PaymentDTO.Price,
             InterestRate = request.PaymentDTO.InterestRate,
+            DiscountRate = request.PaymentDTO.DiscountRate,
             StudentId = request.PaymentDTO.StudentId
         };
 
