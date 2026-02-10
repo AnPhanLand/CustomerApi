@@ -1,13 +1,8 @@
-namespace CustomerApi.Domain.Entities;
-
-public class Payment : BaseEntity
+namespace CustomerApi.Application.Customers.DTOs;
+public class PaymentCreateDTO
 {
     public string Description { get; set; } = string.Empty;
     public decimal Price { get; set; }
     public decimal InterestRate { get; set; } 
-    public decimal Tax => Price * InterestRate; 
-    
-    public decimal Total => Price + Tax;
-    
     public Guid StudentId { get; set; }
 }

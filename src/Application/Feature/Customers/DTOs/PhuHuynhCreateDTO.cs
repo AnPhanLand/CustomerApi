@@ -1,8 +1,7 @@
 namespace CustomerApi.Application.Customers.DTOs;
-public class StudentCreateDTO
+public class PhuHuynhCreateDTO
 {
     public string FirstName { get; set; } = string.Empty;
     public string LastName { get; set; } = string.Empty;
-    public string ClassName { get; set; } = string.Empty;
-    public Guid PhuHuynhId { get; set; }
+    public string PhoneNumber { get; set; } = string.Empty;
 }
