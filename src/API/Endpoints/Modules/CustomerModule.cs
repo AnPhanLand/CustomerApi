@@ -93,5 +93,20 @@ public class CustomerModule : ICarterModule
             // Return the file result
             return Results.File(pdfBytes, "application/pdf", "Customers.pdf");
         });
+
+        RouteGroupBuilder students = app.MapGroup("/Student").RequireRateLimiting("fixed"); 
+
+        // List all
+        students.MapGet("/", async (IMediator mediator) => 
+        {
+            // We send the "Query" object, and MediatR handles the rest
+            return await mediator.Send(new GetAllStudentsQuery());
+        });
+
+        // Create new
+        students.MapPost("/", async (StudentCreateDTO StudentDTO, IMediator mediator) => 
+        {
+            return await mediator.Send(new CreateStudentCommand(StudentDTO));
+        });
     }
 }

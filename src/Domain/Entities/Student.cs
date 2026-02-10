@@ -6,7 +6,7 @@ public class Student : BaseEntity
     public string LastName { get; set; } = string.Empty;
     public string FullName => $"{LastName} {FirstName}";
     
-    public string className { get; set; } = string.Empty;
+    public string ClassName { get; set; } = string.Empty;
 
     public Guid PhuHuynhId { get; set; }
 }
