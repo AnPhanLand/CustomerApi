@@ -1,0 +1,22 @@
+[
+  {
+    "Id": "090f18bd-c679-4640-8332-73f633ba0326",
+    "Description": "Học phí tháng 02/2026",
+    "Price": 3000000,
+    "InterestRate": 0.08,
+    "DiscountRate": 0,
+    "StudentId": "d8728c39-0efe-416d-83e5-b21735116a68",
+    "CreatedAt": "2026-02-11T07:04:08.015238+00:00",
+    "UpdatedAt": null
+  },
+  {
+    "Id": "650f5c27-0a7d-4b4a-8258-9524580ca93e",
+    "Description": "Học phí tháng 02/2026",
+    "Price": 3000000,
+    "InterestRate": 0.08,
+    "DiscountRate": 0,
+    "StudentId": "d8728c39-0efe-416d-83e5-b21735116a68",
+    "CreatedAt": "2026-02-11T07:04:08.883011+00:00",
+    "UpdatedAt": null
+  }
+]

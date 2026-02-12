@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Persistence.Postgres.Migrations
 {
     [DbContext(typeof(CustomerDb))]
-    [Migration("20260210092703_new1")]
+    [Migration("20260211065747_new1")]
     partial class new1
     {
         /// <inheritdoc />
@@ -137,9 +137,6 @@ namespace Infrastructure.Persistence.Postgres.Migrations
                     b.Property<DateTime>("HanThanhToan")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<Guid>("PaymentId")
-                        .HasColumnType("uuid");
-
                     b.Property<Guid>("PhuHuynhId")
                         .HasColumnType("uuid");
 
@@ -150,8 +147,6 @@ namespace Infrastructure.Persistence.Postgres.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
-
-                    b.HasIndex("PaymentId");
 
                     b.HasIndex("PhuHuynhId");
 
@@ -305,12 +300,6 @@ namespace Infrastructure.Persistence.Postgres.Migrations
 
             modelBuilder.Entity("CustomerApi.Domain.Entities.PhieuThu", b =>
                 {
-                    b.HasOne("CustomerApi.Domain.Entities.Payment", "Payment")
-                        .WithMany()
-                        .HasForeignKey("PaymentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("CustomerApi.Domain.Entities.PhuHuynh", "PhuHuynh")
                         .WithMany()
                         .HasForeignKey("PhuHuynhId")
@@ -322,8 +311,6 @@ namespace Infrastructure.Persistence.Postgres.Migrations
                         .HasForeignKey("StudentId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Payment");
 
                     b.Navigation("PhuHuynh");
 

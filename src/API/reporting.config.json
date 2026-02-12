@@ -1,6 +1,8 @@
 {
     "SqlConnectionStrings": {},
     "JsonConnectionStrings": {
-        "LocalData": "Uri=C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\data\\Customers.json"   
+        "LocalData": "Uri=C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\data\\Customers.json",
+        "PhieuThu": "Uri=C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\data\\PhieuThu\\PhieuThu.json",
+        "Payment": "Uri=C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\data\\PhieuThu\\Payment.json"
     }
 }

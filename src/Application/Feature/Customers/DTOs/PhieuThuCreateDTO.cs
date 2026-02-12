@@ -6,5 +6,4 @@ public class PhieuThuCreateDTO
 
     public Guid StudentId { get; set; } 
     public Guid PhuHuynhId { get; set; } 
-    public Guid PaymentId { get; set; }
 }

@@ -12,8 +12,7 @@ public class CreatePhieuThuHandler : IRequestHandler<CreatePhieuThuCommand, Guid
             HanThanhToan = request.PhieuThuDTO.HanThanhToan,
             DaThanhToan = request.PhieuThuDTO.DaThanhToan,
             StudentId = request.PhieuThuDTO.StudentId,
-            PhuHuynhId = request.PhieuThuDTO.PhuHuynhId,
-            PaymentId = request.PhieuThuDTO.PaymentId
+            PhuHuynhId = request.PhieuThuDTO.PhuHuynhId
         };
 
         _context.PhieuThus.Add(entity);

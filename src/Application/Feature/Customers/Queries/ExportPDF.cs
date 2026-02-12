@@ -9,7 +9,7 @@ public class GetCustomerReportPdfHandler : IRequestHandler<GetCustomerReportPdfQ
 {
     public async Task<byte[]> Handle(GetCustomerReportPdfQuery request, CancellationToken cancellationToken)
     {
-            var report = XtraReport.FromFile("C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\newReport.repx", true);
+            var report = XtraReport.FromFile("C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\PhieuThu_test2026.repx", true);
 
             // Create a data source manually using the file you exported from pgAdmin
             var jsonDataSource = new DevExpress.DataAccess.Json.JsonDataSource

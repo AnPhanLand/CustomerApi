@@ -9,6 +9,4 @@ public class PhieuThu : BaseEntity
     public virtual Student Student { get; set; } = null!;
     public Guid PhuHuynhId { get; set; } 
     public virtual PhuHuynh PhuHuynh { get; set; } = null!;
-    public Guid PaymentId { get; set; } 
-    public virtual Payment Payment { get; set; } = null!;
 }   

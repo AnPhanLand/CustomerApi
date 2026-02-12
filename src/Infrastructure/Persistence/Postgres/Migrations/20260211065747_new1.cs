@@ -77,19 +77,12 @@ namespace Infrastructure.Persistence.Postgres.Migrations
                     DaThanhToan = table.Column<bool>(type: "boolean", nullable: false),
                     StudentId = table.Column<Guid>(type: "uuid", nullable: false),
                     PhuHuynhId = table.Column<Guid>(type: "uuid", nullable: false),
-                    PaymentId = table.Column<Guid>(type: "uuid", nullable: false),
                     CreatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: false),
                     UpdatedAt = table.Column<DateTime>(type: "timestamp with time zone", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PhieuThus", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_PhieuThus_Payments_PaymentId",
-                        column: x => x.PaymentId,
-                        principalTable: "Payments",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_PhieuThus_PhuHuynhs_PhuHuynhId",
                         column: x => x.PhuHuynhId,
@@ -103,11 +96,6 @@ namespace Infrastructure.Persistence.Postgres.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_PhieuThus_PaymentId",
-                table: "PhieuThus",
-                column: "PaymentId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PhieuThus_PhuHuynhId",
@@ -124,10 +112,10 @@ namespace Infrastructure.Persistence.Postgres.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "PhieuThus");
+                name: "Payments");
 
             migrationBuilder.DropTable(
-                name: "Payments");
+                name: "PhieuThus");
 
             migrationBuilder.DropTable(
                 name: "PhuHuynhs");
