@@ -105,6 +105,9 @@ namespace Infrastructure.Persistence.Postgres.Migrations
                     b.Property<decimal>("InterestRate")
                         .HasColumnType("numeric");
 
+                    b.Property<Guid>("PhieuThuId")
+                        .HasColumnType("uuid");
+
                     b.Property<decimal>("Price")
                         .HasColumnType("numeric");
 

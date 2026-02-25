@@ -11,6 +11,9 @@
           "Application": "1.0.0",
           "ClosedXML": "0.105.0",
           "CsvHelper": "33.1.0",
+          "DevExpress.AspNetCore.Reporting": "25.2.4",
+          "DevExpress.Data": "25.2.4",
+          "DevExpress.DataAccess": "25.2.4",
           "Hangfire": "1.8.22",
           "Hangfire.Core": "1.8.22",
           "Hangfire.PostgreSql": "1.20.13",
@@ -66,6 +69,50 @@
           "lib/net5.0/Dapper.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "2.0.123.33578"
+          }
+        }
+      },
+      "DevExpress.AspNetCore.Common/25.2.4": {
+        "dependencies": {
+          "DevExpress.AspNetCore.Core": "25.2.4",
+          "DevExpress.Data": "25.2.4"
+        },
+        "runtime": {
+          "lib/net8.0/DevExpress.AspNetCore.Common.v25.2.dll": {
+            "assemblyVersion": "25.2.4.0",
+            "fileVersion": "25.2.4.0"
+          }
+        }
+      },
+      "DevExpress.AspNetCore.Core/25.2.4": {
+        "dependencies": {
+          "DevExpress.Data": "25.2.4",
+          "DevExpress.Office.Core": "25.2.4",
+          "Microsoft.Extensions.DependencyModel": "9.0.12"
+        },
+        "runtime": {
+          "lib/net8.0/DevExpress.AspNetCore.Core.v25.2.dll": {
+            "assemblyVersion": "25.2.4.0",
+            "fileVersion": "25.2.4.0"
+          }
+        }
+      },
+      "DevExpress.AspNetCore.Reporting/25.2.4": {
+        "dependencies": {
+          "DevExpress.AspNetCore.Common": "25.2.4",
+          "DevExpress.AspNetCore.Core": "25.2.4",
+          "DevExpress.Data": "25.2.4",
+          "DevExpress.DataAccess": "25.2.4",
+          "DevExpress.Printing.Core": "25.2.4",
+          "DevExpress.Reporting.Core": "25.2.4",
+          "DevExpress.Web.Reporting.Common": "25.2.4",
+          "DevExpress.Web.Reporting.Common.Services": "25.2.4",
+          "DevExpress.Web.Resources": "25.2.4"
+        },
+        "runtime": {
+          "lib/net8.0/DevExpress.AspNetCore.Reporting.v25.2.dll": {
+            "assemblyVersion": "25.2.4.0",
+            "fileVersion": "25.2.4.0"
           }
         }
       },
@@ -319,6 +366,53 @@
         },
         "runtime": {
           "lib/net8.0/DevExpress.Sparkline.v25.2.Core.dll": {
+            "assemblyVersion": "25.2.4.0",
+            "fileVersion": "25.2.4.0"
+          }
+        }
+      },
+      "DevExpress.Web.Reporting.Common/25.2.4": {
+        "dependencies": {
+          "DevExpress.Charts": "25.2.4",
+          "DevExpress.Charts.Core": "25.2.4",
+          "DevExpress.Data": "25.2.4",
+          "DevExpress.DataAccess": "25.2.4",
+          "DevExpress.Drawing": "25.2.4",
+          "DevExpress.Gauges.Core": "25.2.4",
+          "DevExpress.PivotGrid.Core": "25.2.4",
+          "DevExpress.Printing.Core": "25.2.4",
+          "DevExpress.Reporting.Core": "25.2.4",
+          "DevExpress.Sparkline.Core": "25.2.4",
+          "DevExpress.Xpo": "25.2.4"
+        },
+        "runtime": {
+          "lib/net8.0/DevExpress.XtraReports.v25.2.Web.dll": {
+            "assemblyVersion": "25.2.4.0",
+            "fileVersion": "25.2.4.0"
+          }
+        }
+      },
+      "DevExpress.Web.Reporting.Common.Services/25.2.4": {
+        "dependencies": {
+          "DevExpress.Data": "25.2.4",
+          "DevExpress.DataAccess": "25.2.4",
+          "DevExpress.Reporting.Core": "25.2.4",
+          "DevExpress.Web.Reporting.Common": "25.2.4"
+        },
+        "runtime": {
+          "lib/net8.0/DevExpress.Web.Reporting.v25.2.Common.Services.dll": {
+            "assemblyVersion": "25.2.4.0",
+            "fileVersion": "25.2.4.0"
+          }
+        }
+      },
+      "DevExpress.Web.Resources/25.2.4": {
+        "dependencies": {
+          "DevExpress.AspNetCore.Core": "25.2.4",
+          "DevExpress.Data": "25.2.4"
+        },
+        "runtime": {
+          "lib/net8.0/DevExpress.Web.Resources.v25.2.dll": {
             "assemblyVersion": "25.2.4.0",
             "fileVersion": "25.2.4.0"
           }
@@ -2002,6 +2096,27 @@
       "path": "dapper/2.0.123",
       "hashPath": "dapper.2.0.123.nupkg.sha512"
     },
+    "DevExpress.AspNetCore.Common/25.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/5Jik18MaWGz+WqK1zzZWCIB7BOQMKfmsmAQ4g/WSe8MzNU6F72yo6dcQ+abT4kwZJ8utN66u5yX5fE0uITUaA==",
+      "path": "devexpress.aspnetcore.common/25.2.4",
+      "hashPath": "devexpress.aspnetcore.common.25.2.4.nupkg.sha512"
+    },
+    "DevExpress.AspNetCore.Core/25.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-MfySf6o37C4jV8ZbFV0YI3blCupVDn9cIh86qLhE7i/lJo5Y7fW8p4ApwHeOhHu8zW9tgefGaHTWwIaZBb4Skw==",
+      "path": "devexpress.aspnetcore.core/25.2.4",
+      "hashPath": "devexpress.aspnetcore.core.25.2.4.nupkg.sha512"
+    },
+    "DevExpress.AspNetCore.Reporting/25.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5ez+J67YfqLlE2YuK24VDk6xKrgXqWBdJkrdlFlIs4UYJmf88hJfePxWfMtBc33OFueiP2UKBY7U6rfDLKwXLA==",
+      "path": "devexpress.aspnetcore.reporting/25.2.4",
+      "hashPath": "devexpress.aspnetcore.reporting.25.2.4.nupkg.sha512"
+    },
     "DevExpress.Charts/25.2.4": {
       "type": "package",
       "serviceable": true,
@@ -2120,6 +2235,27 @@
       "sha512": "sha512-0TNogMzpbRVyxwc3WBFrYmFllXfPr3FqqScsdZV1/RQ/8BVCs0RrzqZf/yh1o2f8lhGvprZt0Uahg8PwLMpYcA==",
       "path": "devexpress.sparkline.core/25.2.4",
       "hashPath": "devexpress.sparkline.core.25.2.4.nupkg.sha512"
+    },
+    "DevExpress.Web.Reporting.Common/25.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-jIc0goioB8QltdaAF2wZIYnoosSJrH0Z0koTiisSeU5E6z2XJl9GZFPEKsEdDjq7pW2PrqimujsmlVfis5K0Wg==",
+      "path": "devexpress.web.reporting.common/25.2.4",
+      "hashPath": "devexpress.web.reporting.common.25.2.4.nupkg.sha512"
+    },
+    "DevExpress.Web.Reporting.Common.Services/25.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VON/GMeHdQ1J87acJvZLHIP54ACeyUBtfoHJdgjP9zBbT1UIrbvR/RGWNCo7sRB62F5F7t5FgwNEaU144VlRZA==",
+      "path": "devexpress.web.reporting.common.services/25.2.4",
+      "hashPath": "devexpress.web.reporting.common.services.25.2.4.nupkg.sha512"
+    },
+    "DevExpress.Web.Resources/25.2.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-3WAa4I86b9fVulM0fevbypI47LhKteVhe3uoJwdgorVcvhVn6pGzeIY63x6lzZOApDkPLxCdRKxtjhKq4x3qVA==",
+      "path": "devexpress.web.resources/25.2.4",
+      "hashPath": "devexpress.web.resources.25.2.4.nupkg.sha512"
     },
     "DevExpress.Xpo/25.2.4": {
       "type": "package",

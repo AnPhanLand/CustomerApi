@@ -1,3 +1,5 @@
+using CustomerApi.Infrastructure.Services;
+
 namespace CustomerApi.Infrastructure;
 
 public static class DependencyInjection
@@ -84,6 +86,7 @@ public static class DependencyInjection
 
         services.AddScoped<IExcelService, ExcelService>();
         services.AddScoped<ICsvService, CsvService>();
+        services.AddScoped<IReportService, ReportGeneratorService>();
 
         return services;
     }

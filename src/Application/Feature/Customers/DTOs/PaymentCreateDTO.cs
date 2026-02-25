@@ -6,4 +6,5 @@ public class PaymentCreateDTO
     public decimal InterestRate { get; set; } 
     public decimal DiscountRate { get; set; } = 0;
     public Guid StudentId { get; set; }
+    public Guid PhieuThuId { get; set; }
 }

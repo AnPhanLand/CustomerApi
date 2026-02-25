@@ -1,3 +1,6 @@
+using DevExpress.AspNetCore;
+using DevExpress.AspNetCore.Reporting;
+
 namespace CustomerApi.API;
 
 public static class DependencyInjection

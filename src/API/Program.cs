@@ -1,3 +1,5 @@
+using CustomerApi.Infrastructure.Services;
+
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console(restrictedToMinimumLevel: LogEventLevel.Information)
@@ -13,6 +15,8 @@ try {
     builder.Services.AddApi();
     builder.Host.UseSerilog();
 
+    builder.Services.AddScoped<IReportService, ReportGeneratorService>();
+
     var app = builder.Build();
 
     app.UseCors("MyFrontendPolicy");
@@ -20,6 +24,27 @@ try {
     app.UseAuthorization();
     app.UseHangfireDashboard("/hangfire");
     app.MapCarter();
+
+    using (var scope = app.Services.CreateScope())
+    {
+        var reportService = scope.ServiceProvider.GetRequiredService<IReportService>();
+        
+        // Cast it to the concrete class to access the Update method 
+        // (since it's not part of the base IReportService interface)
+        if (reportService is ReportGeneratorService generator)
+        {
+            generator.UpdateReportSchemaWithSql();
+        }
+    }
+
+    Console.WriteLine("Done! Check your .repx file in VS Code.");
+
+//     using (var scope = app.Services.CreateScope())
+// {
+//     var config = scope.ServiceProvider.GetRequiredService<IConfiguration>();
+//     var conn = config.GetConnectionString("ReportsConnection");
+//     new ReportGeneratorService(conn).UpdateReportSchemaWithSql();
+// }
 
     // Checks if the application is running in 'Development' mode (not production).
     if (app.Environment.IsDevelopment())

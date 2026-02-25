@@ -85,7 +85,9 @@ public class CustomerModule : ICarterModule
             return Results.Ok($"{count} customers imported from CSV successfully.");
         });
 
-        customer.MapGet("/export-pdf", async (IMediator mediator) =>
+        RouteGroupBuilder students = app.MapGroup("/Student").RequireRateLimiting("fixed"); 
+
+        students.MapGet("/export-pdf", async (IMediator mediator) =>
         {
             // Send the query to the Application Layer
             var pdfBytes = await mediator.Send(new GetCustomerReportPdfQuery());
@@ -93,8 +95,6 @@ public class CustomerModule : ICarterModule
             // Return the file result
             return Results.File(pdfBytes, "application/pdf", "Customers.pdf");
         });
-
-        RouteGroupBuilder students = app.MapGroup("/Student").RequireRateLimiting("fixed"); 
 
         // List all
         students.MapGet("/", async (IMediator mediator) => 

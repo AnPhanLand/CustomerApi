@@ -11,4 +11,5 @@ public class Payment : BaseEntity
     public decimal Total => Price + Tax - (Price * DiscountRate);
     
     public Guid StudentId { get; set; }
+    public Guid PhieuThuId { get; set; }
 }

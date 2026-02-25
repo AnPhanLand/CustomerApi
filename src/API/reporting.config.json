@@ -1,5 +1,7 @@
 {
-    "SqlConnectionStrings": {},
+    "SqlConnectionStrings": {
+        "ReportsConnection": "XpoProvider=Postgres;Host=localhost;Port=5432;Database=postgres;Username=postgres;Password=mysecretpassword"
+    },
     "JsonConnectionStrings": {
         "LocalData": "Uri=C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\data\\Customers.json",
         "PhieuThu": "Uri=C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\data\\PhieuThu\\PhieuThu.json",

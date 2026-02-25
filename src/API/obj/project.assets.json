@@ -3723,6 +3723,9 @@
           "Application": "1.0.0",
           "ClosedXML": "0.105.0",
           "CsvHelper": "33.1.0",
+          "DevExpress.AspNetCore.Reporting": "25.2.4",
+          "DevExpress.Data": "25.2.4",
+          "DevExpress.DataAccess": "25.2.4",
           "Hangfire": "1.8.22",
           "Hangfire.Core": "1.8.22",
           "Hangfire.PostgreSql": "1.20.13",
@@ -9216,11 +9219,11 @@
             "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj": {
               "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Application\\Application.csproj"
             },
-            "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
-              "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
+            "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Domain\\Domain.csproj"
             },
-            "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {
-              "projectPath": "c:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj"
+            "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\Infrastructure\\Infrastructure.csproj"
             }
           }
         }
