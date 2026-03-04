@@ -1,4 +1,4 @@
 public interface IReportService
 {
-    Task<byte[]> GenerateReceiptPdfAsync(CancellationToken ct);
+    Task<byte[]> GenerateReceiptPdfAsync(string statusFilter, CancellationToken ct);
 }

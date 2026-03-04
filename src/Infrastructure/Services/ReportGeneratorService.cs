@@ -13,13 +13,22 @@ public class ReportGeneratorService : IReportService
         private const string ConnectionString = "XpoProvider=Postgres;Server=localhost;Port=5432;Database=postgres;Username=postgres;Password=mysecretpassword";
 
     
-    public async Task<byte[]> GenerateReceiptPdfAsync(CancellationToken ct)
+    public async Task<byte[]> GenerateReceiptPdfAsync(string statusFilter, CancellationToken ct)
     {
         var report = XtraReport.FromFile(ViewReportPath, true);
         var sqlDataSource = CreateDataSource();
 
         report.DataSource = sqlDataSource;
         report.DataMember = "PhieuThus";
+
+        // 1. Pass the filter to the Report Parameter
+        if (report.Parameters["p_Status"] != null)
+        {
+            report.Parameters["p_Status"].Value = statusFilter;
+        }
+
+        // 2. Clear the DataMember to fix the "3 tables" repeating issue you had
+        report.DataMember = "";
 
         using var ms = new MemoryStream();
         await report.ExportToPdfAsync(ms, null, ct);

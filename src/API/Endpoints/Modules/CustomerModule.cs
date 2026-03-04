@@ -96,6 +96,15 @@ public class CustomerModule : ICarterModule
             return Results.File(pdfBytes, "application/pdf", "Customers.pdf");
         });
 
+        students.MapPost("/export-filter-pdf", async (ReportRequest request, IReportService reportService, CancellationToken ct) =>
+{
+            // Extract the statusFilter from the request body and pass it to your service
+            var pdfBytes = await reportService.GenerateReceiptPdfAsync(request.StatusFilter, ct);
+
+            // Return the file directly
+            return Results.File(pdfBytes, "application/pdf", "StudentReport.pdf");
+        });
+
         // List all
         students.MapGet("/", async (IMediator mediator) => 
         {

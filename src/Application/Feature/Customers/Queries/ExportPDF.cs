@@ -17,6 +17,6 @@ public class GetCustomerReportPdfHandler : IRequestHandler<GetCustomerReportPdfQ
     public async Task<byte[]> Handle(GetCustomerReportPdfQuery request, CancellationToken cancellationToken)
     {
         // No more JSON logic here!
-        return await _reportService.GenerateReceiptPdfAsync(cancellationToken);
+        return await _reportService.GenerateReceiptPdfAsync("-1", cancellationToken);
     }
 }

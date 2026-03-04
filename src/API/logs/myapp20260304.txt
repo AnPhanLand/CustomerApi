@@ -1,0 +1,514 @@
+2026-03-04 10:54:42.857 +07:00 [INF] Starting the API...
+2026-03-04 10:54:44.638 +07:00 [INF] Start installing Hangfire SQL objects...
+2026-03-04 10:54:44.736 +07:00 [INF] Hangfire SQL objects installed.
+2026-03-04 10:54:44.772 +07:00 [DBG] Found validator CreateCustomerCommandValidator
+2026-03-04 10:54:44.772 +07:00 [DBG] Found validator UpdateCustomerCommandValidator
+2026-03-04 10:54:44.772 +07:00 [DBG] Found module CustomerApi.API.Endpoints.Modules.AuthModule
+2026-03-04 10:54:44.772 +07:00 [DBG] Found module CustomerApi.API.Endpoints.Modules.CustomerModule
+2026-03-04 10:54:46.254 +07:00 [DBG] Hosting starting
+2026-03-04 10:54:46.280 +07:00 [INF] User profile is available. Using 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 10:54:46.291 +07:00 [DBG] Reading data from file 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys\key-e0e4c711-e38d-4994-9c4d-b0c1ef741012.xml'.
+2026-03-04 10:54:46.295 +07:00 [DBG] Found key {e0e4c711-e38d-4994-9c4d-b0c1ef741012}.
+2026-03-04 10:54:46.301 +07:00 [DBG] Considering key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} with expiration date 2026-03-29 06:37:16Z as default key.
+2026-03-04 10:54:46.303 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-03-04 10:54:46.305 +07:00 [DBG] Decrypting secret element using Windows DPAPI.
+2026-03-04 10:54:46.306 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-03-04 10:54:46.309 +07:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2026-03-04 10:54:46.310 +07:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2026-03-04 10:54:46.311 +07:00 [DBG] Using key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} as the default key.
+2026-03-04 10:54:46.311 +07:00 [DBG] Key ring with default key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} was loaded during application startup.
+2026-03-04 10:54:46.314 +07:00 [DBG] Middleware loaded
+2026-03-04 10:54:46.316 +07:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (14879 B).
+2026-03-04 10:54:46.317 +07:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2026-03-04 10:54:46.507 +07:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2026-03-04 10:54:46.527 +07:00 [INF] Now listening on: http://localhost:5067
+2026-03-04 10:54:46.527 +07:00 [DBG] Loaded hosting startup assembly API
+2026-03-04 10:54:46.528 +07:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2026-03-04 10:54:46.533 +07:00 [INF] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: postgres, Schema: hangfire'
+2026-03-04 10:54:46.533 +07:00 [INF] Using the following options for PostgreSQL job storage:
+2026-03-04 10:54:46.533 +07:00 [INF]     Queue poll interval: 00:00:15.
+2026-03-04 10:54:46.534 +07:00 [INF]     Invisibility timeout: 00:30:00.
+2026-03-04 10:54:46.534 +07:00 [INF]     Use sliding invisibility timeout: False.
+2026-03-04 10:54:46.534 +07:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-03-04 10:54:46.542 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 10:54:46.542 +07:00 [INF] Hosting environment: Development
+2026-03-04 10:54:46.542 +07:00 [INF] Content root path: C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\API
+2026-03-04 10:54:46.542 +07:00 [DBG] Hosting started
+2026-03-04 10:54:46.543 +07:00 [DBG] Execution loop BackgroundServerProcess:ab68ff67 has started in 3.3537 ms
+2026-03-04 10:54:46.707 +07:00 [INF] Server desktop-l31jdro:20952:d9923a9c successfully announced in 153.6952 ms
+2026-03-04 10:54:46.713 +07:00 [DBG] Execution loop ServerHeartbeatProcess:47796464 has started in 5.6278 ms
+2026-03-04 10:54:46.714 +07:00 [INF] Server desktop-l31jdro:20952:d9923a9c is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-03-04 10:54:46.717 +07:00 [DBG] Execution loop ServerWatchdog:21e90de9 has started in 2.6461 ms
+2026-03-04 10:54:46.720 +07:00 [DBG] Execution loop ServerJobCancellationWatcher:91fa4123 has started in 2.5983 ms
+2026-03-04 10:54:46.722 +07:00 [DBG] Execution loop ExpirationManager:2b4c69ed has started in 1.9057 ms
+2026-03-04 10:54:46.723 +07:00 [DBG] Removing outdated records from table 'aggregatedcounter'...
+2026-03-04 10:54:46.723 +07:00 [DBG] Execution loop CountersAggregator:a99c3eb4 has started in 1.3076 ms
+2026-03-04 10:54:46.724 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-04 10:54:46.726 +07:00 [DBG] Execution loop Worker:a2fe06b7 has started in 2.5544 ms
+2026-03-04 10:54:46.728 +07:00 [INF] 1 servers were removed due to timeout
+2026-03-04 10:54:46.729 +07:00 [DBG] Execution loop Worker:7f4cae77 has started in 5.3135 ms
+2026-03-04 10:54:46.730 +07:00 [DBG] Execution loop Worker:9346b182 has started in 6.7897 ms
+2026-03-04 10:54:46.732 +07:00 [DBG] Execution loop Worker:01bbc93a has started in 8.6316 ms
+2026-03-04 10:54:46.734 +07:00 [DBG] Execution loop Worker:3f04c5b0 has started in 10.1772 ms
+2026-03-04 10:54:46.738 +07:00 [DBG] Execution loop Worker:e36f5e74 has started in 14.2565 ms
+2026-03-04 10:54:46.740 +07:00 [DBG] Execution loop Worker:79994548 has started in 16.3574 ms
+2026-03-04 10:54:46.742 +07:00 [DBG] Execution loop Worker:50ab33ae has started in 19.0593 ms
+2026-03-04 10:54:46.747 +07:00 [DBG] Execution loop Worker:7d453d00 has started in 23.6555 ms
+2026-03-04 10:54:46.751 +07:00 [DBG] Execution loop Worker:cccf9fa6 has started in 27.5161 ms
+2026-03-04 10:54:46.753 +07:00 [DBG] Execution loop Worker:09b455f0 has started in 29.8917 ms
+2026-03-04 10:54:46.756 +07:00 [DBG] Execution loop Worker:13a08d55 has started in 32.6592 ms
+2026-03-04 10:54:46.764 +07:00 [DBG] Execution loop Worker:ec8dd703 has started in 40.5559 ms
+2026-03-04 10:54:46.766 +07:00 [DBG] Execution loop Worker:38f436dd has started in 42.5325 ms
+2026-03-04 10:54:46.776 +07:00 [DBG] Execution loop Worker:23414b15 has started in 52.6073 ms
+2026-03-04 10:54:46.782 +07:00 [DBG] Execution loop Worker:b9a7dd96 has started in 58.2983 ms
+2026-03-04 10:54:46.821 +07:00 [DBG] Execution loop Worker:63f91d59 has started in 97.2907 ms
+2026-03-04 10:54:46.857 +07:00 [DBG] Execution loop Worker:04e92b8d has started in 134.0043 ms
+2026-03-04 10:54:46.863 +07:00 [DBG] Execution loop Worker:32465797 has started in 139.7729 ms
+2026-03-04 10:54:46.868 +07:00 [DBG] Execution loop Worker:d53aa22f has started in 144.7922 ms
+2026-03-04 10:54:46.881 +07:00 [DBG] Execution loop DelayedJobScheduler:f7fb36c8 has started in 12.7121 ms
+2026-03-04 10:54:46.897 +07:00 [DBG] Execution loop RecurringJobScheduler:8d3fa0c9 has started in 11.7983 ms
+2026-03-04 10:54:46.897 +07:00 [INF] Server desktop-l31jdro:20952:d9923a9c all the dispatchers started
+2026-03-04 10:54:46.948 +07:00 [DBG] Removing outdated records from table 'counter'...
+2026-03-04 10:54:46.965 +07:00 [DBG] Removing outdated records from table 'job'...
+2026-03-04 10:54:46.985 +07:00 [DBG] Removing outdated records from table 'list'...
+2026-03-04 10:54:46.996 +07:00 [DBG] Removing outdated records from table 'set'...
+2026-03-04 10:54:47.010 +07:00 [DBG] Removing outdated records from table 'hash'...
+2026-03-04 10:54:47.740 +07:00 [DBG] Connection id "0HNJPK73OE8AV" accepted.
+2026-03-04 10:54:47.741 +07:00 [DBG] Connection id "0HNJPK73OE8AV" started.
+2026-03-04 10:54:47.768 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/ - null null
+2026-03-04 10:54:47.774 +07:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2026-03-04 10:54:47.810 +07:00 [DBG] No candidates found for the request path '/'
+2026-03-04 10:54:47.810 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:54:47.850 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:54:47.852 +07:00 [DBG] The request path  does not match the path filter
+2026-03-04 10:54:47.866 +07:00 [DBG] Connection id "0HNJPK73OE8AV" completed keep alive response.
+2026-03-04 10:54:47.867 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/ - 404 null null 99.2533ms
+2026-03-04 10:54:47.868 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5067/, Response status code: 404
+2026-03-04 10:54:47.924 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/favicon.ico - null null
+2026-03-04 10:54:47.925 +07:00 [DBG] No candidates found for the request path '/favicon.ico'
+2026-03-04 10:54:47.926 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:54:47.928 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:54:47.928 +07:00 [DBG] The request path  does not match the path filter
+2026-03-04 10:54:47.928 +07:00 [DBG] Connection id "0HNJPK73OE8AV" completed keep alive response.
+2026-03-04 10:54:47.928 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/favicon.ico - 404 0 null 3.6419ms
+2026-03-04 10:54:47.929 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5067/favicon.ico, Response status code: 404
+2026-03-04 10:54:52.087 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger - null null
+2026-03-04 10:54:52.088 +07:00 [DBG] No candidates found for the request path '/swagger'
+2026-03-04 10:54:52.088 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:54:52.089 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:54:52.092 +07:00 [DBG] Connection id "0HNJPK73OE8AV" completed keep alive response.
+2026-03-04 10:54:52.092 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger - 302 null null 5.4896ms
+2026-03-04 10:54:52.132 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger/index.html - null null
+2026-03-04 10:54:52.133 +07:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2026-03-04 10:54:52.133 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:54:52.133 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:54:52.152 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2026-03-04 10:54:52.159 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2026-03-04 10:54:52.159 +07:00 [DBG] Connection id "0HNJPK73OE8AV" completed keep alive response.
+2026-03-04 10:54:52.159 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger/index.html - 200 null text/html; charset=utf-8 26.536ms
+2026-03-04 10:54:52.204 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger/swagger-ui.css - null null
+2026-03-04 10:54:52.204 +07:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2026-03-04 10:54:52.204 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:54:52.204 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:54:52.205 +07:00 [DBG] Connection id "0HNJPK73OE8B0" accepted.
+2026-03-04 10:54:52.205 +07:00 [DBG] Connection id "0HNJPK73OE8B0" started.
+2026-03-04 10:54:52.206 +07:00 [DBG] Connection id "0HNJPK73OE8B1" accepted.
+2026-03-04 10:54:52.206 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger/index.css - null null
+2026-03-04 10:54:52.206 +07:00 [DBG] Connection id "0HNJPK73OE8B1" started.
+2026-03-04 10:54:52.206 +07:00 [DBG] No candidates found for the request path '/swagger/index.css'
+2026-03-04 10:54:52.206 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:54:52.206 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:54:52.206 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger/swagger-ui-bundle.js - null null
+2026-03-04 10:54:52.206 +07:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2026-03-04 10:54:52.206 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:54:52.207 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:54:52.208 +07:00 [DBG] Connection id "0HNJPK73OE8B2" accepted.
+2026-03-04 10:54:52.208 +07:00 [DBG] Connection id "0HNJPK73OE8B2" started.
+2026-03-04 10:54:52.208 +07:00 [DBG] Connection id "0HNJPK73OE8B3" accepted.
+2026-03-04 10:54:52.208 +07:00 [DBG] Connection id "0HNJPK73OE8B3" started.
+2026-03-04 10:54:52.209 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 10:54:52.209 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger/swagger-ui-standalone-preset.js - null null
+2026-03-04 10:54:52.209 +07:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2026-03-04 10:54:52.209 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:54:52.209 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:54:52.210 +07:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2026-03-04 10:54:52.210 +07:00 [DBG] Connection id "0HNJPK73OE8B0" completed keep alive response.
+2026-03-04 10:54:52.210 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger/index.css - 200 218 text/css 4.1887ms
+2026-03-04 10:54:52.210 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2026-03-04 10:54:52.210 +07:00 [DBG] Connection id "0HNJPK73OE8B3" completed keep alive response.
+2026-03-04 10:54:52.210 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/_framework/aspnetcore-browser-refresh.js - 200 14879 application/javascript; charset=utf-8 1.6776ms
+2026-03-04 10:54:52.217 +07:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-03-04 10:54:52.217 +07:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-03-04 10:54:52.220 +07:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-03-04 10:54:52.220 +07:00 [DBG] Connection id "0HNJPK73OE8B1" completed keep alive response.
+2026-03-04 10:54:52.220 +07:00 [DBG] Connection id "0HNJPK73OE8AV" completed keep alive response.
+2026-03-04 10:54:52.221 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger/swagger-ui-bundle.js - 200 1468327 text/javascript 14.3545ms
+2026-03-04 10:54:52.220 +07:00 [DBG] Connection id "0HNJPK73OE8B2" completed keep alive response.
+2026-03-04 10:54:52.221 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger/swagger-ui.css - 200 154988 text/css 16.4299ms
+2026-03-04 10:54:52.221 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger/swagger-ui-standalone-preset.js - 200 229224 text/javascript 12.0481ms
+2026-03-04 10:54:52.417 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger/favicon-16x16.png - null null
+2026-03-04 10:54:52.417 +07:00 [DBG] No candidates found for the request path '/swagger/favicon-16x16.png'
+2026-03-04 10:54:52.417 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:54:52.417 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:54:52.417 +07:00 [INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+2026-03-04 10:54:52.417 +07:00 [DBG] Connection id "0HNJPK73OE8B1" completed keep alive response.
+2026-03-04 10:54:52.417 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger/favicon-16x16.png - 200 665 image/png 0.6399ms
+2026-03-04 10:54:52.451 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger/CustomerAPI/swagger.json - null null
+2026-03-04 10:54:52.451 +07:00 [DBG] No candidates found for the request path '/swagger/CustomerAPI/swagger.json'
+2026-03-04 10:54:52.451 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:54:52.451 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:54:52.454 +07:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-03-04 10:54:52.753 +07:00 [DBG] Connection id "0HNJPK73OE8B1" completed keep alive response.
+2026-03-04 10:54:52.753 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger/CustomerAPI/swagger.json - 200 null application/json; charset=utf-8 302.0646ms
+2026-03-04 10:55:09.552 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5067/Student/generate-report - application/json 24
+2026-03-04 10:55:09.554 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/generate-report'
+2026-03-04 10:55:09.555 +07:00 [DBG] Request matched endpoint 'HTTP: POST /Student/generate-report'
+2026-03-04 10:55:09.555 +07:00 [DBG] The request has an origin header: 'http://localhost:5067'.
+2026-03-04 10:55:09.556 +07:00 [INF] CORS policy execution successful.
+2026-03-04 10:55:09.556 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:55:09.556 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-04 10:55:09.556 +07:00 [INF] Executing endpoint 'HTTP: POST /Student/generate-report'
+2026-03-04 10:55:09.561 +07:00 [DBG] Connection id "0HNJPK73OE8B1", Request id "0HNJPK73OE8B1:00000004": started reading request body.
+2026-03-04 10:55:09.561 +07:00 [DBG] Connection id "0HNJPK73OE8B1", Request id "0HNJPK73OE8B1:00000004": done reading request body.
+2026-03-04 10:55:10.809 +07:00 [INF] Sending file with download name 'StudentReport.pdf'.
+2026-03-04 10:55:10.810 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-04 10:55:10.812 +07:00 [INF] Executed endpoint 'HTTP: POST /Student/generate-report'
+2026-03-04 10:55:10.812 +07:00 [DBG] Connection id "0HNJPK73OE8B1" completed keep alive response.
+2026-03-04 10:55:10.812 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5067/Student/generate-report - 200 85542 application/pdf 1259.9237ms
+2026-03-04 10:55:16.734 +07:00 [DBG] Server desktop-l31jdro:20952:d9923a9c heartbeat successfully sent
+2026-03-04 10:55:25.671 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-04 10:55:25.672 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-04 10:55:25.672 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-04 10:55:25.672 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:55:25.672 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-04 10:55:25.672 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-04 10:55:25.759 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-04 10:55:25.760 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-04 10:55:25.760 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-04 10:55:25.760 +07:00 [DBG] Connection id "0HNJPK73OE8B1" completed keep alive response.
+2026-03-04 10:55:25.760 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 83406 application/pdf 88.9508ms
+2026-03-04 10:55:27.341 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-04 10:55:27.341 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-04 10:55:27.341 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-04 10:55:27.341 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:55:27.341 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-04 10:55:27.341 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-04 10:55:27.439 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-04 10:55:27.439 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-04 10:55:27.440 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-04 10:55:27.440 +07:00 [DBG] Connection id "0HNJPK73OE8B1" completed keep alive response.
+2026-03-04 10:55:27.440 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 83406 application/pdf 98.9054ms
+2026-03-04 10:55:46.757 +07:00 [DBG] Server desktop-l31jdro:20952:d9923a9c heartbeat successfully sent
+2026-03-04 10:56:16.772 +07:00 [DBG] Server desktop-l31jdro:20952:d9923a9c heartbeat successfully sent
+2026-03-04 10:57:51.807 +07:00 [INF] Starting the API...
+2026-03-04 10:57:52.508 +07:00 [INF] Start installing Hangfire SQL objects...
+2026-03-04 10:57:52.620 +07:00 [INF] Hangfire SQL objects installed.
+2026-03-04 10:57:52.633 +07:00 [DBG] Found validator CreateCustomerCommandValidator
+2026-03-04 10:57:52.633 +07:00 [DBG] Found validator UpdateCustomerCommandValidator
+2026-03-04 10:57:52.633 +07:00 [DBG] Found module CustomerApi.API.Endpoints.Modules.AuthModule
+2026-03-04 10:57:52.633 +07:00 [DBG] Found module CustomerApi.API.Endpoints.Modules.CustomerModule
+2026-03-04 10:57:53.078 +07:00 [DBG] Hosting starting
+2026-03-04 10:57:53.103 +07:00 [INF] User profile is available. Using 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 10:57:53.114 +07:00 [DBG] Reading data from file 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys\key-e0e4c711-e38d-4994-9c4d-b0c1ef741012.xml'.
+2026-03-04 10:57:53.118 +07:00 [DBG] Found key {e0e4c711-e38d-4994-9c4d-b0c1ef741012}.
+2026-03-04 10:57:53.122 +07:00 [DBG] Considering key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} with expiration date 2026-03-29 06:37:16Z as default key.
+2026-03-04 10:57:53.124 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-03-04 10:57:53.126 +07:00 [DBG] Decrypting secret element using Windows DPAPI.
+2026-03-04 10:57:53.127 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-03-04 10:57:53.130 +07:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2026-03-04 10:57:53.132 +07:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2026-03-04 10:57:53.132 +07:00 [DBG] Using key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} as the default key.
+2026-03-04 10:57:53.133 +07:00 [DBG] Key ring with default key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} was loaded during application startup.
+2026-03-04 10:57:53.135 +07:00 [DBG] Middleware loaded
+2026-03-04 10:57:53.137 +07:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (14879 B).
+2026-03-04 10:57:53.138 +07:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2026-03-04 10:57:53.270 +07:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2026-03-04 10:57:53.278 +07:00 [INF] Now listening on: http://localhost:5067
+2026-03-04 10:57:53.278 +07:00 [DBG] Loaded hosting startup assembly API
+2026-03-04 10:57:53.278 +07:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2026-03-04 10:57:53.283 +07:00 [INF] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: postgres, Schema: hangfire'
+2026-03-04 10:57:53.283 +07:00 [INF] Using the following options for PostgreSQL job storage:
+2026-03-04 10:57:53.284 +07:00 [INF]     Queue poll interval: 00:00:15.
+2026-03-04 10:57:53.284 +07:00 [INF]     Invisibility timeout: 00:30:00.
+2026-03-04 10:57:53.284 +07:00 [INF]     Use sliding invisibility timeout: False.
+2026-03-04 10:57:53.284 +07:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-03-04 10:57:53.293 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 10:57:53.293 +07:00 [INF] Hosting environment: Development
+2026-03-04 10:57:53.293 +07:00 [INF] Content root path: C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\API
+2026-03-04 10:57:53.293 +07:00 [DBG] Hosting started
+2026-03-04 10:57:53.294 +07:00 [DBG] Execution loop BackgroundServerProcess:9378adaf has started in 3.259 ms
+2026-03-04 10:57:53.387 +07:00 [INF] Server desktop-l31jdro:28444:5ddc7dd8 successfully announced in 89.6799 ms
+2026-03-04 10:57:53.390 +07:00 [DBG] Execution loop ServerHeartbeatProcess:d0ef812a has started in 1.9607 ms
+2026-03-04 10:57:53.390 +07:00 [INF] Server desktop-l31jdro:28444:5ddc7dd8 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-03-04 10:57:53.391 +07:00 [DBG] Execution loop ServerWatchdog:5c0ee5df has started in 1.0198 ms
+2026-03-04 10:57:53.392 +07:00 [DBG] Execution loop ServerJobCancellationWatcher:b725aaf6 has started in 1.0045 ms
+2026-03-04 10:57:53.394 +07:00 [DBG] Execution loop ExpirationManager:300da2c1 has started in 1.5756 ms
+2026-03-04 10:57:53.395 +07:00 [DBG] Removing outdated records from table 'aggregatedcounter'...
+2026-03-04 10:57:53.395 +07:00 [DBG] Execution loop CountersAggregator:8bd12422 has started in 0.8644 ms
+2026-03-04 10:57:53.395 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-04 10:57:53.396 +07:00 [DBG] Execution loop Worker:57ba3e6c has started in 1.1551 ms
+2026-03-04 10:57:53.398 +07:00 [DBG] Execution loop Worker:e384d891 has started in 3.295 ms
+2026-03-04 10:57:53.400 +07:00 [DBG] Execution loop Worker:522f4182 has started in 4.7462 ms
+2026-03-04 10:57:53.401 +07:00 [DBG] Execution loop Worker:a66ac58a has started in 6.3672 ms
+2026-03-04 10:57:53.403 +07:00 [DBG] Execution loop Worker:3f186711 has started in 7.5832 ms
+2026-03-04 10:57:53.404 +07:00 [DBG] Execution loop Worker:acf39195 has started in 8.6198 ms
+2026-03-04 10:57:53.405 +07:00 [DBG] Execution loop Worker:6de93f8b has started in 9.6968 ms
+2026-03-04 10:57:53.414 +07:00 [DBG] Execution loop Worker:a198393b has started in 19.1935 ms
+2026-03-04 10:57:53.424 +07:00 [DBG] Execution loop Worker:c33cf195 has started in 28.6629 ms
+2026-03-04 10:57:53.425 +07:00 [DBG] Execution loop Worker:28f2435c has started in 30.1109 ms
+2026-03-04 10:57:53.428 +07:00 [DBG] Execution loop Worker:a9a7ed35 has started in 33.3138 ms
+2026-03-04 10:57:53.431 +07:00 [DBG] Execution loop Worker:d5ef048d has started in 36.1622 ms
+2026-03-04 10:57:53.438 +07:00 [DBG] Execution loop Worker:96b2f047 has started in 42.8123 ms
+2026-03-04 10:57:53.441 +07:00 [DBG] Execution loop Worker:9eff4f13 has started in 46.1811 ms
+2026-03-04 10:57:53.442 +07:00 [DBG] Removing outdated records from table 'counter'...
+2026-03-04 10:57:53.450 +07:00 [DBG] Execution loop Worker:e8dbfba6 has started in 54.5512 ms
+2026-03-04 10:57:53.455 +07:00 [DBG] Execution loop Worker:0bf1f878 has started in 60.0278 ms
+2026-03-04 10:57:53.459 +07:00 [DBG] Removing outdated records from table 'job'...
+2026-03-04 10:57:53.465 +07:00 [DBG] Execution loop Worker:5ad62c87 has started in 69.6172 ms
+2026-03-04 10:57:53.477 +07:00 [DBG] Execution loop Worker:af18198e has started in 82.3122 ms
+2026-03-04 10:57:53.506 +07:00 [DBG] Removing outdated records from table 'list'...
+2026-03-04 10:57:53.509 +07:00 [DBG] Execution loop Worker:3f1bc5f8 has started in 113.866 ms
+2026-03-04 10:57:53.528 +07:00 [DBG] Execution loop Worker:bde6371c has started in 133.483 ms
+2026-03-04 10:57:53.536 +07:00 [DBG] Execution loop DelayedJobScheduler:3014762f has started in 7.3103 ms
+2026-03-04 10:57:53.547 +07:00 [DBG] Removing outdated records from table 'set'...
+2026-03-04 10:57:53.579 +07:00 [DBG] Execution loop RecurringJobScheduler:7b1c66c0 has started in 40.6943 ms
+2026-03-04 10:57:53.583 +07:00 [INF] Server desktop-l31jdro:28444:5ddc7dd8 all the dispatchers started
+2026-03-04 10:57:53.605 +07:00 [DBG] Removing outdated records from table 'hash'...
+2026-03-04 10:57:53.737 +07:00 [DBG] Connection id "0HNJPK8R67STA" accepted.
+2026-03-04 10:57:53.738 +07:00 [DBG] Connection id "0HNJPK8R67STA" started.
+2026-03-04 10:57:53.771 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/ - null null
+2026-03-04 10:57:53.779 +07:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2026-03-04 10:57:53.824 +07:00 [DBG] No candidates found for the request path '/'
+2026-03-04 10:57:53.824 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:57:53.845 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:57:53.848 +07:00 [DBG] The request path  does not match the path filter
+2026-03-04 10:57:53.851 +07:00 [DBG] Connection id "0HNJPK8R67STA" completed keep alive response.
+2026-03-04 10:57:53.853 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/ - 404 null null 82.2752ms
+2026-03-04 10:57:53.854 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5067/, Response status code: 404
+2026-03-04 10:57:58.701 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger - null null
+2026-03-04 10:57:58.702 +07:00 [DBG] No candidates found for the request path '/swagger'
+2026-03-04 10:57:58.702 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:57:58.704 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:57:58.708 +07:00 [DBG] Connection id "0HNJPK8R67STA" completed keep alive response.
+2026-03-04 10:57:58.708 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger - 302 null null 7.5411ms
+2026-03-04 10:57:58.756 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger/index.html - null null
+2026-03-04 10:57:58.757 +07:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2026-03-04 10:57:58.757 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:57:58.760 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:57:58.775 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2026-03-04 10:57:58.782 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2026-03-04 10:57:58.782 +07:00 [DBG] Connection id "0HNJPK8R67STA" completed keep alive response.
+2026-03-04 10:57:58.782 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger/index.html - 200 null text/html; charset=utf-8 26.4442ms
+2026-03-04 10:57:58.844 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 10:57:58.846 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2026-03-04 10:57:58.847 +07:00 [DBG] Connection id "0HNJPK8R67STA" completed keep alive response.
+2026-03-04 10:57:58.847 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/_framework/aspnetcore-browser-refresh.js - 200 14879 application/javascript; charset=utf-8 2.2031ms
+2026-03-04 10:57:59.088 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger/CustomerAPI/swagger.json - null null
+2026-03-04 10:57:59.088 +07:00 [DBG] No candidates found for the request path '/swagger/CustomerAPI/swagger.json'
+2026-03-04 10:57:59.088 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:57:59.088 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:57:59.091 +07:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-03-04 10:57:59.442 +07:00 [DBG] Connection id "0HNJPK8R67STA" completed keep alive response.
+2026-03-04 10:57:59.442 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger/CustomerAPI/swagger.json - 200 null application/json; charset=utf-8 354.2144ms
+2026-03-04 10:58:04.772 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-04 10:58:04.775 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-04 10:58:04.775 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-04 10:58:04.775 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:58:04.776 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-04 10:58:04.776 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-04 10:58:05.701 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-04 10:58:05.703 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-04 10:58:05.705 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-04 10:58:05.706 +07:00 [DBG] Connection id "0HNJPK8R67STA" completed keep alive response.
+2026-03-04 10:58:05.706 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 83406 application/pdf 934.1407ms
+2026-03-04 10:58:23.421 +07:00 [DBG] Server desktop-l31jdro:28444:5ddc7dd8 heartbeat successfully sent
+2026-03-04 10:58:29.885 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5067/Student/generate-report - application/json 29
+2026-03-04 10:58:29.886 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/generate-report'
+2026-03-04 10:58:29.886 +07:00 [DBG] Request matched endpoint 'HTTP: POST /Student/generate-report'
+2026-03-04 10:58:29.887 +07:00 [DBG] The request has an origin header: 'http://localhost:5067'.
+2026-03-04 10:58:29.887 +07:00 [INF] CORS policy execution successful.
+2026-03-04 10:58:29.888 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:58:29.888 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-04 10:58:29.888 +07:00 [INF] Executing endpoint 'HTTP: POST /Student/generate-report'
+2026-03-04 10:58:29.893 +07:00 [DBG] Connection id "0HNJPK8R67STA", Request id "0HNJPK8R67STA:00000007": started reading request body.
+2026-03-04 10:58:29.893 +07:00 [DBG] Connection id "0HNJPK8R67STA", Request id "0HNJPK8R67STA:00000007": done reading request body.
+2026-03-04 10:58:29.986 +07:00 [INF] Sending file with download name 'StudentReport.pdf'.
+2026-03-04 10:58:29.986 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-04 10:58:29.990 +07:00 [INF] Executed endpoint 'HTTP: POST /Student/generate-report'
+2026-03-04 10:58:29.990 +07:00 [DBG] Connection id "0HNJPK8R67STA" completed keep alive response.
+2026-03-04 10:58:29.990 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5067/Student/generate-report - 200 85060 application/pdf 105.7254ms
+2026-03-04 10:58:38.280 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5067/Student/generate-report - application/json 26
+2026-03-04 10:58:38.280 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/generate-report'
+2026-03-04 10:58:38.280 +07:00 [DBG] Request matched endpoint 'HTTP: POST /Student/generate-report'
+2026-03-04 10:58:38.280 +07:00 [DBG] The request has an origin header: 'http://localhost:5067'.
+2026-03-04 10:58:38.280 +07:00 [INF] CORS policy execution successful.
+2026-03-04 10:58:38.280 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:58:38.280 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-04 10:58:38.280 +07:00 [INF] Executing endpoint 'HTTP: POST /Student/generate-report'
+2026-03-04 10:58:38.280 +07:00 [DBG] Connection id "0HNJPK8R67STA", Request id "0HNJPK8R67STA:00000008": started reading request body.
+2026-03-04 10:58:38.280 +07:00 [DBG] Connection id "0HNJPK8R67STA", Request id "0HNJPK8R67STA:00000008": done reading request body.
+2026-03-04 10:58:38.365 +07:00 [INF] Sending file with download name 'StudentReport.pdf'.
+2026-03-04 10:58:38.365 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-04 10:58:38.366 +07:00 [INF] Executed endpoint 'HTTP: POST /Student/generate-report'
+2026-03-04 10:58:38.366 +07:00 [DBG] Connection id "0HNJPK8R67STA" completed keep alive response.
+2026-03-04 10:58:38.366 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5067/Student/generate-report - 200 85542 application/pdf 86.4707ms
+2026-03-04 10:58:53.434 +07:00 [DBG] Server desktop-l31jdro:28444:5ddc7dd8 heartbeat successfully sent
+2026-03-04 10:59:16.027 +07:00 [INF] Starting the API...
+2026-03-04 10:59:16.580 +07:00 [INF] Start installing Hangfire SQL objects...
+2026-03-04 10:59:16.647 +07:00 [INF] Hangfire SQL objects installed.
+2026-03-04 10:59:16.657 +07:00 [DBG] Found validator CreateCustomerCommandValidator
+2026-03-04 10:59:16.657 +07:00 [DBG] Found validator UpdateCustomerCommandValidator
+2026-03-04 10:59:16.657 +07:00 [DBG] Found module CustomerApi.API.Endpoints.Modules.AuthModule
+2026-03-04 10:59:16.657 +07:00 [DBG] Found module CustomerApi.API.Endpoints.Modules.CustomerModule
+2026-03-04 10:59:17.021 +07:00 [DBG] Hosting starting
+2026-03-04 10:59:17.049 +07:00 [INF] User profile is available. Using 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-04 10:59:17.059 +07:00 [DBG] Reading data from file 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys\key-e0e4c711-e38d-4994-9c4d-b0c1ef741012.xml'.
+2026-03-04 10:59:17.063 +07:00 [DBG] Found key {e0e4c711-e38d-4994-9c4d-b0c1ef741012}.
+2026-03-04 10:59:17.067 +07:00 [DBG] Considering key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} with expiration date 2026-03-29 06:37:16Z as default key.
+2026-03-04 10:59:17.069 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-03-04 10:59:17.070 +07:00 [DBG] Decrypting secret element using Windows DPAPI.
+2026-03-04 10:59:17.072 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-03-04 10:59:17.075 +07:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2026-03-04 10:59:17.076 +07:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2026-03-04 10:59:17.076 +07:00 [DBG] Using key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} as the default key.
+2026-03-04 10:59:17.077 +07:00 [DBG] Key ring with default key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} was loaded during application startup.
+2026-03-04 10:59:17.079 +07:00 [DBG] Middleware loaded
+2026-03-04 10:59:17.081 +07:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (14879 B).
+2026-03-04 10:59:17.082 +07:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2026-03-04 10:59:17.220 +07:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2026-03-04 10:59:17.229 +07:00 [INF] Now listening on: http://localhost:5067
+2026-03-04 10:59:17.229 +07:00 [DBG] Loaded hosting startup assembly API
+2026-03-04 10:59:17.229 +07:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2026-03-04 10:59:17.233 +07:00 [INF] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: postgres, Schema: hangfire'
+2026-03-04 10:59:17.233 +07:00 [INF] Using the following options for PostgreSQL job storage:
+2026-03-04 10:59:17.233 +07:00 [INF]     Queue poll interval: 00:00:15.
+2026-03-04 10:59:17.233 +07:00 [INF]     Invisibility timeout: 00:30:00.
+2026-03-04 10:59:17.233 +07:00 [INF]     Use sliding invisibility timeout: False.
+2026-03-04 10:59:17.233 +07:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-03-04 10:59:17.242 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-04 10:59:17.242 +07:00 [INF] Hosting environment: Development
+2026-03-04 10:59:17.242 +07:00 [INF] Content root path: C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\API
+2026-03-04 10:59:17.242 +07:00 [DBG] Hosting started
+2026-03-04 10:59:17.243 +07:00 [DBG] Execution loop BackgroundServerProcess:ed6e8ea5 has started in 3.705 ms
+2026-03-04 10:59:17.332 +07:00 [INF] Server desktop-l31jdro:2272:38ef1d5c successfully announced in 86.2228 ms
+2026-03-04 10:59:17.335 +07:00 [DBG] Execution loop ServerHeartbeatProcess:382dec1d has started in 2.25 ms
+2026-03-04 10:59:17.336 +07:00 [INF] Server desktop-l31jdro:2272:38ef1d5c is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-03-04 10:59:17.337 +07:00 [DBG] Execution loop ServerWatchdog:200d936d has started in 1.496 ms
+2026-03-04 10:59:17.338 +07:00 [DBG] Execution loop ServerJobCancellationWatcher:adf1ecb0 has started in 0.9964 ms
+2026-03-04 10:59:17.340 +07:00 [DBG] Execution loop ExpirationManager:a09cf80f has started in 1.1858 ms
+2026-03-04 10:59:17.341 +07:00 [DBG] Removing outdated records from table 'aggregatedcounter'...
+2026-03-04 10:59:17.341 +07:00 [DBG] Execution loop CountersAggregator:194d021b has started in 1.0543 ms
+2026-03-04 10:59:17.341 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-04 10:59:17.342 +07:00 [DBG] Execution loop Worker:c28184b3 has started in 1.0166 ms
+2026-03-04 10:59:17.343 +07:00 [DBG] Execution loop Worker:79c41f99 has started in 2.4987 ms
+2026-03-04 10:59:17.345 +07:00 [DBG] Execution loop Worker:cf17d4f2 has started in 3.5652 ms
+2026-03-04 10:59:17.345 +07:00 [DBG] Execution loop Worker:3695ea9f has started in 4.4542 ms
+2026-03-04 10:59:17.346 +07:00 [DBG] Execution loop Worker:84731609 has started in 5.3591 ms
+2026-03-04 10:59:17.347 +07:00 [DBG] Execution loop Worker:9c9e3112 has started in 6.4093 ms
+2026-03-04 10:59:17.348 +07:00 [DBG] Execution loop Worker:a45085cf has started in 7.33 ms
+2026-03-04 10:59:17.350 +07:00 [DBG] Execution loop Worker:0fc52fd9 has started in 8.7555 ms
+2026-03-04 10:59:17.363 +07:00 [DBG] Execution loop Worker:2580e7c9 has started in 21.5852 ms
+2026-03-04 10:59:17.364 +07:00 [DBG] Execution loop Worker:7d62be48 has started in 23.1248 ms
+2026-03-04 10:59:17.367 +07:00 [DBG] Execution loop Worker:53eeaa83 has started in 25.6453 ms
+2026-03-04 10:59:17.368 +07:00 [DBG] Execution loop Worker:27631505 has started in 27.3418 ms
+2026-03-04 10:59:17.371 +07:00 [DBG] Execution loop Worker:eac3dad5 has started in 29.8907 ms
+2026-03-04 10:59:17.372 +07:00 [DBG] Removing outdated records from table 'counter'...
+2026-03-04 10:59:17.373 +07:00 [DBG] Execution loop Worker:b15a3ccd has started in 31.5835 ms
+2026-03-04 10:59:17.376 +07:00 [DBG] Execution loop Worker:ba95fcc8 has started in 35.3139 ms
+2026-03-04 10:59:17.379 +07:00 [DBG] Execution loop Worker:57bcb207 has started in 37.8419 ms
+2026-03-04 10:59:17.384 +07:00 [DBG] Execution loop Worker:40d39b2f has started in 42.5113 ms
+2026-03-04 10:59:17.385 +07:00 [DBG] Execution loop Worker:2a20bfe3 has started in 43.8993 ms
+2026-03-04 10:59:17.389 +07:00 [DBG] Execution loop Worker:4095e861 has started in 47.5518 ms
+2026-03-04 10:59:17.389 +07:00 [DBG] Removing outdated records from table 'job'...
+2026-03-04 10:59:17.391 +07:00 [DBG] Execution loop Worker:9c2d4597 has started in 49.995 ms
+2026-03-04 10:59:17.395 +07:00 [DBG] Execution loop DelayedJobScheduler:7b7cd7d2 has started in 3.8527 ms
+2026-03-04 10:59:17.400 +07:00 [DBG] Execution loop RecurringJobScheduler:7dcecdb4 has started in 4.9414 ms
+2026-03-04 10:59:17.400 +07:00 [INF] Server desktop-l31jdro:2272:38ef1d5c all the dispatchers started
+2026-03-04 10:59:17.424 +07:00 [DBG] Connection id "0HNJPK9K4B66J" accepted.
+2026-03-04 10:59:17.426 +07:00 [DBG] Connection id "0HNJPK9K4B66J" started.
+2026-03-04 10:59:17.530 +07:00 [DBG] Removing outdated records from table 'list'...
+2026-03-04 10:59:17.540 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger/index.html - null null
+2026-03-04 10:59:17.545 +07:00 [DBG] Removing outdated records from table 'set'...
+2026-03-04 10:59:17.560 +07:00 [DBG] Connection id "0HNJPK9K4B66K" accepted.
+2026-03-04 10:59:17.560 +07:00 [DBG] Connection id "0HNJPK9K4B66K" started.
+2026-03-04 10:59:17.562 +07:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2026-03-04 10:59:17.562 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/ - null null
+2026-03-04 10:59:17.562 +07:00 [DBG] Removing outdated records from table 'hash'...
+2026-03-04 10:59:17.611 +07:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2026-03-04 10:59:17.611 +07:00 [DBG] No candidates found for the request path '/'
+2026-03-04 10:59:17.611 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:59:17.611 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:59:17.629 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:59:17.629 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:59:17.632 +07:00 [DBG] The request path  does not match the path filter
+2026-03-04 10:59:17.636 +07:00 [DBG] Connection id "0HNJPK9K4B66K" completed keep alive response.
+2026-03-04 10:59:17.637 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/ - 404 null null 74.457ms
+2026-03-04 10:59:17.638 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5067/, Response status code: 404
+2026-03-04 10:59:17.652 +07:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2026-03-04 10:59:17.661 +07:00 [DBG] Response markup was updated to include browser refresh script injection.
+2026-03-04 10:59:17.662 +07:00 [DBG] Connection id "0HNJPK9K4B66J" completed keep alive response.
+2026-03-04 10:59:17.662 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger/index.html - 200 null text/html; charset=utf-8 123.8641ms
+2026-03-04 10:59:17.689 +07:00 [DBG] Connection id "0HNJPK9K4B66L" accepted.
+2026-03-04 10:59:17.689 +07:00 [DBG] Connection id "0HNJPK9K4B66L" started.
+2026-03-04 10:59:17.717 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/_framework/aspnetcore-browser-refresh.js - null null
+2026-03-04 10:59:17.719 +07:00 [DBG] Script injected: /_framework/aspnetcore-browser-refresh.js
+2026-03-04 10:59:17.719 +07:00 [DBG] Connection id "0HNJPK9K4B66J" completed keep alive response.
+2026-03-04 10:59:17.719 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/_framework/aspnetcore-browser-refresh.js - 200 14879 application/javascript; charset=utf-8 2.6001ms
+2026-03-04 10:59:17.983 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/swagger/CustomerAPI/swagger.json - null null
+2026-03-04 10:59:17.984 +07:00 [DBG] No candidates found for the request path '/swagger/CustomerAPI/swagger.json'
+2026-03-04 10:59:17.984 +07:00 [DBG] Request did not match any endpoints
+2026-03-04 10:59:17.986 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:59:17.988 +07:00 [INF] No action descriptors found. This may indicate an incorrectly configured application or missing application parts. To learn more, visit https://aka.ms/aspnet/mvc/app-parts
+2026-03-04 10:59:18.343 +07:00 [DBG] Connection id "0HNJPK9K4B66J" completed keep alive response.
+2026-03-04 10:59:18.343 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/swagger/CustomerAPI/swagger.json - 200 null application/json; charset=utf-8 359.9025ms
+2026-03-04 10:59:22.695 +07:00 [DBG] Connection id "0HNJPK9K4B66L" received FIN.
+2026-03-04 10:59:22.695 +07:00 [DBG] Connection id "0HNJPK9K4B66L" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-04 10:59:22.696 +07:00 [DBG] Connection id "0HNJPK9K4B66L" disconnecting.
+2026-03-04 10:59:22.697 +07:00 [DBG] Connection id "0HNJPK9K4B66L" stopped.
+2026-03-04 10:59:28.255 +07:00 [INF] Request starting HTTP/1.1 POST http://localhost:5067/Student/export-filter-pdf - application/json 26
+2026-03-04 10:59:28.258 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-filter-pdf'
+2026-03-04 10:59:28.258 +07:00 [DBG] Request matched endpoint 'HTTP: POST /Student/export-filter-pdf'
+2026-03-04 10:59:28.259 +07:00 [DBG] The request has an origin header: 'http://localhost:5067'.
+2026-03-04 10:59:28.259 +07:00 [INF] CORS policy execution successful.
+2026-03-04 10:59:28.260 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-04 10:59:28.260 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-04 10:59:28.261 +07:00 [INF] Executing endpoint 'HTTP: POST /Student/export-filter-pdf'
+2026-03-04 10:59:28.266 +07:00 [DBG] Connection id "0HNJPK9K4B66J", Request id "0HNJPK9K4B66J:00000004": started reading request body.
+2026-03-04 10:59:28.266 +07:00 [DBG] Connection id "0HNJPK9K4B66J", Request id "0HNJPK9K4B66J:00000004": done reading request body.
+2026-03-04 10:59:29.175 +07:00 [INF] Sending file with download name 'StudentReport.pdf'.
+2026-03-04 10:59:29.176 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-04 10:59:29.179 +07:00 [INF] Executed endpoint 'HTTP: POST /Student/export-filter-pdf'
+2026-03-04 10:59:29.180 +07:00 [DBG] Connection id "0HNJPK9K4B66J" completed keep alive response.
+2026-03-04 10:59:29.180 +07:00 [INF] Request finished HTTP/1.1 POST http://localhost:5067/Student/export-filter-pdf - 200 85542 application/pdf 924.7306ms
+2026-03-04 10:59:47.369 +07:00 [DBG] Server desktop-l31jdro:2272:38ef1d5c heartbeat successfully sent
+2026-03-04 11:00:17.395 +07:00 [DBG] Server desktop-l31jdro:2272:38ef1d5c heartbeat successfully sent
+2026-03-04 11:00:47.418 +07:00 [DBG] Server desktop-l31jdro:2272:38ef1d5c heartbeat successfully sent
+2026-03-04 11:01:12.714 +07:00 [DBG] Connection id "0HNJPK9K4B66K" received FIN.
+2026-03-04 11:01:12.714 +07:00 [DBG] Connection id "0HNJPK9K4B66K" disconnecting.
+2026-03-04 11:01:12.715 +07:00 [DBG] Connection id "0HNJPK9K4B66K" stopped.
+2026-03-04 11:01:12.715 +07:00 [DBG] Connection id "0HNJPK9K4B66K" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-04 11:01:17.447 +07:00 [DBG] Server desktop-l31jdro:2272:38ef1d5c heartbeat successfully sent
+2026-03-04 11:01:24.732 +07:00 [DBG] Connection id "0HNJPK9K4B66J" received FIN.
+2026-03-04 11:01:24.732 +07:00 [DBG] Connection id "0HNJPK9K4B66J" disconnecting.
+2026-03-04 11:01:24.732 +07:00 [DBG] Connection id "0HNJPK9K4B66J" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-04 11:01:24.746 +07:00 [DBG] Connection id "0HNJPK9K4B66J" stopped.
+2026-03-04 11:01:47.468 +07:00 [DBG] Server desktop-l31jdro:2272:38ef1d5c heartbeat successfully sent
+2026-03-04 11:02:17.497 +07:00 [DBG] Server desktop-l31jdro:2272:38ef1d5c heartbeat successfully sent
+2026-03-04 11:02:47.506 +07:00 [DBG] Server desktop-l31jdro:2272:38ef1d5c heartbeat successfully sent
+2026-03-04 11:03:17.528 +07:00 [DBG] Server desktop-l31jdro:2272:38ef1d5c heartbeat successfully sent
+2026-03-04 11:03:47.533 +07:00 [DBG] Server desktop-l31jdro:2272:38ef1d5c heartbeat successfully sent
+2026-03-04 11:04:17.402 +07:00 [INF] 2 servers were removed due to timeout
+2026-03-04 11:04:17.465 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-04 11:04:17.547 +07:00 [DBG] Server desktop-l31jdro:2272:38ef1d5c heartbeat successfully sent
