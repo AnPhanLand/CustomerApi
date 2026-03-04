@@ -1,4 +1,4 @@
 public class ReportRequest
 {
-    public string StatusFilter { get; set; }
+    public required string StatusFilter { get; set; }
 }
