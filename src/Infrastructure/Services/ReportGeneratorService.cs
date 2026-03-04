@@ -19,7 +19,13 @@ public class ReportGeneratorService : IReportService
         var sqlDataSource = CreateDataSource();
 
         report.DataSource = sqlDataSource;
-        report.DataMember = "PhieuThus";
+        report.DataMember = "";
+
+        if (statusFilter == "-1") 
+        {
+            // Clearing the FilterString ensures DevExpress does not hide any rows
+            report.FilterString = string.Empty; 
+        }
 
         // 1. Pass the filter to the Report Parameter
         if (report.Parameters["p_Status"] != null)
@@ -56,47 +62,64 @@ public class ReportGeneratorService : IReportService
     }
 
     // Helper to avoid repeating the SQL logic
-    private SqlDataSource CreateDataSource()
+    // private SqlDataSource CreateDataSource()
+    // {
+    //     // Use "User ID" instead of "Username" for DevExpress Postgres provider
+    //     var connParams = new CustomStringConnectionParameters(ConnectionString);
+    //     var sqlDataSource = new SqlDataSource(connParams);
+
+    //     var query = new CustomSqlQuery("PhieuThus", 
+    //         @"SELECT pt.*, 
+    //             s.""LastName"" || ' ' || s.""FirstName"" AS ""StudentName"",
+    //             s.""ClassName"",
+    //             p.""LastName"" || ' ' || p.""FirstName"" AS ""ParentName"",
+    //             p.""PhoneNumber"" AS ""ParentPhone""
+    //           FROM ""PhieuThus"" pt 
+    //           INNER JOIN ""PhuHuynhs"" p ON pt.""PhuHuynhId"" = p.""Id""
+    //           INNER JOIN ""Students"" s ON pt.""StudentId"" = s.""Id""");
+
+    //     var query2 = new CustomSqlQuery("Payments", 
+    //         @"SELECT p.*,
+    //             s.""LastName"" || ' ' || s.""FirstName"" AS ""StudentName"",
+    //             s.""ClassName""
+    //             FROM ""Payments"" p 
+    //           INNER JOIN ""Students"" s ON p.""StudentId"" = s.""Id""");
+
+    //     var query3 = new CustomSqlQuery("Students", 
+    //         @"SELECT s.* FROM ""Students"" s");
+        
+    //     var query4 = new CustomSqlQuery("PhuHuynhs", 
+    //         @"SELECT p.* FROM ""PhuHuynhs"" p");
+
+    //     sqlDataSource.Queries.Add(query);
+    //     sqlDataSource.Queries.Add(query2);
+    //     sqlDataSource.Queries.Add(query3);
+    //     sqlDataSource.Queries.Add(query4);
+
+    //     var relation = new MasterDetailInfo("PhieuThus", "Payments", "StudentId", "StudentId");
+    //     var relation2 = new MasterDetailInfo("PhieuThus", "Payments", "Id", "PhieuThuId");
+    //     var relation3 = new MasterDetailInfo("PhuHuynhs", "Students", "Id", "PhuHuynhId");
+
+    //     sqlDataSource.Relations.Add(relation);
+    //     sqlDataSource.Relations.Add(relation2);
+    //     sqlDataSource.Relations.Add(relation3);
+
+    //     // This fetches the column metadata
+    //     sqlDataSource.RebuildResultSchema();
+
+    //     return sqlDataSource;
+    // }
+
+        private SqlDataSource CreateDataSource()
     {
         // Use "User ID" instead of "Username" for DevExpress Postgres provider
         var connParams = new CustomStringConnectionParameters(ConnectionString);
         var sqlDataSource = new SqlDataSource(connParams);
 
-        var query = new CustomSqlQuery("PhieuThus", 
-            @"SELECT pt.*, 
-                s.""LastName"" || ' ' || s.""FirstName"" AS ""StudentName"",
-                s.""ClassName"",
-                p.""LastName"" || ' ' || p.""FirstName"" AS ""ParentName"",
-                p.""PhoneNumber"" AS ""ParentPhone""
-              FROM ""PhieuThus"" pt 
-              INNER JOIN ""PhuHuynhs"" p ON pt.""PhuHuynhId"" = p.""Id""
-              INNER JOIN ""Students"" s ON pt.""StudentId"" = s.""Id""");
-
-        var query2 = new CustomSqlQuery("Payments", 
-            @"SELECT p.*,
-                s.""LastName"" || ' ' || s.""FirstName"" AS ""StudentName"",
-                s.""ClassName""
-                FROM ""Payments"" p 
-              INNER JOIN ""Students"" s ON p.""StudentId"" = s.""Id""");
-
-        var query3 = new CustomSqlQuery("Students", 
-            @"SELECT s.* FROM ""Students"" s");
+        var query = new CustomSqlQuery("BienLais", 
+            @"SELECT bl.* FROM ""BienLais"" bl");
         
-        var query4 = new CustomSqlQuery("PhuHuynhs", 
-            @"SELECT p.* FROM ""PhuHuynhs"" p");
-
         sqlDataSource.Queries.Add(query);
-        sqlDataSource.Queries.Add(query2);
-        sqlDataSource.Queries.Add(query3);
-        sqlDataSource.Queries.Add(query4);
-
-        var relation = new MasterDetailInfo("PhieuThus", "Payments", "StudentId", "StudentId");
-        var relation2 = new MasterDetailInfo("PhieuThus", "Payments", "Id", "PhieuThuId");
-        var relation3 = new MasterDetailInfo("PhuHuynhs", "Students", "Id", "PhuHuynhId");
-
-        sqlDataSource.Relations.Add(relation);
-        sqlDataSource.Relations.Add(relation2);
-        sqlDataSource.Relations.Add(relation3);
 
         // This fetches the column metadata
         sqlDataSource.RebuildResultSchema();

@@ -8,6 +8,7 @@ public class CustomerDb : DbContext, IApplicationDbContext
     public DbSet<Student> Students { get; set; }
     public DbSet<PhuHuynh> PhuHuynhs { get; set; }
     public DbSet<Payment> Payments { get; set; }
+    public DbSet<BienLai> BienLais { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

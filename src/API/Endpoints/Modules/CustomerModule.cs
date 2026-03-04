@@ -182,5 +182,22 @@ public class CustomerModule : ICarterModule
         {
             return await mediator.Send(new CreatePhieuThuCommand(PhieuThuDTO));
         });
+
+        RouteGroupBuilder BienLai = app.MapGroup("/BienLai").RequireRateLimiting("fixed");
+        
+        BienLai.MapGet("/", async (IMediator mediator) => 
+        {
+            return await mediator.Send(new GetAllBienLaiQuery());
+        });
+
+        BienLai.MapPost("/", async (BienLaiCreateDTO BienLaiDTO, IMediator mediator) => 
+        {
+            return await mediator.Send(new CreateBienLaiCommand(BienLaiDTO));
+        });
+
+        BienLai.MapDelete("/{id}", async (int id, IMediator mediator) => 
+        {
+            return await mediator.Send(new DeleteBienLaiCommand(id));
+        });
     }
 }

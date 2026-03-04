@@ -11,7 +11,8 @@ public interface IApplicationDbContext
     public DbSet<Student> Students { get; set; }
     public DbSet<PhuHuynh> PhuHuynhs { get; set; }
     public DbSet<Payment> Payments { get; set; }
-    
+    public DbSet<BienLai> BienLais { get; set; }
+
     // This allows your Handlers to save changes without seeing the DB implementation
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }
