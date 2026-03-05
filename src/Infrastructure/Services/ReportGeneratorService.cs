@@ -146,8 +146,8 @@ public class ReportGeneratorService : IReportService
         sqlDataSource.Queries.Add(query2);
         sqlDataSource.Queries.Add(query3);
 
-        var relation = new MasterDetailInfo("Reports", "Balances", "report_id", "report_id");
-        var relation2 = new MasterDetailInfo("Accounts", "Balances", "account_id", "account_id");
+        var relation = new MasterDetailInfo("Reports", "Balances", "Id", "report_id");
+        var relation2 = new MasterDetailInfo("Accounts", "Balances", "Id", "account_id");
 
         sqlDataSource.Relations.Add(relation);
         sqlDataSource.Relations.Add(relation2);
