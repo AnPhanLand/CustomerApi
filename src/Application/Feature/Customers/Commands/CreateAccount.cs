@@ -17,6 +17,6 @@ public class CreateAccountHandler : IRequestHandler<CreateAccountCommand, int>
         _context.Accounts.Add(entity);
         await _context.SaveChangesAsync(ct);
         
-        return entity.account_id;
+        return entity.Id;
     }
 }

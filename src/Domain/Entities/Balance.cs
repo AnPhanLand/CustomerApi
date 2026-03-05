@@ -2,7 +2,7 @@ namespace CustomerApi.Domain.Entities;
 
 public class Balance
 {
-    public int balance_id { get; set; }
+    public int Id { get; set; }
     public int report_id { get; set; }
     public int account_id { get; set; }
     public int report_year { get; set; }

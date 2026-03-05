@@ -31,7 +31,7 @@ public class DeleteBalanceHandler : IRequestHandler<DeleteBalanceCommand, int>
             await _db.SaveChangesAsync(ct);
             await _cache.RemoveAsync($"balance_{request.Id}", ct);
             await _cache.RemoveAsync("all_balances", ct);
-            return balance.balance_id;
+            return balance.Id;
         }
 
         return 0;

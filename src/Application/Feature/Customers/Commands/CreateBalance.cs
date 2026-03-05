@@ -18,6 +18,6 @@ public class CreateBalanceHandler : IRequestHandler<CreateBalanceCommand, int>
         _context.Balances.Add(entity);
         await _context.SaveChangesAsync(ct);
         
-        return entity.balance_id;
+        return entity.Id;
     }
 }

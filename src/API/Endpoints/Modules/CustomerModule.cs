@@ -199,5 +199,57 @@ public class CustomerModule : ICarterModule
         {
             return await mediator.Send(new DeleteBienLaiCommand(id));
         });
+
+        RouteGroupBuilder Report = app.MapGroup("/Report").RequireRateLimiting("fixed");
+        
+        Report.MapGet("/", async (IMediator mediator) => 
+        {
+            return await mediator.Send(new GetAllReportQuery());
+        });
+
+        Report.MapPost("/", async (ReportCreateDTO ReportDTO, IMediator mediator) => 
+        {
+            return await mediator.Send(new CreateReportCommand(ReportDTO));
+        });
+
+        Report.MapDelete("/{id}", async (int id, IMediator mediator) => 
+        {
+            return await mediator.Send(new DeleteReportCommand(id));
+        });
+
+
+        RouteGroupBuilder Account = app.MapGroup("/Account").RequireRateLimiting("fixed");
+        
+        Account.MapGet("/", async (IMediator mediator) => 
+        {
+            return await mediator.Send(new GetAllAccountQuery());
+        });
+
+        Account.MapPost("/", async (AccountCreateDTO AccountDTO, IMediator mediator) => 
+        {
+            return await mediator.Send(new CreateAccountCommand(AccountDTO));
+        });
+
+        Account.MapDelete("/{id}", async (int id, IMediator mediator) => 
+        {
+            return await mediator.Send(new DeleteAccountCommand(id));
+        });
+
+        RouteGroupBuilder Balance = app.MapGroup("/Balance").RequireRateLimiting("fixed");
+        
+        Balance.MapGet("/", async (IMediator mediator) => 
+        {
+            return await mediator.Send(new GetAllBalanceQuery());
+        });
+
+        Balance.MapPost("/", async (BalanceCreateDTO BalanceDTO, IMediator mediator) => 
+        {
+            return await mediator.Send(new CreateBalanceCommand(BalanceDTO));
+        });
+
+        Balance.MapDelete("/{id}", async (int id, IMediator mediator) => 
+        {
+            return await mediator.Send(new DeleteBalanceCommand(id));
+        });
     }
 }

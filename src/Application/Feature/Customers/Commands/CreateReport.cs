@@ -17,6 +17,6 @@ public class CreateReportHandler : IRequestHandler<CreateReportCommand, int>
         _context.Reports.Add(entity);
         await _context.SaveChangesAsync(ct);
         
-        return entity.report_id;
+        return entity.Id;
     }
 }

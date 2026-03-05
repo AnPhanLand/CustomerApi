@@ -2,7 +2,7 @@ namespace CustomerApi.Domain.Entities;
 
 public class Account
 {
-    public int account_id { get; set; }
+    public int Id { get; set; }
     public string account_name { get; set; } = string.Empty;
     public string account_number { get; set; } = string.Empty;
     public int? parent_account_id { get; set; } = null;

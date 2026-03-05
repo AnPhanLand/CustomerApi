@@ -31,7 +31,7 @@ public class DeleteReportHandler : IRequestHandler<DeleteReportCommand, int>
             await _db.SaveChangesAsync(ct);
             await _cache.RemoveAsync($"report_{request.Id}", ct);
             await _cache.RemoveAsync("all_reports", ct);
-            return report.report_id;
+            return report.Id;
         }
 
         return 0;

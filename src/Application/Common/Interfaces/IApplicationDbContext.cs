@@ -23,7 +23,7 @@ public interface IApplicationDbContext
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.account_id);
+            entity.HasKey(e => e.Id);
 
             // This creates the "thuộc về (tài khoản cha)" loop from your ERD
             entity.HasOne(d => d.ParentAccount)

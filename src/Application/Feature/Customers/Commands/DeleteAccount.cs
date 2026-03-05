@@ -31,7 +31,7 @@ public class DeleteAccountHandler : IRequestHandler<DeleteAccountCommand, int>
             await _db.SaveChangesAsync(ct);
             await _cache.RemoveAsync($"account_{request.Id}", ct);
             await _cache.RemoveAsync("all_accounts", ct);
-            return account.account_id;
+            return account.Id;
         }
 
         return 0;
