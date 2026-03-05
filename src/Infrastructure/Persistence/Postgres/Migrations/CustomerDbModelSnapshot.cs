@@ -37,7 +37,7 @@ namespace Infrastructure.Persistence.Postgres.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("account_number")
+                    b.Property<string>("account_type")
                         .IsRequired()
                         .HasColumnType("text");
 

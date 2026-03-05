@@ -10,7 +10,7 @@ public class CreateAccountHandler : IRequestHandler<CreateAccountCommand, int>
         var entity = new Account
         {
             account_name = request.AccountDTO.account_name,
-            account_number = request.AccountDTO.account_number,
+            account_type = request.AccountDTO.account_type,
             parent_account_id = request.AccountDTO.parent_account_id
         };
 

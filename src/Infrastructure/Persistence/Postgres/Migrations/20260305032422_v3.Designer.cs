@@ -12,7 +12,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Persistence.Postgres.Migrations
 {
     [DbContext(typeof(CustomerDb))]
-    [Migration("20260305031114_v3")]
+    [Migration("20260305032422_v3")]
     partial class v3
     {
         /// <inheritdoc />
@@ -40,7 +40,7 @@ namespace Infrastructure.Persistence.Postgres.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<string>("account_number")
+                    b.Property<string>("account_type")
                         .IsRequired()
                         .HasColumnType("text");
 

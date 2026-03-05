@@ -18,7 +18,7 @@ namespace Infrastructure.Persistence.Postgres.Migrations
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
                     account_name = table.Column<string>(type: "text", nullable: false),
-                    account_number = table.Column<string>(type: "text", nullable: false),
+                    account_type = table.Column<string>(type: "text", nullable: false),
                     parent_account_id = table.Column<int>(type: "integer", nullable: true),
                     ParentAccountId = table.Column<int>(type: "integer", nullable: true)
                 },
