@@ -6,11 +6,11 @@ namespace CustomerApi.Infrastructure.Services;
 
 public class ReportGeneratorService : IReportService
 {
-        private const string GenerateReportPath = "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\newReport.repx";
-         private const string ViewReportPath = "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\ViewReport.repx";
-        // var report = XtraReport.FromFile(reportPath, true);
+    private const string GenerateReportPath = "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\newReport.repx";
+        private const string ViewReportPath = "C:\\Users\\phant\\Documents\\Intern\\BackEndIntership\\CustomerApi\\src\\API\\ViewReport.repx";
+    // var report = XtraReport.FromFile(reportPath, true);
 
-        private const string ConnectionString = "XpoProvider=Postgres;Server=localhost;Port=5432;Database=postgres;Username=postgres;Password=mysecretpassword";
+    private const string ConnectionString = "XpoProvider=Postgres;Server=localhost;Port=5432;Database=postgres;Username=postgres;Password=mysecretpassword";
 
     
     public async Task<byte[]> GenerateReceiptPdfAsync(string statusFilter, CancellationToken ct)
@@ -110,16 +110,48 @@ public class ReportGeneratorService : IReportService
     //     return sqlDataSource;
     // }
 
-        private SqlDataSource CreateDataSource()
+    // private SqlDataSource CreateDataSource()
+    // {
+    //     // Use "User ID" instead of "Username" for DevExpress Postgres provider
+    //     var connParams = new CustomStringConnectionParameters(ConnectionString);
+    //     var sqlDataSource = new SqlDataSource(connParams);
+
+    //     var query = new CustomSqlQuery("BienLais", 
+    //         @"SELECT bl.* FROM ""BienLais"" bl");
+        
+    //     sqlDataSource.Queries.Add(query);
+
+    //     // This fetches the column metadata
+    //     sqlDataSource.RebuildResultSchema();
+
+    //     return sqlDataSource;
+    // }
+
+    private SqlDataSource CreateDataSource()
     {
         // Use "User ID" instead of "Username" for DevExpress Postgres provider
         var connParams = new CustomStringConnectionParameters(ConnectionString);
         var sqlDataSource = new SqlDataSource(connParams);
 
-        var query = new CustomSqlQuery("BienLais", 
-            @"SELECT bl.* FROM ""BienLais"" bl");
-        
+        var query = new CustomSqlQuery("Reports", 
+            @"SELECT r.* FROM ""Reports"" r");
+
+        var query2 = new CustomSqlQuery("Balances", 
+            @"SELECT b.* FROM ""Balances"" b");
+
+        var query3 = new CustomSqlQuery("Accounts", 
+            @"SELECT a.* FROM ""Accounts"" a");
+
         sqlDataSource.Queries.Add(query);
+        sqlDataSource.Queries.Add(query2);
+        sqlDataSource.Queries.Add(query3);
+
+        var relation = new MasterDetailInfo("Reports", "Balances", "report_id", "report_id");
+        var relation2 = new MasterDetailInfo("Accounts", "Balances", "account_id", "account_id");
+
+        sqlDataSource.Relations.Add(relation);
+        sqlDataSource.Relations.Add(relation2);
+
 
         // This fetches the column metadata
         sqlDataSource.RebuildResultSchema();
