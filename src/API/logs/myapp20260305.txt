@@ -12807,3 +12807,1268 @@ FROM "Balances" AS b
 2026-03-05 14:37:28.780 +07:00 [DBG] Connection id "0HNJQH86PMEIV" completed keep alive response.
 2026-03-05 14:37:28.780 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/favicon.ico - 404 0 null 5.2447ms
 2026-03-05 14:37:28.782 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5067/favicon.ico, Response status code: 404
+2026-03-05 14:37:58.273 +07:00 [DBG] Server desktop-l31jdro:26836:5cbe2c7a heartbeat successfully sent
+2026-03-05 14:38:28.288 +07:00 [DBG] Server desktop-l31jdro:26836:5cbe2c7a heartbeat successfully sent
+2026-03-05 14:38:58.305 +07:00 [DBG] Server desktop-l31jdro:26836:5cbe2c7a heartbeat successfully sent
+2026-03-05 14:39:23.943 +07:00 [DBG] Connection id "0HNJQH86PMEIV" received FIN.
+2026-03-05 14:39:23.944 +07:00 [DBG] Connection id "0HNJQH86PMEIV" disconnecting.
+2026-03-05 14:39:23.945 +07:00 [DBG] Connection id "0HNJQH86PMEIV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 14:39:23.957 +07:00 [DBG] Connection id "0HNJQH86PMEIV" stopped.
+2026-03-05 14:39:28.311 +07:00 [DBG] Server desktop-l31jdro:26836:5cbe2c7a heartbeat successfully sent
+2026-03-05 14:44:18.324 +07:00 [INF] Starting the API...
+2026-03-05 14:44:18.925 +07:00 [INF] Start installing Hangfire SQL objects...
+2026-03-05 14:44:19.008 +07:00 [INF] Hangfire SQL objects installed.
+2026-03-05 14:44:19.024 +07:00 [DBG] Found validator CreateCustomerCommandValidator
+2026-03-05 14:44:19.024 +07:00 [DBG] Found validator UpdateCustomerCommandValidator
+2026-03-05 14:44:19.024 +07:00 [DBG] Found module CustomerApi.API.Endpoints.Modules.AuthModule
+2026-03-05 14:44:19.024 +07:00 [DBG] Found module CustomerApi.API.Endpoints.Modules.CustomerModule
+2026-03-05 14:44:20.463 +07:00 [DBG] Hosting starting
+2026-03-05 14:44:20.497 +07:00 [INF] User profile is available. Using 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-03-05 14:44:20.517 +07:00 [DBG] Reading data from file 'C:\Users\phant\AppData\Local\ASP.NET\DataProtection-Keys\key-e0e4c711-e38d-4994-9c4d-b0c1ef741012.xml'.
+2026-03-05 14:44:20.526 +07:00 [DBG] Found key {e0e4c711-e38d-4994-9c4d-b0c1ef741012}.
+2026-03-05 14:44:20.536 +07:00 [DBG] Considering key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} with expiration date 2026-03-29 06:37:16Z as default key.
+2026-03-05 14:44:20.539 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-03-05 14:44:20.543 +07:00 [DBG] Decrypting secret element using Windows DPAPI.
+2026-03-05 14:44:20.545 +07:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=10.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2026-03-05 14:44:20.551 +07:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2026-03-05 14:44:20.553 +07:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2026-03-05 14:44:20.555 +07:00 [DBG] Using key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} as the default key.
+2026-03-05 14:44:20.556 +07:00 [DBG] Key ring with default key {e0e4c711-e38d-4994-9c4d-b0c1ef741012} was loaded during application startup.
+2026-03-05 14:44:20.561 +07:00 [DBG] Middleware loaded
+2026-03-05 14:44:20.565 +07:00 [DBG] Middleware loaded. Script /_framework/aspnetcore-browser-refresh.js (14879 B).
+2026-03-05 14:44:20.566 +07:00 [DBG] Middleware loaded. Script /_framework/blazor-hotreload.js (799 B).
+2026-03-05 14:44:20.919 +07:00 [DBG] Middleware loaded: DOTNET_MODIFIABLE_ASSEMBLIES=debug, __ASPNETCORE_BROWSER_TOOLS=true
+2026-03-05 14:44:20.935 +07:00 [INF] Now listening on: http://localhost:5067
+2026-03-05 14:44:20.935 +07:00 [DBG] Loaded hosting startup assembly API
+2026-03-05 14:44:20.936 +07:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2026-03-05 14:44:20.943 +07:00 [INF] Starting Hangfire Server using job storage: 'PostgreSQL Server: Host: localhost, DB: postgres, Schema: hangfire'
+2026-03-05 14:44:20.943 +07:00 [INF] Using the following options for PostgreSQL job storage:
+2026-03-05 14:44:20.943 +07:00 [INF]     Queue poll interval: 00:00:15.
+2026-03-05 14:44:20.943 +07:00 [INF]     Invisibility timeout: 00:30:00.
+2026-03-05 14:44:20.944 +07:00 [INF]     Use sliding invisibility timeout: False.
+2026-03-05 14:44:20.944 +07:00 [INF] Using the following options for Hangfire Server:
+    Worker count: 20
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+2026-03-05 14:44:20.960 +07:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-03-05 14:44:20.960 +07:00 [INF] Hosting environment: Development
+2026-03-05 14:44:20.960 +07:00 [INF] Content root path: C:\Users\phant\Documents\Intern\BackEndIntership\CustomerApi\src\API
+2026-03-05 14:44:20.960 +07:00 [DBG] Hosting started
+2026-03-05 14:44:20.962 +07:00 [DBG] Execution loop BackgroundServerProcess:59ad9d9a has started in 6.0484 ms
+2026-03-05 14:44:21.127 +07:00 [INF] Server desktop-l31jdro:11188:c3560c48 successfully announced in 160.3769 ms
+2026-03-05 14:44:21.132 +07:00 [DBG] Execution loop ServerHeartbeatProcess:a45cbf8c has started in 3.2627 ms
+2026-03-05 14:44:21.133 +07:00 [INF] Server desktop-l31jdro:11188:c3560c48 is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+2026-03-05 14:44:21.136 +07:00 [DBG] Execution loop ServerWatchdog:9b4ec7b7 has started in 2.349 ms
+2026-03-05 14:44:21.137 +07:00 [DBG] Execution loop ServerJobCancellationWatcher:1cc71257 has started in 1.5845 ms
+2026-03-05 14:44:21.140 +07:00 [DBG] Execution loop ExpirationManager:0fde33cc has started in 2.0518 ms
+2026-03-05 14:44:21.141 +07:00 [DBG] Removing outdated records from table 'aggregatedcounter'...
+2026-03-05 14:44:21.142 +07:00 [INF] 1 servers were removed due to timeout
+2026-03-05 14:44:21.146 +07:00 [DBG] Execution loop CountersAggregator:c51d3130 has started in 6.5134 ms
+2026-03-05 14:44:21.148 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 14:44:21.151 +07:00 [DBG] Execution loop Worker:279b6dd8 has started in 3.1693 ms
+2026-03-05 14:44:21.159 +07:00 [DBG] Execution loop Worker:feb543f0 has started in 11.5365 ms
+2026-03-05 14:44:21.167 +07:00 [DBG] Execution loop Worker:c6f39462 has started in 19.1417 ms
+2026-03-05 14:44:21.186 +07:00 [DBG] Execution loop Worker:8f2b2e70 has started in 38.9606 ms
+2026-03-05 14:44:21.201 +07:00 [DBG] Execution loop Worker:147f0ae2 has started in 53.4567 ms
+2026-03-05 14:44:21.204 +07:00 [DBG] Execution loop Worker:a768bc66 has started in 56.8615 ms
+2026-03-05 14:44:21.355 +07:00 [DBG] Execution loop Worker:3093b59a has started in 207.8276 ms
+2026-03-05 14:44:21.378 +07:00 [DBG] Execution loop Worker:83b3444d has started in 229.8689 ms
+2026-03-05 14:44:21.382 +07:00 [DBG] Removing outdated records from table 'counter'...
+2026-03-05 14:44:21.410 +07:00 [DBG] Removing outdated records from table 'job'...
+2026-03-05 14:44:21.435 +07:00 [DBG] Execution loop Worker:c59de4d7 has started in 286.9609 ms
+2026-03-05 14:44:21.442 +07:00 [DBG] Execution loop Worker:e3982844 has started in 294.0835 ms
+2026-03-05 14:44:21.459 +07:00 [DBG] Execution loop Worker:491cd81f has started in 311.1614 ms
+2026-03-05 14:44:21.474 +07:00 [DBG] Execution loop Worker:a6a3f10e has started in 326.952 ms
+2026-03-05 14:44:21.485 +07:00 [DBG] Execution loop Worker:8daabc3a has started in 337.051 ms
+2026-03-05 14:44:21.512 +07:00 [DBG] Execution loop Worker:7c1afe2e has started in 364.2271 ms
+2026-03-05 14:44:21.532 +07:00 [DBG] Execution loop Worker:8b7cc8c2 has started in 383.9922 ms
+2026-03-05 14:44:21.534 +07:00 [DBG] Execution loop Worker:88de692a has started in 386.4416 ms
+2026-03-05 14:44:21.537 +07:00 [DBG] Removing outdated records from table 'list'...
+2026-03-05 14:44:21.545 +07:00 [DBG] Execution loop Worker:e12cc4b3 has started in 397.1804 ms
+2026-03-05 14:44:21.581 +07:00 [DBG] Execution loop Worker:58990978 has started in 433.8537 ms
+2026-03-05 14:44:21.585 +07:00 [DBG] Removing outdated records from table 'set'...
+2026-03-05 14:44:21.598 +07:00 [DBG] Execution loop Worker:fd75efdf has started in 450.3206 ms
+2026-03-05 14:44:21.610 +07:00 [DBG] Execution loop Worker:bdf5de29 has started in 462.2035 ms
+2026-03-05 14:44:21.630 +07:00 [DBG] Execution loop DelayedJobScheduler:1642c69f has started in 19.5803 ms
+2026-03-05 14:44:21.630 +07:00 [DBG] Removing outdated records from table 'hash'...
+2026-03-05 14:44:21.634 +07:00 [DBG] Connection id "0HNJQHC1T4BHO" accepted.
+2026-03-05 14:44:21.638 +07:00 [DBG] Connection id "0HNJQHC1T4BHO" started.
+2026-03-05 14:44:21.660 +07:00 [DBG] Execution loop RecurringJobScheduler:0435e531 has started in 30.5802 ms
+2026-03-05 14:44:21.661 +07:00 [INF] Server desktop-l31jdro:11188:c3560c48 all the dispatchers started
+2026-03-05 14:44:21.797 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/ - null null
+2026-03-05 14:44:21.822 +07:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2026-03-05 14:44:21.955 +07:00 [DBG] No candidates found for the request path '/'
+2026-03-05 14:44:21.956 +07:00 [DBG] Request did not match any endpoints
+2026-03-05 14:44:21.993 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 14:44:21.999 +07:00 [DBG] The request path  does not match the path filter
+2026-03-05 14:44:22.004 +07:00 [DBG] Connection id "0HNJQHC1T4BHO" completed keep alive response.
+2026-03-05 14:44:22.007 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/ - 404 null null 211.7026ms
+2026-03-05 14:44:22.009 +07:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET http://localhost:5067/, Response status code: 404
+2026-03-05 14:44:24.259 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 14:44:24.265 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 14:44:24.266 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:44:24.269 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 14:44:24.270 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 14:44:24.270 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:44:25.556 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 14:44:25.559 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 14:44:25.562 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:44:25.564 +07:00 [DBG] Connection id "0HNJQHC1T4BHO" completed keep alive response.
+2026-03-05 14:44:25.565 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 49693 application/pdf 1306.0258ms
+2026-03-05 14:44:51.146 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:45:21.174 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:45:51.196 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:46:21.187 +07:00 [DBG] Connection id "0HNJQHC1T4BHO" received FIN.
+2026-03-05 14:46:21.188 +07:00 [DBG] Connection id "0HNJQHC1T4BHO" disconnecting.
+2026-03-05 14:46:21.188 +07:00 [DBG] Connection id "0HNJQHC1T4BHO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 14:46:21.203 +07:00 [DBG] Connection id "0HNJQHC1T4BHO" stopped.
+2026-03-05 14:46:21.216 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:46:51.220 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:47:21.244 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:47:44.247 +07:00 [DBG] Connection id "0HNJQHC1T4BHP" accepted.
+2026-03-05 14:47:44.247 +07:00 [DBG] Connection id "0HNJQHC1T4BHP" started.
+2026-03-05 14:47:44.248 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 14:47:44.251 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 14:47:44.251 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:47:44.253 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 14:47:44.253 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 14:47:44.253 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:47:44.394 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 14:47:44.394 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 14:47:44.394 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:47:44.394 +07:00 [DBG] Connection id "0HNJQHC1T4BHP" completed keep alive response.
+2026-03-05 14:47:44.394 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 51146 application/pdf 146.2676ms
+2026-03-05 14:47:51.250 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:48:02.304 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 14:48:02.304 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 14:48:02.304 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:48:02.304 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 14:48:02.304 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 14:48:02.304 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:48:02.357 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 14:48:02.357 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 14:48:02.357 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:48:02.357 +07:00 [DBG] Connection id "0HNJQHC1T4BHP" completed keep alive response.
+2026-03-05 14:48:02.357 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 49693 application/pdf 53.2029ms
+2026-03-05 14:48:21.265 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:48:51.280 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:49:07.843 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 14:49:07.844 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 14:49:07.844 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:49:07.844 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 14:49:07.844 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 14:49:07.844 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:49:07.890 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 14:49:07.890 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 14:49:07.890 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:49:07.890 +07:00 [DBG] Connection id "0HNJQHC1T4BHP" completed keep alive response.
+2026-03-05 14:49:07.890 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 49693 application/pdf 46.7272ms
+2026-03-05 14:49:21.225 +07:00 [INF] 1 servers were removed due to timeout
+2026-03-05 14:49:21.283 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:49:21.405 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 14:49:49.453 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 14:49:49.453 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 14:49:49.453 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:49:49.453 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 14:49:49.453 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 14:49:49.453 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:49:49.533 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 14:49:49.533 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 14:49:49.533 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:49:49.533 +07:00 [DBG] Connection id "0HNJQHC1T4BHP" completed keep alive response.
+2026-03-05 14:49:49.533 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 53598 application/pdf 80.5147ms
+2026-03-05 14:49:51.299 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:50:21.326 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:50:25.493 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 14:50:25.493 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 14:50:25.494 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:50:25.494 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 14:50:25.494 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 14:50:25.494 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:50:25.565 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 14:50:25.565 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 14:50:25.565 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:50:25.565 +07:00 [DBG] Connection id "0HNJQHC1T4BHP" completed keep alive response.
+2026-03-05 14:50:25.566 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 53598 application/pdf 72.39ms
+2026-03-05 14:50:40.815 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 14:50:40.815 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 14:50:40.815 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:50:40.815 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 14:50:40.816 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 14:50:40.816 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:50:40.862 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 14:50:40.862 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 14:50:40.862 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 14:50:40.862 +07:00 [DBG] Connection id "0HNJQHC1T4BHP" completed keep alive response.
+2026-03-05 14:50:40.862 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 53598 application/pdf 46.807ms
+2026-03-05 14:50:51.344 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:51:21.358 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:51:51.373 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:52:21.399 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:52:36.764 +07:00 [DBG] Connection id "0HNJQHC1T4BHP" received FIN.
+2026-03-05 14:52:36.765 +07:00 [DBG] Connection id "0HNJQHC1T4BHP" disconnecting.
+2026-03-05 14:52:36.765 +07:00 [DBG] Connection id "0HNJQHC1T4BHP" stopped.
+2026-03-05 14:52:36.765 +07:00 [DBG] Connection id "0HNJQHC1T4BHP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 14:52:51.422 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:53:21.450 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:53:51.468 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:54:21.413 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 14:54:21.550 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:54:51.555 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:55:21.568 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:55:51.592 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:56:21.607 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:56:51.634 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:57:21.651 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:57:51.668 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:58:21.679 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:58:51.696 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:59:21.429 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 14:59:21.714 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 14:59:51.740 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:00:21.770 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:00:51.785 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:01:21.809 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:01:51.824 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:02:21.848 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:02:51.874 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:03:21.901 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:03:51.926 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:04:21.441 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 15:04:21.952 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:04:51.955 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:05:21.976 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:05:52.006 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:06:22.023 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:06:52.042 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:07:22.053 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:07:52.068 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:08:22.090 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:08:52.118 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:09:21.451 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 15:09:22.125 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:09:25.578 +07:00 [DBG] Connection id "0HNJQHC1T4BHQ" accepted.
+2026-03-05 15:09:25.578 +07:00 [DBG] Connection id "0HNJQHC1T4BHQ" started.
+2026-03-05 15:09:25.578 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:09:25.578 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:09:25.578 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:09:25.578 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:09:25.578 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:09:25.578 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:09:25.689 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:09:25.689 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:09:25.689 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:09:25.689 +07:00 [DBG] Connection id "0HNJQHC1T4BHQ" completed keep alive response.
+2026-03-05 15:09:25.689 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 48062 application/pdf 110.9254ms
+2026-03-05 15:09:44.743 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Account - null null
+2026-03-05 15:09:44.743 +07:00 [DBG] 1 candidate(s) found for the request path '/Account'
+2026-03-05 15:09:44.743 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Account/'
+2026-03-05 15:09:44.743 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:09:44.743 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:09:44.743 +07:00 [INF] Executing endpoint 'HTTP: GET /Account/'
+2026-03-05 15:09:44.820 +07:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2026-03-05 15:09:45.274 +07:00 [DBG] The property 'Account.ParentAccountId' was created in shadow state because there are no eligible CLR members with a matching name.
+2026-03-05 15:09:45.274 +07:00 [DBG] The property 'EmailAddress.CustomerId' was created in shadow state because there are no eligible CLR members with a matching name.
+2026-03-05 15:09:45.274 +07:00 [DBG] The property 'PhoneNumber.CustomerId' was created in shadow state because there are no eligible CLR members with a matching name.
+2026-03-05 15:09:45.371 +07:00 [DBG] Entity Framework Core 9.0.12 initialized 'CustomerDb' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: MigrationsAssembly=Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2026-03-05 15:09:45.385 +07:00 [DBG] Compiling query expression: 
+'DbSet<Account>()'
+2026-03-05 15:09:45.551 +07:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<Account>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Account.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Account.ParentAccountId (no field, int?) Shadow FK Index, 1], [Property: Account.account_name (string) Required, 2], [Property: Account.account_type (string) Required, 3], [Property: Account.parent_account_id (int?), 4] }
+        SELECT a.Id, a.ParentAccountId, a.account_name, a.account_type, a.parent_account_id
+        FROM Accounts AS a) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Account.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Account.ParentAccountId (no field, int?) Shadow FK Index, 1], [Property: Account.account_name (string) Required, 2], [Property: Account.account_type (string) Required, 3], [Property: Account.parent_account_id (int?), 4] }
+        SELECT a.Id, a.ParentAccountId, a.account_name, a.account_type, a.parent_account_id
+        FROM Accounts AS a, 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        Account entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            Account instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(Account);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: Account.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Account").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (Account)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: Account | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Account")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: Account | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Account")]: 
+                        {
+                            shadowSnapshot1 = (ISnapshot)new Snapshot<int?>(dataReader.IsDBNull(1) ? default(int?) : (int?)dataReader.GetInt32(1));
+                            return 
+                            {
+                                Account instance;
+                                instance = new Account();
+                                instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                instance.<account_name>k__BackingField = dataReader.GetString(2);
+                                instance.<account_type>k__BackingField = dataReader.GetString(3);
+                                instance.<parent_account_id>k__BackingField = dataReader.IsDBNull(4) ? default(int?) : (int?)dataReader.GetInt32(4);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: Account | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Account")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(Account)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return entity;
+    }, 
+    contextType: CustomerApi.Infrastructure.Persistence.Postgres.CustomerDb, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)'
+2026-03-05 15:09:45.572 +07:00 [DBG] Creating DbConnection.
+2026-03-05 15:09:45.575 +07:00 [DBG] Created DbConnection. (1ms).
+2026-03-05 15:09:45.577 +07:00 [DBG] Opening connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-03-05 15:09:45.578 +07:00 [DBG] Opened connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-03-05 15:09:45.580 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-03-05 15:09:45.582 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2026-03-05 15:09:45.583 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2026-03-05 15:09:45.586 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ParentAccountId", a.account_name, a.account_type, a.parent_account_id
+FROM "Accounts" AS a
+2026-03-05 15:09:45.597 +07:00 [INF] Executed DbCommand (10ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT a."Id", a."ParentAccountId", a.account_name, a.account_type, a.parent_account_id
+FROM "Accounts" AS a
+2026-03-05 15:09:45.618 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.629 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.630 +07:00 [DBG] Context 'CustomerDb' started tracking 'Account' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:09:45.633 +07:00 [DBG] Closing data reader to 'postgres' on server 'tcp://localhost:5432'.
+2026-03-05 15:09:45.636 +07:00 [DBG] A data reader for 'postgres' on server 'tcp://localhost:5432' is being disposed after spending 35ms reading results.
+2026-03-05 15:09:45.638 +07:00 [DBG] Closing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-03-05 15:09:45.638 +07:00 [DBG] Closed connection to database 'postgres' on server 'tcp://localhost:5432' (0ms).
+2026-03-05 15:09:45.651 +07:00 [INF] Executed endpoint 'HTTP: GET /Account/'
+2026-03-05 15:09:45.651 +07:00 [DBG] Connection id "0HNJQHC1T4BHQ" completed keep alive response.
+2026-03-05 15:09:45.652 +07:00 [DBG] 'CustomerDb' disposed.
+2026-03-05 15:09:45.656 +07:00 [DBG] Disposing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-03-05 15:09:45.657 +07:00 [DBG] Disposed connection to database 'postgres' on server 'tcp://localhost:5432' (0ms).
+2026-03-05 15:09:45.657 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Account - 200 null application/json; charset=utf-8 914.1422ms
+2026-03-05 15:09:52.142 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:10:22.159 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:10:52.173 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:10:54.466 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:10:54.466 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:10:54.466 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:10:54.466 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:10:54.467 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:10:54.467 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:10:54.514 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:10:54.514 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:10:54.514 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:10:54.514 +07:00 [DBG] Connection id "0HNJQHC1T4BHQ" completed keep alive response.
+2026-03-05 15:10:54.514 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 49677 application/pdf 48.088ms
+2026-03-05 15:11:22.189 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:11:45.603 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:11:45.604 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:11:45.604 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:11:45.604 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:11:45.604 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:11:45.604 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:11:45.678 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:11:45.678 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:11:45.678 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:11:45.678 +07:00 [DBG] Connection id "0HNJQHC1T4BHQ" completed keep alive response.
+2026-03-05 15:11:45.678 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 60749 application/pdf 74.6079ms
+2026-03-05 15:11:52.197 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:12:22.207 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:12:43.283 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:12:43.283 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:12:43.283 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:12:43.283 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:12:43.283 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:12:43.283 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:12:43.325 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:12:43.325 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:12:43.325 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:12:43.325 +07:00 [DBG] Connection id "0HNJQHC1T4BHQ" completed keep alive response.
+2026-03-05 15:12:43.325 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 60735 application/pdf 42.3947ms
+2026-03-05 15:12:52.236 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:13:22.256 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:13:52.275 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:14:21.455 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 15:14:22.298 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:14:38.639 +07:00 [DBG] Connection id "0HNJQHC1T4BHQ" received FIN.
+2026-03-05 15:14:38.639 +07:00 [DBG] Connection id "0HNJQHC1T4BHQ" disconnecting.
+2026-03-05 15:14:38.639 +07:00 [DBG] Connection id "0HNJQHC1T4BHQ" stopped.
+2026-03-05 15:14:38.639 +07:00 [DBG] Connection id "0HNJQHC1T4BHQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 15:14:52.313 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:15:22.342 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:15:52.371 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:16:22.394 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:16:52.413 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:17:22.433 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:17:52.460 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:18:22.489 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:18:52.501 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:19:21.470 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 15:19:22.518 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:19:52.535 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:20:22.555 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:20:52.584 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:21:22.605 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:21:52.623 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:22:22.648 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:22:49.293 +07:00 [DBG] Connection id "0HNJQHC1T4BHR" accepted.
+2026-03-05 15:22:49.293 +07:00 [DBG] Connection id "0HNJQHC1T4BHR" started.
+2026-03-05 15:22:49.293 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:22:49.293 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:22:49.294 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:22:49.294 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:22:49.294 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:22:49.294 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:22:49.800 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:22:49.800 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:22:49.801 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:22:49.801 +07:00 [DBG] Connection id "0HNJQHC1T4BHR" completed keep alive response.
+2026-03-05 15:22:49.801 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 79334 application/pdf 507.8039ms
+2026-03-05 15:22:52.665 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:23:12.084 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:23:12.085 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:23:12.085 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:23:12.085 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:23:12.085 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:23:12.085 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:23:12.162 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:23:12.163 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:23:12.166 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:23:12.166 +07:00 [DBG] Connection id "0HNJQHC1T4BHR" completed keep alive response.
+2026-03-05 15:23:12.166 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 79670 application/pdf 82.0334ms
+2026-03-05 15:23:22.689 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:23:52.713 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:24:21.478 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 15:24:22.733 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:24:52.750 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:25:07.421 +07:00 [DBG] Connection id "0HNJQHC1T4BHR" received FIN.
+2026-03-05 15:25:07.422 +07:00 [DBG] Connection id "0HNJQHC1T4BHR" disconnecting.
+2026-03-05 15:25:07.422 +07:00 [DBG] Connection id "0HNJQHC1T4BHR" stopped.
+2026-03-05 15:25:07.422 +07:00 [DBG] Connection id "0HNJQHC1T4BHR" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 15:25:21.600 +07:00 [DBG] Connection id "0HNJQHC1T4BHS" accepted.
+2026-03-05 15:25:21.601 +07:00 [DBG] Connection id "0HNJQHC1T4BHS" started.
+2026-03-05 15:25:21.601 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:25:21.601 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:25:21.601 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:25:21.601 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:25:21.601 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:25:21.601 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:25:21.649 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:25:21.649 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:25:21.649 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:25:21.649 +07:00 [DBG] Connection id "0HNJQHC1T4BHS" completed keep alive response.
+2026-03-05 15:25:21.649 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 60999 application/pdf 48.5878ms
+2026-03-05 15:25:22.775 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:25:52.805 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:26:06.499 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:26:06.499 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:26:06.499 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:26:06.500 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:26:06.500 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:26:06.500 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:26:06.543 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:26:06.543 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:26:06.543 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:26:06.543 +07:00 [DBG] Connection id "0HNJQHC1T4BHS" completed keep alive response.
+2026-03-05 15:26:06.544 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 61007 application/pdf 44.2916ms
+2026-03-05 15:26:22.830 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:26:52.842 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:27:22.851 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:27:52.867 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:28:01.591 +07:00 [DBG] Connection id "0HNJQHC1T4BHS" received FIN.
+2026-03-05 15:28:01.591 +07:00 [DBG] Connection id "0HNJQHC1T4BHS" disconnecting.
+2026-03-05 15:28:01.592 +07:00 [DBG] Connection id "0HNJQHC1T4BHS" stopped.
+2026-03-05 15:28:01.592 +07:00 [DBG] Connection id "0HNJQHC1T4BHS" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 15:28:22.891 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:28:52.909 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:29:21.488 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 15:29:22.934 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:29:38.972 +07:00 [DBG] Connection id "0HNJQHC1T4BHT" accepted.
+2026-03-05 15:29:38.972 +07:00 [DBG] Connection id "0HNJQHC1T4BHT" started.
+2026-03-05 15:29:38.972 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:29:38.972 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:29:38.973 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:29:38.973 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:29:38.973 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:29:38.973 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:29:39.029 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:29:39.029 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:29:39.030 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:29:39.030 +07:00 [DBG] Connection id "0HNJQHC1T4BHT" completed keep alive response.
+2026-03-05 15:29:39.030 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 61007 application/pdf 57.3965ms
+2026-03-05 15:29:52.963 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:30:22.980 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:30:49.620 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:30:49.620 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:30:49.620 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:30:49.621 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:30:49.621 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:30:49.621 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:30:49.692 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:30:49.692 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:30:49.692 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:30:49.692 +07:00 [DBG] Connection id "0HNJQHC1T4BHT" completed keep alive response.
+2026-03-05 15:30:49.692 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 61007 application/pdf 71.4995ms
+2026-03-05 15:30:52.998 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:31:23.015 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:31:53.042 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:32:23.061 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:32:31.593 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Balance - null null
+2026-03-05 15:32:31.593 +07:00 [DBG] 1 candidate(s) found for the request path '/Balance'
+2026-03-05 15:32:31.593 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Balance/'
+2026-03-05 15:32:31.594 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:32:31.594 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:32:31.594 +07:00 [INF] Executing endpoint 'HTTP: GET /Balance/'
+2026-03-05 15:32:31.608 +07:00 [DBG] Entity Framework Core 9.0.12 initialized 'CustomerDb' using provider 'Npgsql.EntityFrameworkCore.PostgreSQL:9.0.4+fd2380957bee5cd86f336466af36b08c0163f1a5' with options: MigrationsAssembly=Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null 
+2026-03-05 15:32:31.608 +07:00 [DBG] Compiling query expression: 
+'DbSet<Balance>()'
+2026-03-05 15:32:31.612 +07:00 [DBG] Generated query execution expression: 
+'queryContext => SingleQueryingEnumerable.Create<Balance>(
+    relationalQueryContext: (RelationalQueryContext)queryContext, 
+    relationalCommandResolver: parameters => [LIFTABLE Constant: RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Balance.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Balance.account_id (int) Required, 1], [Property: Balance.amount (decimal) Required, 2], [Property: Balance.report_id (int) Required, 3], [Property: Balance.report_year (int) Required, 4] }
+        SELECT b.Id, b.account_id, b.amount, b.report_id, b.report_year
+        FROM Balances AS b) | Resolver: c => new RelationalCommandCache(
+        c.Dependencies.MemoryCache, 
+        c.RelationalDependencies.QuerySqlGeneratorFactory, 
+        c.RelationalDependencies.RelationalParameterBasedSqlProcessorFactory, 
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Balance.Id (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Balance.account_id (int) Required, 1], [Property: Balance.amount (decimal) Required, 2], [Property: Balance.report_id (int) Required, 3], [Property: Balance.report_year (int) Required, 4] }
+        SELECT b.Id, b.account_id, b.amount, b.report_id, b.report_year
+        FROM Balances AS b, 
+        False, 
+        new HashSet<string>(
+            new string[]{ }, 
+            StringComparer.Ordinal
+        )
+    )].GetRelationalCommandTemplate(parameters), 
+    readerColumns: null, 
+    shaper: (queryContext, dataReader, resultContext, resultCoordinator) => 
+    {
+        Balance entity;
+        entity = 
+        {
+            MaterializationContext materializationContext1;
+            IEntityType entityType1;
+            Balance instance1;
+            InternalEntityEntry entry1;
+            bool hasNullKey1;
+            materializationContext1 = new MaterializationContext(
+                [LIFTABLE Constant: ValueBuffer | Resolver: _ => (object)ValueBuffer.Empty], 
+                queryContext.Context
+            );
+            instance1 = default(Balance);
+            entry1 = queryContext.TryGetEntry(
+                key: [LIFTABLE Constant: Key: Balance.Id PK | Resolver: c => c.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Balance").FindPrimaryKey()], 
+                keyValues: new object[]{ (object)dataReader.GetInt32(0) }, 
+                throwOnNullKey: True, 
+                hasNullKey: hasNullKey1);
+            !(hasNullKey1) ? entry1 != default(InternalEntityEntry) ? 
+            {
+                entityType1 = entry1.EntityType;
+                return instance1 = (Balance)entry1.Entity;
+            } : 
+            {
+                ISnapshot shadowSnapshot1;
+                shadowSnapshot1 = [LIFTABLE Constant: Snapshot | Resolver: _ => Snapshot.Empty];
+                entityType1 = [LIFTABLE Constant: EntityType: Balance | Resolver: namelessParameter{0} => namelessParameter{0}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Balance")];
+                instance1 = switch (entityType1)
+                {
+                    case [LIFTABLE Constant: EntityType: Balance | Resolver: namelessParameter{1} => namelessParameter{1}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Balance")]: 
+                        {
+                            return 
+                            {
+                                Balance instance;
+                                instance = new Balance();
+                                instance.<Id>k__BackingField = dataReader.GetInt32(0);
+                                instance.<account_id>k__BackingField = dataReader.GetInt32(1);
+                                instance.<amount>k__BackingField = dataReader.GetDecimal(2);
+                                instance.<report_id>k__BackingField = dataReader.GetInt32(3);
+                                instance.<report_year>k__BackingField = dataReader.GetInt32(4);
+                                (instance is IInjectableService) ? ((IInjectableService)instance).Injected(
+                                    context: materializationContext1.Context, 
+                                    entity: instance, 
+                                    queryTrackingBehavior: TrackAll, 
+                                    structuralType: [LIFTABLE Constant: EntityType: Balance | Resolver: namelessParameter{2} => namelessParameter{2}.Dependencies.Model.FindEntityType("CustomerApi.Domain.Entities.Balance")]) : default(void);
+                                return instance;
+                            }}
+                    default: 
+                        default(Balance)
+                }
+                ;
+                entry1 = entityType1 == default(IEntityType) ? default(InternalEntityEntry) : queryContext.StartTracking(
+                    entityType: entityType1, 
+                    entity: instance1, 
+                    snapshot: shadowSnapshot1);
+                return instance1;
+            } : default(void);
+            return instance1;
+        };
+        return entity;
+    }, 
+    contextType: CustomerApi.Infrastructure.Persistence.Postgres.CustomerDb, 
+    standAloneStateManager: False, 
+    detailedErrorsEnabled: False, 
+    threadSafetyChecksEnabled: True)'
+2026-03-05 15:32:31.613 +07:00 [DBG] Creating DbConnection.
+2026-03-05 15:32:31.613 +07:00 [DBG] Created DbConnection. (0ms).
+2026-03-05 15:32:31.613 +07:00 [DBG] Opening connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-03-05 15:32:31.613 +07:00 [DBG] Opened connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-03-05 15:32:31.613 +07:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2026-03-05 15:32:31.613 +07:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2026-03-05 15:32:31.613 +07:00 [DBG] Initialized DbCommand for 'ExecuteReader' (0ms).
+2026-03-05 15:32:31.614 +07:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b.account_id, b.amount, b.report_id, b.report_year
+FROM "Balances" AS b
+2026-03-05 15:32:31.615 +07:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT b."Id", b.account_id, b.amount, b.report_id, b.report_year
+FROM "Balances" AS b
+2026-03-05 15:32:31.621 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.627 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Context 'CustomerDb' started tracking 'Balance' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2026-03-05 15:32:31.628 +07:00 [DBG] Closing data reader to 'postgres' on server 'tcp://localhost:5432'.
+2026-03-05 15:32:31.628 +07:00 [DBG] A data reader for 'postgres' on server 'tcp://localhost:5432' is being disposed after spending 13ms reading results.
+2026-03-05 15:32:31.629 +07:00 [DBG] Closing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-03-05 15:32:31.629 +07:00 [DBG] Closed connection to database 'postgres' on server 'tcp://localhost:5432' (0ms).
+2026-03-05 15:32:31.631 +07:00 [INF] Executed endpoint 'HTTP: GET /Balance/'
+2026-03-05 15:32:31.631 +07:00 [DBG] Connection id "0HNJQHC1T4BHT" completed keep alive response.
+2026-03-05 15:32:31.631 +07:00 [DBG] 'CustomerDb' disposed.
+2026-03-05 15:32:31.631 +07:00 [DBG] Disposing connection to database 'postgres' on server 'tcp://localhost:5432'.
+2026-03-05 15:32:31.631 +07:00 [DBG] Disposed connection to database 'postgres' on server 'tcp://localhost:5432' (0ms).
+2026-03-05 15:32:31.631 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Balance - 200 null application/json; charset=utf-8 37.9771ms
+2026-03-05 15:32:39.384 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:32:39.384 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:32:39.384 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:32:39.384 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:32:39.384 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:32:39.384 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:32:39.428 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:32:39.429 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:32:39.429 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:32:39.429 +07:00 [DBG] Connection id "0HNJQHC1T4BHT" completed keep alive response.
+2026-03-05 15:32:39.429 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 61007 application/pdf 45.046ms
+2026-03-05 15:32:53.070 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:33:23.075 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:33:53.087 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:34:21.492 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 15:34:23.097 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:34:35.308 +07:00 [DBG] Connection id "0HNJQHC1T4BHT" received FIN.
+2026-03-05 15:34:35.308 +07:00 [DBG] Connection id "0HNJQHC1T4BHT" disconnecting.
+2026-03-05 15:34:35.308 +07:00 [DBG] Connection id "0HNJQHC1T4BHT" stopped.
+2026-03-05 15:34:35.308 +07:00 [DBG] Connection id "0HNJQHC1T4BHT" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 15:34:53.126 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:35:23.142 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:35:53.165 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:36:23.180 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:36:53.201 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:37:23.222 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:37:53.249 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:38:23.274 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:38:53.293 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:39:21.497 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 15:39:23.310 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:39:53.330 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:40:23.344 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:40:32.962 +07:00 [DBG] Connection id "0HNJQHC1T4BHU" accepted.
+2026-03-05 15:40:32.962 +07:00 [DBG] Connection id "0HNJQHC1T4BHU" started.
+2026-03-05 15:40:32.963 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:40:32.963 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:40:32.963 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:40:32.963 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:40:32.963 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:40:32.963 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:40:33.014 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:40:33.014 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:40:33.015 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:40:33.015 +07:00 [DBG] Connection id "0HNJQHC1T4BHU" completed keep alive response.
+2026-03-05 15:40:33.015 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 69347 application/pdf 52.6643ms
+2026-03-05 15:40:53.369 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:41:15.740 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:41:15.740 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:41:15.740 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:41:15.740 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:41:15.740 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:41:15.740 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:41:15.778 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:41:15.778 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:41:15.778 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:41:15.779 +07:00 [DBG] Connection id "0HNJQHC1T4BHU" completed keep alive response.
+2026-03-05 15:41:15.779 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 44103 application/pdf 38.7773ms
+2026-03-05 15:41:23.395 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:41:36.123 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:41:36.124 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:41:36.124 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:41:36.124 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:41:36.124 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:41:36.124 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:41:36.164 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:41:36.165 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:41:36.165 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:41:36.165 +07:00 [DBG] Connection id "0HNJQHC1T4BHU" completed keep alive response.
+2026-03-05 15:41:36.165 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 44103 application/pdf 41.5699ms
+2026-03-05 15:41:47.704 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:41:47.704 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:41:47.704 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:41:47.704 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:41:47.704 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:41:47.704 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:41:47.743 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:41:47.743 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:41:47.744 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:41:47.744 +07:00 [DBG] Connection id "0HNJQHC1T4BHU" completed keep alive response.
+2026-03-05 15:41:47.744 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 70097 application/pdf 40.2695ms
+2026-03-05 15:41:53.423 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:42:23.441 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:42:35.026 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:42:35.026 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:42:35.026 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:42:35.026 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:42:35.026 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:42:35.026 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:42:35.067 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:42:35.067 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:42:35.067 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:42:35.067 +07:00 [DBG] Connection id "0HNJQHC1T4BHU" completed keep alive response.
+2026-03-05 15:42:35.067 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 61007 application/pdf 41.0593ms
+2026-03-05 15:42:53.462 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:43:23.480 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:43:53.508 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:44:21.506 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 15:44:21.801 +07:00 [DBG] Removing outdated records from table 'aggregatedcounter'...
+2026-03-05 15:44:21.810 +07:00 [DBG] Removing outdated records from table 'counter'...
+2026-03-05 15:44:21.818 +07:00 [DBG] Removing outdated records from table 'job'...
+2026-03-05 15:44:21.827 +07:00 [DBG] Removing outdated records from table 'list'...
+2026-03-05 15:44:21.835 +07:00 [DBG] Removing outdated records from table 'set'...
+2026-03-05 15:44:21.842 +07:00 [DBG] Removing outdated records from table 'hash'...
+2026-03-05 15:44:23.527 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:44:30.631 +07:00 [DBG] Connection id "0HNJQHC1T4BHU" received FIN.
+2026-03-05 15:44:30.631 +07:00 [DBG] Connection id "0HNJQHC1T4BHU" disconnecting.
+2026-03-05 15:44:30.631 +07:00 [DBG] Connection id "0HNJQHC1T4BHU" stopped.
+2026-03-05 15:44:30.631 +07:00 [DBG] Connection id "0HNJQHC1T4BHU" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 15:44:53.548 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:45:23.588 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:45:53.596 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:46:23.605 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:46:53.623 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:47:23.647 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:47:53.666 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:48:23.693 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:48:53.716 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:49:21.519 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 15:49:23.732 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:49:53.756 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:50:23.781 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:50:53.796 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:51:23.814 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:51:53.831 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:52:23.850 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:52:53.867 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:53:23.895 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:53:53.919 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:54:21.531 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 15:54:23.932 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:54:53.958 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:55:10.280 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" accepted.
+2026-03-05 15:55:10.280 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" started.
+2026-03-05 15:55:10.281 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:55:10.281 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:55:10.281 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:55:10.281 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:55:10.281 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:55:10.281 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:55:10.717 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:55:10.717 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:55:10.717 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:55:10.717 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" completed keep alive response.
+2026-03-05 15:55:10.717 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 86814 application/pdf 436.4925ms
+2026-03-05 15:55:23.969 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:55:46.356 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:55:46.356 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:55:46.356 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:55:46.356 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:55:46.356 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:55:46.356 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:55:46.404 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:55:46.405 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:55:46.405 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:55:46.405 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" completed keep alive response.
+2026-03-05 15:55:46.405 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 61013 application/pdf 49.1425ms
+2026-03-05 15:55:53.992 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:56:23.997 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:56:52.133 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:56:52.133 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:56:52.133 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:56:52.133 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:56:52.133 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:56:52.133 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:56:52.181 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:56:52.181 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:56:52.181 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:56:52.181 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" completed keep alive response.
+2026-03-05 15:56:52.181 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 44103 application/pdf 48.7038ms
+2026-03-05 15:56:54.022 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:57:24.038 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:57:33.025 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:57:33.025 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:57:33.025 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:57:33.025 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:57:33.025 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:57:33.025 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:57:33.063 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:57:33.064 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:57:33.064 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:57:33.064 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" completed keep alive response.
+2026-03-05 15:57:33.064 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 44103 application/pdf 38.5724ms
+2026-03-05 15:57:54.049 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:58:16.364 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 15:58:16.365 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 15:58:16.365 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:58:16.365 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 15:58:16.365 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 15:58:16.365 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:58:16.399 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 15:58:16.399 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 15:58:16.399 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 15:58:16.399 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" completed keep alive response.
+2026-03-05 15:58:16.399 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 44103 application/pdf 34.5017ms
+2026-03-05 15:58:24.075 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:58:54.107 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:59:21.538 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 15:59:24.121 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 15:59:54.148 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:00:00.443 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:00:00.443 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:00:00.443 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:00:00.443 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:00:00.443 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:00:00.443 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:00:00.491 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:00:00.491 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:00:00.491 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:00:00.491 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" completed keep alive response.
+2026-03-05 16:00:00.491 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 48018 application/pdf 48.2997ms
+2026-03-05 16:00:19.708 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:00:19.708 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:00:19.708 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:00:19.708 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:00:19.708 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:00:19.708 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:00:19.744 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:00:19.744 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:00:19.744 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:00:19.744 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" completed keep alive response.
+2026-03-05 16:00:19.744 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 48360 application/pdf 36.171ms
+2026-03-05 16:00:24.164 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:00:54.188 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:01:24.214 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:01:24.827 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:01:24.827 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:01:24.827 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:01:24.827 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:01:24.827 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:01:24.827 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:01:24.868 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:01:24.868 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:01:24.868 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:01:24.868 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" completed keep alive response.
+2026-03-05 16:01:24.868 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 47869 application/pdf 40.8034ms
+2026-03-05 16:01:48.691 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:01:48.691 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:01:48.691 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:01:48.691 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:01:48.691 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:01:48.691 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:01:48.731 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:01:48.731 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:01:48.732 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:01:48.732 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" completed keep alive response.
+2026-03-05 16:01:48.732 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 67290 application/pdf 41.0626ms
+2026-03-05 16:01:54.241 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:02:14.931 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:02:14.931 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:02:14.931 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:02:14.931 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:02:14.931 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:02:14.931 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:02:14.971 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:02:14.971 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:02:14.972 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:02:14.972 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" completed keep alive response.
+2026-03-05 16:02:14.972 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 67536 application/pdf 40.894ms
+2026-03-05 16:02:24.261 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:02:54.284 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:03:24.308 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:03:54.336 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:04:10.665 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" received FIN.
+2026-03-05 16:04:10.665 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" disconnecting.
+2026-03-05 16:04:10.665 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 16:04:10.680 +07:00 [DBG] Connection id "0HNJQHC1T4BHV" stopped.
+2026-03-05 16:04:21.552 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 16:04:24.359 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:04:54.385 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:05:20.616 +07:00 [DBG] Connection id "0HNJQHC1T4BI0" accepted.
+2026-03-05 16:05:20.616 +07:00 [DBG] Connection id "0HNJQHC1T4BI0" started.
+2026-03-05 16:05:20.616 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:05:20.616 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:05:20.616 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:05:20.617 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:05:20.617 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:05:20.617 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:05:20.670 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:05:20.670 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:05:20.670 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:05:20.670 +07:00 [DBG] Connection id "0HNJQHC1T4BI0" completed keep alive response.
+2026-03-05 16:05:20.670 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 67276 application/pdf 53.8674ms
+2026-03-05 16:05:24.404 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:05:54.434 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:06:24.453 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:06:54.475 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:07:17.704 +07:00 [DBG] Connection id "0HNJQHC1T4BI0" received FIN.
+2026-03-05 16:07:17.704 +07:00 [DBG] Connection id "0HNJQHC1T4BI0" disconnecting.
+2026-03-05 16:07:17.705 +07:00 [DBG] Connection id "0HNJQHC1T4BI0" stopped.
+2026-03-05 16:07:17.705 +07:00 [DBG] Connection id "0HNJQHC1T4BI0" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 16:07:24.497 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:07:54.514 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:08:24.534 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:08:54.556 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:09:21.560 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 16:09:24.580 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:09:54.600 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:10:24.628 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:10:54.648 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:11:24.663 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:11:54.681 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:12:24.709 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:12:34.287 +07:00 [DBG] Connection id "0HNJQHC1T4BI1" accepted.
+2026-03-05 16:12:34.287 +07:00 [DBG] Connection id "0HNJQHC1T4BI1" started.
+2026-03-05 16:12:34.288 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:12:34.288 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:12:34.288 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:12:34.288 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:12:34.288 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:12:34.288 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:12:34.352 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:12:34.352 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:12:34.352 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:12:34.352 +07:00 [DBG] Connection id "0HNJQHC1T4BI1" completed keep alive response.
+2026-03-05 16:12:34.352 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 64072 application/pdf 64.605ms
+2026-03-05 16:12:54.723 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:13:24.742 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:13:42.619 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:13:42.619 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:13:42.619 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:13:42.619 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:13:42.619 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:13:42.619 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:13:42.659 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:13:42.659 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:13:42.659 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:13:42.659 +07:00 [DBG] Connection id "0HNJQHC1T4BI1" completed keep alive response.
+2026-03-05 16:13:42.659 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 67276 application/pdf 40.5823ms
+2026-03-05 16:13:54.759 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:14:21.575 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 16:14:24.790 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:14:54.813 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:15:24.839 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:15:38.050 +07:00 [DBG] Connection id "0HNJQHC1T4BI1" received FIN.
+2026-03-05 16:15:38.052 +07:00 [DBG] Connection id "0HNJQHC1T4BI1" disconnecting.
+2026-03-05 16:15:38.052 +07:00 [DBG] Connection id "0HNJQHC1T4BI1" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 16:15:38.065 +07:00 [DBG] Connection id "0HNJQHC1T4BI1" stopped.
+2026-03-05 16:15:54.864 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:16:24.877 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:16:54.893 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:17:24.917 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:17:54.925 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:18:24.939 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:18:53.901 +07:00 [DBG] Connection id "0HNJQHC1T4BI2" accepted.
+2026-03-05 16:18:53.901 +07:00 [DBG] Connection id "0HNJQHC1T4BI2" started.
+2026-03-05 16:18:53.901 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:18:53.901 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:18:53.901 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:18:53.901 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:18:53.901 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:18:53.901 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:18:53.943 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:18:53.943 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:18:53.943 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:18:53.943 +07:00 [DBG] Connection id "0HNJQHC1T4BI2" completed keep alive response.
+2026-03-05 16:18:53.943 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 67278 application/pdf 42.1812ms
+2026-03-05 16:18:54.946 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:19:17.564 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:19:17.564 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:19:17.564 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:19:17.564 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:19:17.564 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:19:17.564 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:19:17.613 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:19:17.613 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:19:17.613 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:19:17.613 +07:00 [DBG] Connection id "0HNJQHC1T4BI2" completed keep alive response.
+2026-03-05 16:19:17.613 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 67278 application/pdf 49.3345ms
+2026-03-05 16:19:21.578 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 16:19:24.955 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:19:54.970 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:20:02.158 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:20:02.158 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:20:02.158 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:20:02.158 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:20:02.158 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:20:02.158 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:20:02.199 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:20:02.199 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:20:02.200 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:20:02.200 +07:00 [DBG] Connection id "0HNJQHC1T4BI2" completed keep alive response.
+2026-03-05 16:20:02.200 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 67276 application/pdf 41.5108ms
+2026-03-05 16:20:24.982 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:20:54.999 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:21:25.021 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:21:55.036 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:21:57.685 +07:00 [DBG] Connection id "0HNJQHC1T4BI2" received FIN.
+2026-03-05 16:21:57.685 +07:00 [DBG] Connection id "0HNJQHC1T4BI2" disconnecting.
+2026-03-05 16:21:57.685 +07:00 [DBG] Connection id "0HNJQHC1T4BI2" stopped.
+2026-03-05 16:21:57.685 +07:00 [DBG] Connection id "0HNJQHC1T4BI2" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 16:22:25.046 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:22:55.051 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:23:25.075 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:23:55.107 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:24:10.179 +07:00 [DBG] Connection id "0HNJQHC1T4BI3" accepted.
+2026-03-05 16:24:10.180 +07:00 [DBG] Connection id "0HNJQHC1T4BI3" started.
+2026-03-05 16:24:10.180 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:24:10.180 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:24:10.180 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:24:10.180 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:24:10.180 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:24:10.180 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:24:10.227 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:24:10.227 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:24:10.227 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:24:10.228 +07:00 [DBG] Connection id "0HNJQHC1T4BI3" completed keep alive response.
+2026-03-05 16:24:10.228 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 67276 application/pdf 47.3981ms
+2026-03-05 16:24:21.583 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 16:24:25.114 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:24:55.127 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:25:25.144 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:25:55.155 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:26:05.526 +07:00 [DBG] Connection id "0HNJQHC1T4BI3" received FIN.
+2026-03-05 16:26:05.526 +07:00 [DBG] Connection id "0HNJQHC1T4BI3" disconnecting.
+2026-03-05 16:26:05.526 +07:00 [DBG] Connection id "0HNJQHC1T4BI3" stopped.
+2026-03-05 16:26:05.526 +07:00 [DBG] Connection id "0HNJQHC1T4BI3" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 16:26:10.445 +07:00 [DBG] Connection id "0HNJQHC1T4BI4" accepted.
+2026-03-05 16:26:10.445 +07:00 [DBG] Connection id "0HNJQHC1T4BI4" started.
+2026-03-05 16:26:10.446 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:26:10.446 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:26:10.446 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:26:10.446 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:26:10.446 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:26:10.446 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:26:10.491 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:26:10.491 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:26:10.491 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:26:10.491 +07:00 [DBG] Connection id "0HNJQHC1T4BI4" completed keep alive response.
+2026-03-05 16:26:10.491 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 64072 application/pdf 45.4945ms
+2026-03-05 16:26:25.168 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:26:50.230 +07:00 [INF] Request starting HTTP/1.1 GET http://localhost:5067/Student/export-pdf - null null
+2026-03-05 16:26:50.230 +07:00 [DBG] 1 candidate(s) found for the request path '/Student/export-pdf'
+2026-03-05 16:26:50.230 +07:00 [DBG] Request matched endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:26:50.230 +07:00 [DBG] AuthenticationScheme: Bearer was not authenticated.
+2026-03-05 16:26:50.230 +07:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2026-03-05 16:26:50.230 +07:00 [INF] Executing endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:26:50.288 +07:00 [INF] Sending file with download name 'Customers.pdf'.
+2026-03-05 16:26:50.288 +07:00 [DBG] The file result has not been enabled for processing range requests. To enable it, set the EnableRangeProcessing property on the result to 'true'.
+2026-03-05 16:26:50.289 +07:00 [INF] Executed endpoint 'HTTP: GET /Student/export-pdf'
+2026-03-05 16:26:50.289 +07:00 [DBG] Connection id "0HNJQHC1T4BI4" completed keep alive response.
+2026-03-05 16:26:50.289 +07:00 [INF] Request finished HTTP/1.1 GET http://localhost:5067/Student/export-pdf - 200 65986 application/pdf 58.8232ms
+2026-03-05 16:26:55.174 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:27:25.182 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:27:55.196 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:28:25.223 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:28:46.084 +07:00 [DBG] Connection id "0HNJQHC1T4BI4" received FIN.
+2026-03-05 16:28:46.084 +07:00 [DBG] Connection id "0HNJQHC1T4BI4" disconnecting.
+2026-03-05 16:28:46.084 +07:00 [DBG] Connection id "0HNJQHC1T4BI4" stopped.
+2026-03-05 16:28:46.084 +07:00 [DBG] Connection id "0HNJQHC1T4BI4" sending FIN because: "The Socket transport's send loop completed gracefully."
+2026-03-05 16:28:55.230 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:29:21.590 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 16:29:25.241 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:29:55.268 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:30:25.293 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:30:55.325 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:31:25.337 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:31:55.356 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:32:25.381 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:32:55.410 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:33:25.416 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:33:55.432 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:34:21.603 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 16:34:25.436 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:34:55.454 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:35:25.483 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:35:55.500 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:36:25.518 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:36:55.538 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:37:25.556 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:37:55.577 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:38:25.599 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:38:55.603 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:39:21.619 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 16:39:25.622 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:39:55.648 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:40:25.664 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:40:55.690 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:41:25.712 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:41:55.736 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:42:25.753 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:42:55.758 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:43:25.766 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:43:55.783 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:44:21.624 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 16:44:21.874 +07:00 [DBG] Removing outdated records from table 'aggregatedcounter'...
+2026-03-05 16:44:21.897 +07:00 [DBG] Removing outdated records from table 'counter'...
+2026-03-05 16:44:21.907 +07:00 [DBG] Removing outdated records from table 'job'...
+2026-03-05 16:44:21.914 +07:00 [DBG] Removing outdated records from table 'list'...
+2026-03-05 16:44:21.920 +07:00 [DBG] Removing outdated records from table 'set'...
+2026-03-05 16:44:21.927 +07:00 [DBG] Removing outdated records from table 'hash'...
+2026-03-05 16:44:25.796 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:44:55.801 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:45:25.824 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:45:55.828 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:46:25.833 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:46:55.847 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:47:25.859 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:47:55.876 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:48:25.890 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:48:55.911 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:49:21.640 +07:00 [DBG] Aggregating records in 'Counter' table...
+2026-03-05 16:49:25.931 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:49:55.951 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:50:25.970 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:50:55.986 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:51:26.005 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent
+2026-03-05 16:51:56.016 +07:00 [DBG] Server desktop-l31jdro:11188:c3560c48 heartbeat successfully sent

@@ -142,9 +142,19 @@ public class ReportGeneratorService : IReportService
         var query3 = new CustomSqlQuery("Accounts", 
             @"SELECT a.* FROM ""Accounts"" a");
 
+        var query4 = new CustomSqlQuery("BalanceSheetFlat", 
+            @"SELECT 
+                A.*, 
+                B.report_year, 
+                B.amount 
+            FROM ""Accounts"" A
+            LEFT JOIN ""Balances"" B ON A.""Id"" = B.account_id
+            ORDER BY A.account_name, B.report_year");
+
         sqlDataSource.Queries.Add(query);
         sqlDataSource.Queries.Add(query2);
         sqlDataSource.Queries.Add(query3);
+        sqlDataSource.Queries.Add(query4);
 
         var relation = new MasterDetailInfo("Reports", "Balances", "Id", "report_id");
         var relation2 = new MasterDetailInfo("Accounts", "Balances", "Id", "account_id");
